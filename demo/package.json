@@ -8,7 +8,8 @@
     "react-scripts": "3.2.0",
     "rimble-ui": "^0.11.1",
     "styled-components": "^4.4.1",
-    "styled-system": "^5.1.2"
+    "styled-system": "^5.1.2",
+    "@rimble/icons": "link:.."
   },
   "scripts": {
     "start": "react-scripts start",
