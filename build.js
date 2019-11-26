@@ -86,8 +86,6 @@ const copy = async () => {
     .sort((a, b) => (a.name < b.name ? -1 : 1));
 
   const icons = materialIcons.concat(cryptoIcons);
-  // const icons = materialIcons;
-  // const icons = cryptoIcons;
 
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
   if (!fs.existsSync(examplesDir)) fs.mkdirSync(examplesDir);
