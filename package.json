@@ -1,0 +1,45 @@
+{
+  "name": "@rimble/icons",
+  "version": "1.0.1",
+  "description": "Rimble Icons",
+  "main": "index.js",
+  "sideEffects": false,
+  "scripts": {
+    "prepare": "./build.js && pixo svg && babel src -d lib",
+    "clean": "rm -r svg src lib examples",
+    "start": "cd demo && yarn start"
+  },
+  "keywords": [],
+  "author": "Rimble",
+  "license": "MIT",
+  "dependencies": {
+    "styled-system": "^2.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "grid-styled": "^4.1.0",
+    "lodash.camelcase": "^4.3.0",
+    "lodash.uniqby": "^4.7.0",
+    "lodash.upperfirst": "^4.3.1",
+    "material-design-icons": "^3.0.1",
+    "ok-css": "^1.0.0-0",
+    "pixo": "^1.1.0",
+    "react": "^16.3.2",
+    "react-test-renderer": "^16.3.2",
+    "recursive-readdir": "^2.2.2",
+    "styled-components": "^3.2.6"
+  },
+  "peerDependencies": {
+    "styled-components": ">=2.0 || >=3.0"
+  },
+  "pixo": {
+    "outDir": "src",
+    "template": "styledSystem",
+    "index": true,
+    "iconComponent": true
+  },
+  "x0": {
+    "cssLibrary": "styled-components"
+  }
+}
