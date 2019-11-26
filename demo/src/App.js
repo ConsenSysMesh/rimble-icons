@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Box } from "rimble-ui";
-import * as icons from "rmdi";
+import * as icons from "@rimble/icons";
 import styled from "styled-components";
 
 const Truncate = styled(Box)([], {
@@ -13,7 +13,7 @@ const iconList = Object.keys(icons)
   .filter(key => key !== "Icon")
   .map(key => (
     <Box
-      width={96}
+      width={'4rem'}
       key={key}
       title={key}
       m={3}
@@ -23,9 +23,9 @@ const iconList = Object.keys(icons)
     >
       {React.createElement(icons[key], {
         title: key,
-        size: 64
+        size: 48
       })}
-      <Truncate fontSize={10}>{key}</Truncate>
+      <Truncate fontSize={'1rem'}>{key}</Truncate>
     </Box>
   ));
 
