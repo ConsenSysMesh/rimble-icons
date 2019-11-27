@@ -93,7 +93,6 @@ const copy = async () => {
   icons.forEach(writeFile);
   icons.forEach(createExample);
   createDoc(icons);
-  console.log(icons);
   console.log(icons.length, " icons copied");
 };
 

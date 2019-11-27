@@ -3,17 +3,19 @@
   "version": "0.0.1",
   "description": "Rimble Icons",
   "main": "index.js",
+  "module": "index.es.js",
   "sideEffects": false,
   "scripts": {
-    "prepare": "./build.js && pixo svg && babel source -d lib",
-    "clean": "rm -r svg source lib examples",
+    "prepare": "./build.js && pixo svg && npm run build:cjs && npm run build:es",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel source -d lib",
+    "build:es": "babel source -d es",
+    "clean": "rm -r svg source lib es examples",
     "start": "cd demo && yarn start"
   },
   "keywords": [],
   "author": "Rimble",
   "license": "MIT",
   "dependencies": {
-    "styled-system": "^2.0.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
@@ -28,7 +30,8 @@
     "react": "^16.3.2",
     "react-test-renderer": "^16.3.2",
     "recursive-readdir": "^2.2.2",
-    "styled-components": "^3.2.6"
+    "styled-components": "^3.2.6",
+    "styled-system": "^2.0.0"
   },
   "peerDependencies": {
     "styled-components": ">=2.0 || >=3.0"
@@ -41,5 +44,9 @@
   },
   "x0": {
     "cssLibrary": "styled-components"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "cross-env": "^6.0.3"
   }
 }
