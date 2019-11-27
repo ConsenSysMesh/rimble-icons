@@ -1,7 +1,7 @@
 # Rimble Icons
 
 ```sh
-npm i @rimble/icons
+yarn add @rimble/icons
 ```
 
 ```jsx
@@ -45,7 +45,7 @@ Prop | Type | Description
 ## Contributing
 
 ```sh
-npm install
+yarn install
 ```
 
 The build process will:
@@ -60,7 +60,7 @@ The build process will:
 To run the development server:
 
 ```sh
-npm start
+yarn start
 ```
 
 Should start a local webserver that displays all the icons
