@@ -3,15 +3,16 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@rimble/icons": "file:..",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0",
     "rimble-ui": "^0.11.1",
     "styled-components": "^4.4.1",
-    "styled-system": "^5.1.2",
-    "@rimble/icons": "file:.."
+    "styled-system": "^5.1.2"
   },
   "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -31,5 +32,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "source-map-explorer": "^2.1.1"
   }
 }
