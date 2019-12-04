@@ -1,18 +1,16 @@
 import React, { useState } from "react";
+import styled, { ThemeProvider } from "styled-components";
 import {
-  ThemeProvider,
   theme,
   BaseStyles,
   Flex,
-  Box,
-  Field,
-  Input,
-  Heading
+  Text,
+  Heading,
+  Input
 } from "rimble-ui";
 import * as icons from "@rimble/icons";
-import styled from "styled-components";
 
-const Truncate = styled(Box)([], {
+const Truncate = styled(Text)([], {
   overflow: "hidden",
   whiteSpace: "nowrap",
   textOverflow: "ellipsis"
@@ -23,52 +21,60 @@ const IconList = ({ filterValue }) => {
   return Object.keys(icons)
     .filter(key => key !== "Icon" && key.includes(filterValue))
     .map(key => (
-      <Box
-        width={"4rem"}
+      <Text
         key={key}
         title={key}
+        width={'5rem'}
         m={3}
-        style={{
-          textAlign: "center"
-        }}
+        textAlign={'center'}
       >
         {React.createElement(icons[key], {
           title: key,
           size: 48
         })}
-        <Truncate fontSize={"1rem"}>{key}</Truncate>
-      </Box>
+        <Truncate lineHeight={'1rem'} fontSize={1}>
+          {key}
+        </Truncate>
+      </Text>
     ));
 };
 
 const FilteredIcons = () => {
   const [filterValue, setFilterValue] = useState("");
   return (
-    <Box my={4}>
-      <Field label="Filter icons">
-        <Input
-          type="text"
-          placeholder="e.g. Eth"
-          onChange={e => setFilterValue(e.target.value)}
-          value={filterValue}
-        />
-      </Field>
-
-      <Flex flexWrap="wrap">
+    <>
+      <Input
+        type="search"
+        placeholder="Filter…"
+        onChange={e => setFilterValue(e.target.value)}
+        value={filterValue}
+        width={'100%'}
+        maxWidth={'50%'}
+        mx={'auto'}
+        mb={5}
+      />
+      <Flex flexWrap={'wrap'} justifyContent={'center'} >
         <IconList filterValue={filterValue} />
       </Flex>
-    </Box>
+    </>
   );
 };
 
 const App = props => {
   return (
-    <ThemeProvider theme={theme} className="App">
+    <ThemeProvider theme={theme}>
       <BaseStyles>
-        <Box m={4}>
-          <Heading as="h1">Rimble Icons</Heading>
+        <Flex
+          flexDirection={'column'}
+          alignItems={'center'}
+          maxWidth={'80vw'}
+          mx={'auto'}
+        >
+          <Heading as={'h1'} py={5}>
+            Rimble Icons
+          </Heading>
           <FilteredIcons icons={icons} />
-        </Box>
+        </Flex>
       </BaseStyles>
     </ThemeProvider>
   );
