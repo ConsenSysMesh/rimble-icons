@@ -1,0 +1,33 @@
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+import React from 'react';
+import styled from 'styled-components';
+import { space, color } from 'styled-system';
+
+var Svg = styled('svg')({ flex: 'none' }, space, color);
+
+var RouterIcon = function RouterIcon(_ref) {
+  var size = _ref.size,
+      props = _objectWithoutProperties(_ref, ['size']);
+
+  return React.createElement(
+    Svg,
+    _extends({}, props, {
+      viewBox: '0 0 24 24',
+      width: size,
+      height: size,
+      fill: 'currentcolor'
+    }),
+    React.createElement('path', { d: 'M20.2 5.9l.8-.8C19.6 3.7 17.8 3 16 3s-3.6.7-5 2.1l.8.8C13 4.8 14.5 4.2 16 4.2s3 .6 4.2 1.7zm-.9.8c-.9-.9-2.1-1.4-3.3-1.4s-2.4.5-3.3 1.4l.8.8c.7-.7 1.6-1 2.5-1 .9 0 1.8.3 2.5 1l.8-.8zM19 13h-2V9h-2v4H5c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-4c0-1.1-.9-2-2-2zM8 18H6v-2h2v2zm3.5 0h-2v-2h2v2zm3.5 0h-2v-2h2v2z' })
+  );
+};
+
+RouterIcon.displayName = 'RouterIcon';
+
+RouterIcon.defaultProps = {
+  size: 24
+};
+
+export default RouterIcon;

@@ -1,0 +1,33 @@
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+import React from 'react';
+import styled from 'styled-components';
+import { space, color } from 'styled-system';
+
+var Svg = styled('svg')({ flex: 'none' }, space, color);
+
+var ViewArrayIcon = function ViewArrayIcon(_ref) {
+  var size = _ref.size,
+      props = _objectWithoutProperties(_ref, ['size']);
+
+  return React.createElement(
+    Svg,
+    _extends({}, props, {
+      viewBox: '0 0 24 24',
+      width: size,
+      height: size,
+      fill: 'currentcolor'
+    }),
+    React.createElement('path', { d: 'M4 18h3V5H4v13zM18 5v13h3V5h-3zM8 18h9V5H8v13z' })
+  );
+};
+
+ViewArrayIcon.displayName = 'ViewArrayIcon';
+
+ViewArrayIcon.defaultProps = {
+  size: 24
+};
+
+export default ViewArrayIcon;
