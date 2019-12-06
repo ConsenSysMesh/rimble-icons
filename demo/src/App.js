@@ -7,13 +7,14 @@ import {
   Box,
   Field,
   Input,
-  Heading
+  Heading,
+  Text
 } from "rimble-ui";
 // import * as icons from "@rimble/icons";
 import * as mdIcons from "@rimble/icons/es/md";
 import * as cryptoIcons from "@rimble/icons/es/crypto";
-// import { default as Star2 } from "@rimble/icons/es/md/Star";
-// import { Star as Star3 } from "@rimble/icons/es/md";
+import { Star } from "@rimble/icons/es/md";
+import { Eth, Btc } from "@rimble/icons/es/crypto";
 import styled from "styled-components";
 
 const Truncate = styled(Box)([], {
@@ -71,6 +72,34 @@ const App = props => {
       <BaseStyles>
         <Box m={4}>
           <Heading as="h1">Rimble Icons</Heading>
+
+          <Text>Single icon, named imports that supports tree-shaking</Text>
+
+          <Text bg={"light-gray"} p={3}>
+            import {`{ Star }`} from "@rimble/icons/es/md";
+          </Text>
+
+          <Flex>
+            <Box m={3}>
+              <Star size={"24px"} />
+            </Box>
+            <Box m={3}>
+              <Star size={"24px"} color={"red"} />
+            </Box>
+          </Flex>
+
+          <Text bg={"light-gray"} p={3}>
+            import {`{ Btc, Eth }`} from "@rimble/icons/es/crypto";
+          </Text>
+
+          <Flex>
+            <Box m={3}>
+              <Eth size={"24px"} />
+            </Box>
+            <Box m={3}>
+              <Btc size={"24px"} />
+            </Box>
+          </Flex>
 
           <Heading as="h2">Crypto</Heading>
           <FilteredIcons icons={cryptoIcons} placeholder={"Eth"} />
