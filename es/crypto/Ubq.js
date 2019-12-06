@@ -7,13 +7,13 @@ var SvgUbq = function SvgUbq(props) {
     "svg",
     _extends({
       viewBox: "0 0 24 24",
-      fill: "none",
+      fill: props.color ? props.color : "#00EA90",
       height: props.size,
       width: props.size
     }, props),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "#00EA90"
+      fill: "inherit"
     }),
     React.createElement("path", {
       d: "M13.661 5.631l5.833 3.051-5.62 3.445-.213-6.496zM10.34 18.337l-5.833-3.051 5.62-3.446.213 6.497z",

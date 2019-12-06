@@ -1,5 +1,5 @@
 
-# Icons (1302)
+# Icons (1301)
 
 - `AcUnit`
 - `AccessAlarm`
@@ -1181,7 +1181,6 @@
 - `Oot`
 - `Ost`
 - `Ox`
-- `Pac`
 - `Part`
 - `Pasl`
 - `Pay`

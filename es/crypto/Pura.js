@@ -7,7 +7,7 @@ var SvgPura = function SvgPura(props) {
     "svg",
     _extends({
       viewBox: "0 0 24 24",
-      fill: "none",
+      fill: props.color ? props.color : "#333333",
       height: props.size,
       width: props.size
     }, props),

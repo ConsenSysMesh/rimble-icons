@@ -5,7 +5,12 @@ import React from "react";
 var SvgTrendingFlat = function SvgTrendingFlat(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
     React.createElement("path", { d: "M22 12l-4-4v3H3v2h15v3z" })
   );
 };

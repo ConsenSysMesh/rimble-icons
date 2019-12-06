@@ -7,7 +7,7 @@ var SvgEmc2 = function SvgEmc2(props) {
     "svg",
     _extends({
       viewBox: "0 0 24 24",
-      fill: "none",
+      fill: props.color ? props.color : "#00CCFF",
       height: props.size,
       width: props.size
     }, props),

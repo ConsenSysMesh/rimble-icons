@@ -5,7 +5,12 @@ import React from "react";
 var SvgSentimentNeutral = function SvgSentimentNeutral(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
     React.createElement("path", { d: "M9 14h6v1.5H9z" }),
     React.createElement("circle", { cx: 15.5, cy: 9.5, r: 1.5 }),
     React.createElement("circle", { cx: 8.5, cy: 9.5, r: 1.5 }),

@@ -7,7 +7,7 @@ var SvgBtc = function SvgBtc(props) {
     "svg",
     _extends({
       viewBox: "0 0 24 24",
-      fill: "none",
+      fill: props.color ? props.color : "#FF9900",
       height: props.size,
       width: props.size
     }, props),

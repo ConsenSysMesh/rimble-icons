@@ -7,7 +7,7 @@ var SvgXmr = function SvgXmr(props) {
     "svg",
     _extends({
       viewBox: "0 0 24 24",
-      fill: "none",
+      fill: props.color ? props.color : "#FF6600",
       height: props.size,
       width: props.size
     }, props),

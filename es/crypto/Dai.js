@@ -7,7 +7,7 @@ var SvgDai = function SvgDai(props) {
     "svg",
     _extends({
       viewBox: "0 0 24 24",
-      fill: "none",
+      fill: props.color ? props.color : "white",
       height: props.size,
       width: props.size
     }, props),

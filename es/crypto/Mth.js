@@ -7,13 +7,13 @@ var SvgMth = function SvgMth(props) {
     "svg",
     _extends({
       viewBox: "0 0 24 24",
-      fill: "none",
+      fill: props.color ? props.color : "#104FCA",
       height: props.size,
       width: props.size
     }, props),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "#104FCA"
+      fill: "inherit"
     }),
     React.createElement("path", {
       d: "M5.25 7.176l3.175 5.327V18c-1.753 0-3.175-1.377-3.175-3.076V7.176z",

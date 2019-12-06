@@ -5,7 +5,12 @@ import React from "react";
 var SvgViewStream = function SvgViewStream(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
     React.createElement("path", { d: "M4 18h17v-6H4v6zM4 5v6h17V5H4z" })
   );
 };

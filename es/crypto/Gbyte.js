@@ -7,13 +7,13 @@ var SvgGbyte = function SvgGbyte(props) {
     "svg",
     _extends({
       viewBox: "0 0 24 24",
-      fill: "none",
+      fill: props.color ? props.color : "#302C2C",
       height: props.size,
       width: props.size
     }, props),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "#302C2C"
+      fill: "inherit"
     }),
     React.createElement("path", {
       d: "M12 20.25a8.25 8.25 0 100-16.5 8.25 8.25 0 000 16.5z",

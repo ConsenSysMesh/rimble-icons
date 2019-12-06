@@ -7,7 +7,7 @@ var SvgNas = function SvgNas(props) {
     "svg",
     _extends({
       viewBox: "0 0 24 24",
-      fill: "none",
+      fill: props.color ? props.color : "#222222",
       height: props.size,
       width: props.size
     }, props),

@@ -5,7 +5,13 @@ import React from "react";
 var SvgFiberSmartRecord = function SvgFiberSmartRecord(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
+    React.createElement("path", { fill: "none", d: "M24 24H0V0h24v24z" }),
     React.createElement(
       "g",
       { fill: "#010101" },

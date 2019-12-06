@@ -7,13 +7,13 @@ var SvgEla = function SvgEla(props) {
     "svg",
     _extends({
       viewBox: "0 0 24 24",
-      fill: "none",
+      fill: props.color ? props.color : "#3FBADF",
       height: props.size,
       width: props.size
     }, props),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "#3FBADF"
+      fill: "inherit"
     }),
     React.createElement("path", {
       d: "M8.25 16.59L12 14.473v4.227l-3.75-2.112zm0-6.75L12 7.723v4.226L8.25 9.84z",

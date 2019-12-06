@@ -13,8 +13,8 @@ import {
 // import * as icons from "@rimble/icons";
 import * as mdIcons from "@rimble/icons/es/md";
 import * as cryptoIcons from "@rimble/icons/es/crypto";
-import { Star } from "@rimble/icons/es/md";
-import { Eth, Btc } from "@rimble/icons/es/crypto";
+import { Star, Battery20 } from "@rimble/icons/es/md";
+import { Eth, Btc, Xuc } from "@rimble/icons/es/crypto";
 import styled from "styled-components";
 
 const Truncate = styled(Box)([], {
@@ -28,20 +28,38 @@ const IconList = ({ filterValue, icons }) => {
   return Object.keys(icons)
     .filter(key => key !== "Icon" && key.includes(filterValue))
     .map(key => (
-      <Box
-        width={"4rem"}
-        key={key}
-        title={key}
-        m={3}
-        style={{
-          textAlign: "center"
-        }}
-      >
-        {React.createElement(icons[key], {
-          title: key,
-          size: 48
-        })}
-        <Truncate fontSize={"1rem"}>{key}</Truncate>
+      <Box>
+        <Box
+          width={"4rem"}
+          key={key}
+          title={key}
+          m={3}
+          style={{
+            textAlign: "center"
+          }}
+        >
+          {React.createElement(icons[key], {
+            title: key,
+            size: 48
+          })}
+          <Truncate fontSize={"1rem"}>{key}</Truncate>
+        </Box>
+        <Box
+          width={"4rem"}
+          key={key}
+          title={key}
+          m={3}
+          style={{
+            textAlign: "center"
+          }}
+        >
+          {React.createElement(icons[key], {
+            title: key,
+            size: 48,
+            color: "red"
+          })}
+          <Truncate fontSize={"1rem"}>{key}</Truncate>
+        </Box>
       </Box>
     ));
 };
@@ -86,6 +104,12 @@ const App = props => {
             <Box m={3}>
               <Star size={"24px"} color={"red"} />
             </Box>
+            <Box m={3}>
+              <Battery20 size={"24px"} />
+            </Box>
+            <Box m={3}>
+              <Battery20 size={"24px"} color={"red"} />
+            </Box>
           </Flex>
 
           <Text bg={"light-gray"} p={3}>
@@ -97,7 +121,19 @@ const App = props => {
               <Eth size={"24px"} />
             </Box>
             <Box m={3}>
+              <Eth size={"24px"} color={"red"} />
+            </Box>
+            <Box m={3}>
               <Btc size={"24px"} />
+            </Box>
+            <Box m={3}>
+              <Btc size={"24px"} color={"red"} />
+            </Box>
+            <Box m={3}>
+              <Xuc size={"24px"} />
+            </Box>
+            <Box m={3}>
+              <Xuc size={"24px"} color={"red"} />
             </Box>
           </Flex>
 

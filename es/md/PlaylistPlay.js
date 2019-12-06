@@ -5,8 +5,14 @@ import React from "react";
 var SvgPlaylistPlay = function SvgPlaylistPlay(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
-    React.createElement("path", { d: "M19 9H2v2h17V9zm0-4H2v2h17V5zM2 15h13v-2H2v2zm15-2v6l5-3-5-3z" })
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
+    React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" }),
+    React.createElement("path", { d: "M4 10h12v2H4zM4 6h12v2H4zM4 14h8v2H4zM14 14v6l5-3z" })
   );
 };
 
