@@ -6,10 +6,10 @@
   "module": "index.es.js",
   "sideEffects": false,
   "scripts": {
-    "prepare": "./build.js && pixo svg && npx @svgr/cli -d ./source/crypto ./svg/crypto && npx @svgr/cli -d ./source/md ./svg/md && ./colorize.js && npm run build:cjs && npm run build:es && create-index ./es -ri",
+    "prepare": "./build.js && npx @svgr/cli -d ./source/crypto ./svg/crypto && npx @svgr/cli -d ./source/md ./svg/md && ./colorize.js && create-index ./source -ri && npm run build:cjs && npm run build:es",
     "build:cjs": "cross-env BABEL_ENV=cjs babel source -d lib",
     "build:es": "babel source -d es",
-    "clean": "rm -r svg source lib es examples",
+    "clean": "rm -r svg source/md source/crypto lib es examples",
     "start": "cd demo && yarn start"
   },
   "keywords": [],

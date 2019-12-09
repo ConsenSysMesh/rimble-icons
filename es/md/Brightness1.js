@@ -11,8 +11,7 @@ var SvgBrightness1 = function SvgBrightness1(props) {
       width: props.size,
       fill: props.color ? props.color : "#000"
     }, props),
-    React.createElement("circle", { cx: 12, cy: 12, r: 10 }),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
+    React.createElement("circle", { cx: 12, cy: 12, r: 10 })
   );
 };
 
