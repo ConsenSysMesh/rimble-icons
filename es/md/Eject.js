@@ -11,7 +11,6 @@ var SvgEject = function SvgEject(props) {
       width: props.size,
       fill: props.color ? props.color : "#000"
     }, props),
-    React.createElement("path", { fill: "none", d: "M0 24V0h24v24H0z" }),
     React.createElement("path", { d: "M5 17h14v2H5zm7-12L5.33 15h13.34z" })
   );
 };

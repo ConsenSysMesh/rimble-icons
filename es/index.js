@@ -1,2 +1,2 @@
-export * from "./crypto/index";
+export * from "./tokens/index";
 export * from "./md/index";

@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const SVG = require("svgi");
 
-const sourceDir = path.join(__dirname, 'crypto-icons');
+const sourceDir = path.join(__dirname, 'token-icons');
 
 // THIS WILL GET THE DEFAULT COLOR OF THE SVG CIRCLE FILL
 fs.readdir(sourceDir, function (err, files) {
@@ -25,7 +25,7 @@ fs.readdir(sourceDir, function (err, files) {
             // FIND THE MATCHING FILE IN THE COMPILED DIRECTORY
             const fileCapitalized = file.charAt(0).toUpperCase() + file.slice(1);
             const fileExtension = fileCapitalized.substr(0, fileCapitalized.lastIndexOf(".")) + ".js";
-            const sourceFileCapitalized = path.join(__dirname + "/source/crypto", fileExtension);
+            const sourceFileCapitalized = path.join(__dirname + "/source/tokens", fileExtension);
 
             // THIS WILL REPLACE THE DEFAULT COLOR OF THE SVG CIRCLE WITH INHERIT
             fs.readFile(sourceFileCapitalized, 'utf8', function (err,jsData) {

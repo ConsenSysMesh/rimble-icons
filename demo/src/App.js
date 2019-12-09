@@ -12,9 +12,9 @@ import {
 } from "rimble-ui";
 // import * as icons from "@rimble/icons";
 import * as mdIcons from "@rimble/icons/es/md";
-import * as cryptoIcons from "@rimble/icons/es/crypto";
+import * as tokenIcons from "@rimble/icons/es/tokens";
 import { Star, Battery20 } from "@rimble/icons/es/md";
-import { Eth, Btc, Xuc } from "@rimble/icons/es/crypto";
+import { Eth, Btc, Xuc } from "@rimble/icons/es/tokens";
 import styled from "styled-components";
 
 const Truncate = styled(Box)([], {
@@ -112,7 +112,7 @@ const App = props => {
           </Flex>
 
           <Text bg={"light-gray"} p={3}>
-            import {`{ Btc, Eth }`} from "@rimble/icons/es/crypto";
+            import {`{ Btc, Eth }`} from "@rimble/icons/es/tokens";
           </Text>
 
           <Flex>
@@ -136,8 +136,8 @@ const App = props => {
             </Box>
           </Flex>
 
-          <Heading as="h2">Crypto</Heading>
-          <FilteredIcons icons={cryptoIcons} placeholder={"Eth"} />
+          <Heading as="h2">Tokens</Heading>
+          <FilteredIcons icons={tokenIcons} placeholder={"Eth"} />
 
           <Heading as="h2">Material</Heading>
           <FilteredIcons icons={mdIcons} placeholder={"Star"} />

@@ -11,8 +11,7 @@ var SvgSend = function SvgSend(props) {
       width: props.size,
       fill: props.color ? props.color : "#000"
     }, props),
-    React.createElement("path", { d: "M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" }),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
+    React.createElement("path", { d: "M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" })
   );
 };
 

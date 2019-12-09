@@ -11,20 +11,7 @@ var SvgLineWeight = function SvgLineWeight(props) {
       width: props.size,
       fill: props.color ? props.color : "#000"
     }, props),
-    React.createElement(
-      "defs",
-      null,
-      React.createElement("path", { id: "lineWeight_svg__a", d: "M0 0h24v24H0z" })
-    ),
-    React.createElement(
-      "clipPath",
-      { id: "lineWeight_svg__b" },
-      React.createElement("use", { xlinkHref: "#lineWeight_svg__a", overflow: "visible" })
-    ),
-    React.createElement("path", {
-      clipPath: "url(#lineWeight_svg__b)",
-      d: "M3 17h18v-2H3v2zm0 3h18v-1H3v1zm0-7h18v-3H3v3zm0-9v4h18V4H3z"
-    })
+    React.createElement("path", { d: "M3 17h18v-2H3v2zm0 3h18v-1H3v1zm0-7h18v-3H3v3zm0-9v4h18V4H3z" })
   );
 };
 
