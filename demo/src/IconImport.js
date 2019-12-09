@@ -10,11 +10,7 @@ import {
   Heading,
   Text
 } from "rimble-ui";
-// import * as icons from "@rimble/icons";
-import * as mdIcons from "@rimble/icons/es/md";
-import * as cryptoIcons from "@rimble/icons/es/crypto";
-import { Star, Battery20 } from "@rimble/icons/es/md";
-import { Eth, Btc, Xuc } from "@rimble/icons/es/crypto";
+import * as icons from "@rimble/icons";
 import styled from "styled-components";
 
 const Truncate = styled(Box)([], {
@@ -83,68 +79,19 @@ const FilteredIcons = ({ icons, placeholder }) => {
   );
 };
 
-const App = props => {
+const IconImport = props => {
   return (
     <ThemeProvider theme={theme} className="App">
       <BaseStyles>
         <Box m={4}>
           <Heading as="h1">Rimble Icons</Heading>
 
-          <Text>Single icon, named imports that supports tree-shaking</Text>
-
-          <Text bg={"light-gray"} p={3}>
-            import {`{ Star }`} from "@rimble/icons/es/md";
-          </Text>
-
-          <Flex>
-            <Box m={3}>
-              <Star size={"24px"} />
-            </Box>
-            <Box m={3}>
-              <Star size={"24px"} color={"red"} />
-            </Box>
-            <Box m={3}>
-              <Battery20 size={"24px"} />
-            </Box>
-            <Box m={3}>
-              <Battery20 size={"24px"} color={"red"} />
-            </Box>
-          </Flex>
-
-          <Text bg={"light-gray"} p={3}>
-            import {`{ Btc, Eth }`} from "@rimble/icons/es/crypto";
-          </Text>
-
-          <Flex>
-            <Box m={3}>
-              <Eth size={"24px"} />
-            </Box>
-            <Box m={3}>
-              <Eth size={"24px"} color={"red"} />
-            </Box>
-            <Box m={3}>
-              <Btc size={"24px"} />
-            </Box>
-            <Box m={3}>
-              <Btc size={"24px"} color={"red"} />
-            </Box>
-            <Box m={3}>
-              <Xuc size={"24px"} />
-            </Box>
-            <Box m={3}>
-              <Xuc size={"24px"} color={"red"} />
-            </Box>
-          </Flex>
-
-          <Heading as="h2">Crypto</Heading>
-          <FilteredIcons icons={cryptoIcons} placeholder={"Eth"} />
-
-          <Heading as="h2">Material</Heading>
-          <FilteredIcons icons={mdIcons} placeholder={"Star"} />
+          <Heading as="h2">All Icons</Heading>
+          <FilteredIcons icons={icons} placeholder={"Eth"} />
         </Box>
       </BaseStyles>
     </ThemeProvider>
   );
 };
 
-export default App;
+export default IconImport;
