@@ -12,7 +12,8 @@ var SvgSignalCellular3Bar = function SvgSignalCellular3Bar(props) {
       fill: props.color ? props.color : "#000"
     }, props),
     React.createElement("path", { fillOpacity: 0.3, d: "M2 22h20V2z" }),
-    React.createElement("path", { d: "M17 7L2 22h15z" })
+    React.createElement("path", { d: "M17 7L2 22h15z" }),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
   );
 };
 

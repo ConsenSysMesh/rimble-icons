@@ -11,8 +11,7 @@ var SvgTitle = function SvgTitle(props) {
       width: props.size,
       fill: props.color ? props.color : "#000"
     }, props),
-    React.createElement("path", { d: "M5 4v3h5.5v12h3V7H19V4z" }),
-    React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" })
+    React.createElement("path", { d: "M5 4v3h5.5v12h3V7H19V4z" })
   );
 };
 

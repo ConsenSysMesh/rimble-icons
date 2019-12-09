@@ -11,7 +11,8 @@ var SvgViewCarousel = function SvgViewCarousel(props) {
       width: props.size,
       fill: props.color ? props.color : "#000"
     }, props),
-    React.createElement("path", { d: "M7 19h10V4H7v15zm-5-2h4V6H2v11zM18 6v11h4V6h-4z" })
+    React.createElement("path", { d: "M7 19h10V4H7v15zm-5-2h4V6H2v11zM18 6v11h4V6h-4z" }),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
   );
 };
 

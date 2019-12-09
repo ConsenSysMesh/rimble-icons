@@ -5,5 +5,10 @@
     height: '{props.size}', 
     width: '{props.size}',
     fill: '{ props.color ? props.color : "#000" }'
+  },
+  svgo:false,
+  svgoConfig: {
+    minifyStyles: false,
+    convertColors: false
   }
 }

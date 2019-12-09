@@ -11,7 +11,6 @@ var SvgFiberSmartRecord = function SvgFiberSmartRecord(props) {
       width: props.size,
       fill: props.color ? props.color : "#000"
     }, props),
-    React.createElement("path", { fill: "none", d: "M24 24H0V0h24v24z" }),
     React.createElement(
       "g",
       { fill: "#010101" },

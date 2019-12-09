@@ -1,5 +1,5 @@
 
-# Icons (1301)
+# Icons (1300)
 
 - `AcUnit`
 - `AccessAlarm`
@@ -1105,7 +1105,6 @@
 - `Gno`
 - `Gnt`
 - `Grc`
-- `Grs`
 - `Gto`
 - `Gup`
 - `Gvt`
