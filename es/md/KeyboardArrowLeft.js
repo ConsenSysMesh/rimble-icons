@@ -11,7 +11,8 @@ var SvgKeyboardArrowLeft = function SvgKeyboardArrowLeft(props) {
       width: props.size,
       fill: props.color ? props.color : "#000"
     }, props),
-    React.createElement("path", { d: "M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z" })
+    React.createElement("path", { d: "M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z" }),
+    React.createElement("path", { d: "M0-.5h24v24H0z", fill: "none" })
   );
 };
 

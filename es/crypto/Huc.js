@@ -19,7 +19,7 @@ var SvgHuc = function SvgHuc(props) {
       fillRule: "evenodd",
       clipRule: "evenodd",
       d: "M8.625 10.875h6.75V7.5h2.25v12h-2.25v-6.375h-6.75V16.5h-2.25v-12h2.25v6.375z",
-      fill: "#fff"
+      fill: "white"
     })
   );
 };

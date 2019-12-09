@@ -18,9 +18,9 @@ var SvgMod = function SvgMod(props) {
     React.createElement("path", {
       opacity: 0.5,
       d: "M17.239 15.755V6.06l-4.734 4.837 4.734 4.858z",
-      fill: "#fff"
+      fill: "white"
     }),
-    React.createElement("path", { d: "M6.75 5.25l.228.234 6.35 6.506L6.75 18.74V5.25z", fill: "#fff" })
+    React.createElement("path", { d: "M6.75 5.25l.228.234 6.35 6.506L6.75 18.74V5.25z", fill: "white" })
   );
 };
 

@@ -17,7 +17,7 @@ var SvgIcn = function SvgIcn(props) {
     }),
     React.createElement("path", {
       d: "M15.625 5.25h2v13.5h-2V5.25zM12.292 12h2v6.75h-2V12zM8.958 8.625h2V18.75h-2V8.625zm-3.333 6.75h2v3.375h-2v-3.375z",
-      fill: "#fff"
+      fill: "white"
     })
   );
 };

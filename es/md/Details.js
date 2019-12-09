@@ -11,7 +11,6 @@ var SvgDetails = function SvgDetails(props) {
       width: props.size,
       fill: props.color ? props.color : "#000"
     }, props),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M3 4l9 16 9-16H3zm3.38 2h11.25L12 16 6.38 6z" })
   );
 };

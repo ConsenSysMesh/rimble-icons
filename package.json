@@ -6,7 +6,6 @@
   "module": "index.es.js",
   "sideEffects": false,
   "scripts": {
-    "prepare": "./build.js && pixo svg && npx @svgr/cli -d ./source/crypto ./svg/crypto && npx @svgr/cli -d ./source/md ./svg/md && ./colorize.js && npm run build:cjs && npm run build:es && create-index ./es -ri",
     "build:cjs": "cross-env BABEL_ENV=cjs babel source -d lib",
     "build:es": "babel source -d es",
     "clean": "rm -r svg source lib es examples",
@@ -45,6 +44,22 @@
   },
   "x0": {
     "cssLibrary": "styled-components"
+  },
+  "svgr": {
+    "dimensions": false,
+    "svgProps": {
+      "viewBox": "0 0 24 24",
+      "height": "{props.size}",
+      "width": "{props.size}",
+      "fill": "{ props.color ? props.color : '#000' }"
+    },
+    "svgoConfig": {
+      "plugins": [
+        {
+          "convertColors": false
+        }
+      ]
+    }
   },
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",

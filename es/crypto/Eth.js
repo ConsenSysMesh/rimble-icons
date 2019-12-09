@@ -17,7 +17,7 @@ var SvgEth = function SvgEth(props) {
     }),
     React.createElement("path", {
       d: "M12 15.243l4.5-2.662-4.5 6.343-4.5-6.342 4.5 2.662v-.001zm0-10.74l4.5 7.087-4.5 2.662-4.5-2.662L12 4.502z",
-      fill: "#fff"
+      fill: "white"
     })
   );
 };

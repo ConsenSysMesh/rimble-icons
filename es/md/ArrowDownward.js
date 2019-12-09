@@ -11,6 +11,7 @@ var SvgArrowDownward = function SvgArrowDownward(props) {
       width: props.size,
       fill: props.color ? props.color : "#000"
     }, props),
+    React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" }),
     React.createElement("path", {
       fill: "#010101",
       d: "M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"

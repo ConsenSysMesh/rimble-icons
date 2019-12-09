@@ -19,7 +19,7 @@ var SvgNav = function SvgNav(props) {
       fillRule: "evenodd",
       clipRule: "evenodd",
       d: "M15.99 16.5h-3.597l-2.849-5.254L7.348 16.5H3.75l3.763-9h3.598l2.959 5.457L16.652 7.5h3.598l-4.26 9z",
-      fill: "#fff"
+      fill: "white"
     })
   );
 };

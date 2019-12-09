@@ -17,7 +17,7 @@ var SvgSalt = function SvgSalt(props) {
     }),
     React.createElement("path", {
       d: "M12.375 7.834l4.353 9.16H8.022l4.353-9.16zm0-4.084l-7.125 15H19.5l-7.125-15z",
-      fill: "#fff"
+      fill: "white"
     })
   );
 };

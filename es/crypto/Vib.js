@@ -17,7 +17,7 @@ var SvgVib = function SvgVib(props) {
     }),
     React.createElement("path", {
       d: "M5.25 5.25H8.4l5.4 9.581V5.25h2.7v13.5h-3.6L5.25 5.25z",
-      fill: "#fff"
+      fill: "white"
     })
   );
 };

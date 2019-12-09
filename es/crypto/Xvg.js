@@ -17,9 +17,9 @@ var SvgXvg = function SvgXvg(props) {
     }),
     React.createElement("path", {
       d: "M7.207 7.751L6 5.25h12l-1.194 2.501H18L11.963 20.25 6 7.751h1.207zm0 0l4.829 9.998 4.77-9.998H7.208z",
-      fill: "#fff"
+      fill: "white"
     }),
-    React.createElement("path", { opacity: 0.504, d: "M12 18.375L6 5.25h12l-6 13.125z", fill: "#fff" })
+    React.createElement("path", { opacity: 0.504, d: "M12 18.375L6 5.25h12l-6 13.125z", fill: "white" })
   );
 };
 

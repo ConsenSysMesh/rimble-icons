@@ -19,7 +19,7 @@ var SvgEmc = function SvgEmc(props) {
       fillRule: "evenodd",
       clipRule: "evenodd",
       d: "M6 6v2.4h4.8v2.4H6v2.4h7.2V8.4h2.4v7.2H6V18h12V6H6z",
-      fill: "#fff"
+      fill: "white"
     })
   );
 };

@@ -17,7 +17,7 @@ var SvgNio = function SvgNio(props) {
     }),
     React.createElement("path", {
       d: "M12 10.323H8.383L12 4.125l3.617 6.198H12zm.491 7.302l1.886-3.232 1.809-3.098 3.689 6.33h-7.384zm-2.868-3.232l1.886 3.232H4.125l3.69-6.33 1.807 3.098z",
-      fill: "#fff"
+      fill: "white"
     })
   );
 };
