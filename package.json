@@ -6,7 +6,7 @@
   "module": "index.es.js",
   "sideEffects": false,
   "scripts": {
-    "prepare": "./build.js && pixo svg && npm run build:cjs && npm run build:es",
+    "prepare": "./build.js && pixo svg && npx @svgr/cli -d ./source/crypto ./svg/crypto && npx @svgr/cli -d ./source/md ./svg/md && npm run build:cjs && npm run build:es && create-index ./es -ri",
     "build:cjs": "cross-env BABEL_ENV=cjs babel source -d lib",
     "build:es": "babel source -d es",
     "clean": "rm -r svg source lib es examples",
@@ -16,6 +16,7 @@
   "author": "Rimble",
   "license": "MIT",
   "dependencies": {
+    "@svgr/cli": "^4.3.3",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
@@ -39,7 +40,7 @@
   "pixo": {
     "outDir": "source",
     "template": "styledSystem",
-    "index": true,
+    "index": false,
     "iconComponent": true
   },
   "x0": {
@@ -47,6 +48,7 @@
   },
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "create-index": "^2.5.0",
     "cross-env": "^6.0.3"
   }
 }

@@ -7,9 +7,14 @@ import {
   Box,
   Field,
   Input,
-  Heading
+  Heading,
+  Text
 } from "rimble-ui";
-import * as icons from "@rimble/icons";
+// import * as icons from "@rimble/icons";
+import * as mdIcons from "@rimble/icons/es/md";
+import * as cryptoIcons from "@rimble/icons/es/crypto";
+import { Star } from "@rimble/icons/es/md";
+import { Eth, Btc } from "@rimble/icons/es/crypto";
 import styled from "styled-components";
 
 const Truncate = styled(Box)([], {
@@ -18,7 +23,7 @@ const Truncate = styled(Box)([], {
   textOverflow: "ellipsis"
 });
 
-const IconList = ({ filterValue }) => {
+const IconList = ({ filterValue, icons }) => {
   console.log("filterValue", filterValue);
   return Object.keys(icons)
     .filter(key => key !== "Icon" && key.includes(filterValue))
@@ -41,21 +46,21 @@ const IconList = ({ filterValue }) => {
     ));
 };
 
-const FilteredIcons = () => {
+const FilteredIcons = ({ icons, placeholder }) => {
   const [filterValue, setFilterValue] = useState("");
   return (
     <Box my={4}>
       <Field label="Filter icons">
         <Input
           type="text"
-          placeholder="e.g. Eth"
+          placeholder={`e.g. ${placeholder}`}
           onChange={e => setFilterValue(e.target.value)}
           value={filterValue}
         />
       </Field>
 
       <Flex flexWrap="wrap">
-        <IconList filterValue={filterValue} />
+        <IconList filterValue={filterValue} icons={icons} />
       </Flex>
     </Box>
   );
@@ -67,7 +72,40 @@ const App = props => {
       <BaseStyles>
         <Box m={4}>
           <Heading as="h1">Rimble Icons</Heading>
-          <FilteredIcons icons={icons} />
+
+          <Text>Single icon, named imports that supports tree-shaking</Text>
+
+          <Text bg={"light-gray"} p={3}>
+            import {`{ Star }`} from "@rimble/icons/es/md";
+          </Text>
+
+          <Flex>
+            <Box m={3}>
+              <Star size={"24px"} />
+            </Box>
+            <Box m={3}>
+              <Star size={"24px"} color={"red"} />
+            </Box>
+          </Flex>
+
+          <Text bg={"light-gray"} p={3}>
+            import {`{ Btc, Eth }`} from "@rimble/icons/es/crypto";
+          </Text>
+
+          <Flex>
+            <Box m={3}>
+              <Eth size={"24px"} />
+            </Box>
+            <Box m={3}>
+              <Btc size={"24px"} />
+            </Box>
+          </Flex>
+
+          <Heading as="h2">Crypto</Heading>
+          <FilteredIcons icons={cryptoIcons} placeholder={"Eth"} />
+
+          <Heading as="h2">Material</Heading>
+          <FilteredIcons icons={mdIcons} placeholder={"Star"} />
         </Box>
       </BaseStyles>
     </ThemeProvider>
