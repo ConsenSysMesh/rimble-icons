@@ -11,7 +11,8 @@ var SvgDehaze = function SvgDehaze(props) {
       width: props.size,
       fill: props.color ? props.color : "#000"
     }, props),
-    React.createElement("path", { d: "M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z" })
+    React.createElement("path", { d: "M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z" }),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
   );
 };
 

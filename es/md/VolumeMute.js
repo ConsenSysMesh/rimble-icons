@@ -11,7 +11,8 @@ var SvgVolumeMute = function SvgVolumeMute(props) {
       width: props.size,
       fill: props.color ? props.color : "#000"
     }, props),
-    React.createElement("path", { d: "M7 9v6h4l5 5V4l-5 5H7z" })
+    React.createElement("path", { d: "M7 9v6h4l5 5V4l-5 5H7z" }),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
   );
 };
 

@@ -11,6 +11,7 @@ var SvgFiberManualRecord = function SvgFiberManualRecord(props) {
       width: props.size,
       fill: props.color ? props.color : "#000"
     }, props),
+    React.createElement("path", { fill: "none", d: "M24 24H0V0h24v24z" }),
     React.createElement("circle", { fill: "#010101", cx: 12, cy: 12, r: 8 })
   );
 };

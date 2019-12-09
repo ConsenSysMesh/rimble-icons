@@ -11,7 +11,8 @@ var SvgFastForward = function SvgFastForward(props) {
       width: props.size,
       fill: props.color ? props.color : "#000"
     }, props),
-    React.createElement("path", { d: "M4 18l8.5-6L4 6v12zm9-12v12l8.5-6L13 6z" })
+    React.createElement("path", { d: "M4 18l8.5-6L4 6v12zm9-12v12l8.5-6L13 6z" }),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
   );
 };
 
