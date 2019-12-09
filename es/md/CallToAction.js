@@ -5,7 +5,12 @@ import React from "react";
 var SvgCallToAction = function SvgCallToAction(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
     React.createElement("path", { d: "M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3v-3h18v3z" })
   );
 };

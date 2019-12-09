@@ -5,7 +5,12 @@ import React from "react";
 var SvgBatteryCharging20 = function SvgBatteryCharging20(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
     React.createElement("path", { d: "M11 20v-3H7v3.67C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V17h-4.4L11 20z" }),
     React.createElement("path", {
       fillOpacity: 0.3,

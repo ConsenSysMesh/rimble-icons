@@ -5,9 +5,13 @@ import React from "react";
 var SvgVerticalAlignTop = function SvgVerticalAlignTop(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
-    React.createElement("path", { d: "M8 11h3v10h2V11h3l-4-4-4 4zM4 3v2h16V3H4z" }),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
+    React.createElement("path", { d: "M8 11h3v10h2V11h3l-4-4-4 4zM4 3v2h16V3H4z" })
   );
 };
 

@@ -5,7 +5,12 @@ import React from "react";
 var SvgVolumeMute = function SvgVolumeMute(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
     React.createElement("path", { d: "M7 9v6h4l5 5V4l-5 5H7z" })
   );
 };

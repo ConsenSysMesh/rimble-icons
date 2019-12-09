@@ -5,21 +5,13 @@ import React from "react";
 var SvgTextFields = function SvgTextFields(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
-    React.createElement(
-      "defs",
-      null,
-      React.createElement("path", { id: "textFields_svg__a", d: "M24 24H0V0h24v24z" })
-    ),
-    React.createElement(
-      "clipPath",
-      { id: "textFields_svg__b" },
-      React.createElement("use", { xlinkHref: "#textFields_svg__a", overflow: "visible" })
-    ),
-    React.createElement("path", {
-      clipPath: "url(#textFields_svg__b)",
-      d: "M2.5 4v3h5v12h3V7h5V4h-13zm19 5h-9v3h3v7h3v-7h3V9z"
-    })
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
+    React.createElement("path", { d: "M2.5 4v3h5v12h3V7h5V4h-13zm19 5h-9v3h3v7h3v-7h3V9z" })
   );
 };
 

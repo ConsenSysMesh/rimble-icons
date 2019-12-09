@@ -5,7 +5,12 @@ import React from "react";
 var SvgSubdirectoryArrowLeft = function SvgSubdirectoryArrowLeft(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
     React.createElement("path", { d: "M11 9l1.42 1.42L8.83 14H18V4h2v12H8.83l3.59 3.58L11 21l-6-6 6-6z" })
   );
 };

@@ -7,7 +7,7 @@ const upperFirst = require("lodash.upperfirst");
 const uniqBy = require("lodash.uniqby");
 
 const pkgPath = path.join(__dirname, "./node_modules/material-design-icons");
-const cryptoPath = path.join(__dirname, "./crypto-icons");
+const cryptoPath = path.join(__dirname, "./token-icons");
 
 const outBaseDir = path.join(__dirname, "./svg");
 const examplesBaseDir = path.join(__dirname, "./examples");
@@ -15,8 +15,8 @@ const examplesBaseDir = path.join(__dirname, "./examples");
 const mdOutDir = path.join(__dirname + "/svg", "./md");
 const mdExamplesDir = path.join(__dirname + "/examples", "./md");
 
-const cryptoOutDir = path.join(__dirname + "/svg", "./crypto");
-const cryptoExamplesDir = path.join(__dirname + "/examples", "./crypto");
+const cryptoOutDir = path.join(__dirname + "/svg", "./tokens");
+const cryptoExamplesDir = path.join(__dirname + "/examples", "./tokens");
 
 const ignore = (file, stats) => {
   if (stats.isDirectory()) return false;
@@ -131,7 +131,7 @@ const copy = async () => {
   cryptoIcons.forEach(writeCryptoFile);
   // Create crypto examples
   cryptoIcons.forEach(createCryptoExample);
-  console.log(cryptoIcons.length, " crypto icons copied");
+  console.log(cryptoIcons.length, " token icons copied");
 
   // Combine icon sets
   const combinedIcons = mdIcons.concat(cryptoIcons);

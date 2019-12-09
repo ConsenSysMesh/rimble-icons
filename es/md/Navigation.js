@@ -5,8 +5,12 @@ import React from "react";
 var SvgNavigation = function SvgNavigation(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
     React.createElement("path", { d: "M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" })
   );
 };

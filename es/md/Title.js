@@ -5,9 +5,13 @@ import React from "react";
 var SvgTitle = function SvgTitle(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
-    React.createElement("path", { d: "M5 4v3h5.5v12h3V7H19V4z" }),
-    React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" })
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
+    React.createElement("path", { d: "M5 4v3h5.5v12h3V7H19V4z" })
   );
 };
 

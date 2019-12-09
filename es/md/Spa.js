@@ -5,7 +5,12 @@ import React from "react";
 var SvgSpa = function SvgSpa(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
     React.createElement("path", {
       fill: "none",
       d: "M0 0h24v24H0V0zm13.97 21.49c-.63.23-1.29.4-1.97.51.68-.12 1.33-.29 1.97-.51zM12 22z"

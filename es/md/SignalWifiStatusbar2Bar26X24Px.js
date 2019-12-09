@@ -5,7 +5,12 @@ import React from "react";
 var SvgSignalWifiStatusbar2Bar26X24Px = function SvgSignalWifiStatusbar2Bar26X24Px(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
     React.createElement("path", {
       fillOpacity: 0.3,
       d: "M13.01 21.99L25.58 6.32C25.1 5.96 20.26 2 13 2S.9 5.96.42 6.32l12.57 15.66.01.02.01-.01z"

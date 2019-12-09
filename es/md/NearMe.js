@@ -5,8 +5,12 @@ import React from "react";
 var SvgNearMe = function SvgNearMe(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
-    React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" }),
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
     React.createElement("path", { d: "M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z" })
   );
 };

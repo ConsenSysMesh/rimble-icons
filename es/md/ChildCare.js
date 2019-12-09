@@ -5,7 +5,12 @@ import React from "react";
 var SvgChildCare = function SvgChildCare(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0z" }),
     React.createElement("circle", { cx: 14.5, cy: 10.5, r: 1.25 }),
     React.createElement("circle", { cx: 9.5, cy: 10.5, r: 1.25 }),

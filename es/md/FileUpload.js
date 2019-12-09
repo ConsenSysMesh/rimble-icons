@@ -5,7 +5,13 @@ import React from "react";
 var SvgFileUpload = function SvgFileUpload(props) {
   return React.createElement(
     "svg",
-    _extends({ viewBox: "0 0 24 24", height: props.size, width: props.size }, props),
+    _extends({
+      viewBox: "0 0 24 24",
+      height: props.size,
+      width: props.size,
+      fill: props.color ? props.color : "#000"
+    }, props),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z" })
   );
 };
