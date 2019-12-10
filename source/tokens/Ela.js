@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgEla = props => (
-  <svg
+  <Svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "#3FBADF"}
     height={props.size}
@@ -41,7 +50,11 @@ const SvgEla = props => (
       fill="white"
       fillOpacity={0.5}
     />
-  </svg>
+  </Svg>
 );
 
+SvgEla.displayName = "SvgEla";
+SvgEla.defaultProps = {
+  size: 24
+};
 export default SvgEla;

@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgDash = props => (
-  <svg
+  <Svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "#1C75BC"}
     height={props.size}
@@ -18,7 +27,11 @@ const SvgDash = props => (
       d="M19.928 9.728L18.4 14.514s-.943 2.386-3.185 2.386H4.398l.773-2.385h9.8l1.542-4.787H6.728l.758-2.385h10.757c2.357 0 1.685 2.385 1.685 2.385zM4.786 11.015h5.8l-.743 2.213H4.027l.758-2.213z"
       fill="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgDash.displayName = "SvgDash";
+SvgDash.defaultProps = {
+  size: 24
+};
 export default SvgDash;

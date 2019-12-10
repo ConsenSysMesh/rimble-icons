@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgElix = props => (
-  <svg
+  <Svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "#00ADED"}
     height={props.size}
@@ -31,7 +40,11 @@ const SvgElix = props => (
       fill="white"
       fillOpacity={0.145}
     />
-  </svg>
+  </Svg>
 );
 
+SvgElix.displayName = "SvgElix";
+SvgElix.defaultProps = {
+  size: 24
+};
 export default SvgElix;

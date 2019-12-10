@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgKrb = props => (
-  <svg
+  <Svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "#00AEEF"}
     height={props.size}
@@ -16,7 +25,11 @@ const SvgKrb = props => (
       d="M11.82 11.03c.178-.031.336-.098.474-.2.138-.1.268-.271.39-.505l2.72-5.24a1.45 1.45 0 01.386-.425.9.9 0 01.526-.16h1.724l-3.386 6.164c-.15.253-.32.46-.51.619-.19.158-.405.28-.638.362.363.094.667.246.915.46.245.21.478.507.695.889l3.259 6.506h-1.898c-.383 0-.691-.206-.924-.615l-2.671-5.513c-.138-.246-.288-.421-.45-.527a1.257 1.257 0 00-.611-.183v2.798h-1.492v-2.81H9.232v6.85H7.125v-15h2.107v6.553h1.097V7.813h1.492v3.218h-.001z"
       fill="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgKrb.displayName = "SvgKrb";
+SvgKrb.defaultProps = {
+  size: 24
+};
 export default SvgKrb;

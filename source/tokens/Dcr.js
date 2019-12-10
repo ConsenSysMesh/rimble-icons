@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgDcr = props => (
-  <svg
+  <Svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "#2ED6A1"}
     height={props.size}
@@ -16,7 +25,11 @@ const SvgDcr = props => (
       d="M11.142 13.215h3.315a2.24 2.24 0 002.233-2.247 2.24 2.24 0 00-2.233-2.246h-1.055l-2.26-1.972h3.315a4.201 4.201 0 014.116 3.409 4.224 4.224 0 01-2.534 4.717l2.613 2.282H15.66l-4.517-3.944v.001zm1.618-2.52H9.445A2.24 2.24 0 007.21 12.94a2.24 2.24 0 002.234 2.247H10.5l2.259 1.972H9.445a4.201 4.201 0 01-4.116-3.408 4.224 4.224 0 012.534-4.718L5.251 6.75h2.994l4.515 3.945z"
       fill="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgDcr.displayName = "SvgDcr";
+SvgDcr.defaultProps = {
+  size: 24
+};
 export default SvgDcr;

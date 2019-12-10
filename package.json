@@ -46,22 +46,6 @@
   "x0": {
     "cssLibrary": "styled-components"
   },
-  "svgr": {
-    "dimensions": false,
-    "svgProps": {
-      "viewBox": "0 0 24 24",
-      "height": "{props.size}",
-      "width": "{props.size}",
-      "fill": "{ props.color ? props.color : '#000' }"
-    },
-    "svgoConfig": {
-      "plugins": [
-        {
-          "convertColors": false
-        }
-      ]
-    }
-  },
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "create-index": "^2.5.0",

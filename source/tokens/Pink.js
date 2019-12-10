@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgPink = props => (
-  <svg
+  <Svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "#ED79AA"}
     height={props.size}
@@ -25,7 +34,11 @@ const SvgPink = props => (
       d="M8.76 18.588v-6.833h.006c.105-1.953 1.711-3.505 3.678-3.505 2.034 0 3.683 1.66 3.683 3.71 0 2.048-1.649 3.708-3.682 3.708a3.647 3.647 0 01-1.863-.507v4.133a7.368 7.368 0 01-1.821-.705v-.001zm3.684-4.754a1.868 1.868 0 001.862-1.874 1.869 1.869 0 00-1.862-1.876 1.869 1.869 0 00-1.862 1.876c0 1.034.834 1.874 1.862 1.874z"
       fill="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgPink.displayName = "SvgPink";
+SvgPink.defaultProps = {
+  size: 24
+};
 export default SvgPink;

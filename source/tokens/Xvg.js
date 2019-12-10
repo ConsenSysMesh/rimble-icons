@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgXvg = props => (
-  <svg
+  <Svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "#00CBFF"}
     height={props.size}
@@ -17,7 +26,11 @@ const SvgXvg = props => (
       fill="white"
     />
     <path opacity={0.504} d="M12 18.375L6 5.25h12l-6 13.125z" fill="white" />
-  </svg>
+  </Svg>
 );
 
+SvgXvg.displayName = "SvgXvg";
+SvgXvg.defaultProps = {
+  size: 24
+};
 export default SvgXvg;

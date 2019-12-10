@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgEos = props => (
-  <svg
+  <Svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "black"}
     height={props.size}
@@ -19,7 +28,11 @@ const SvgEos = props => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-  </svg>
+  </Svg>
 );
 
+SvgEos.displayName = "SvgEos";
+SvgEos.defaultProps = {
+  size: 24
+};
 export default SvgEos;

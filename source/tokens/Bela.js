@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgBela = props => (
-  <svg
+  <Svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "#13A0F6"}
     height={props.size}
@@ -18,7 +27,11 @@ const SvgBela = props => (
       d="M6.223 8.676a1.817 1.817 0 01-.973-1.61 1.812 1.812 0 113.415-.85 6.668 6.668 0 013.376-.912c3.704 0 6.709 3.01 6.709 6.723s-3.004 6.723-6.71 6.723c-3.705 0-6.709-3.01-6.709-6.723a6.705 6.705 0 01.892-3.351zm5.817 6.659c1.823 0 3.3-1.481 3.3-3.308a3.304 3.304 0 00-3.3-3.307 3.304 3.304 0 00-3.3 3.307 3.304 3.304 0 003.3 3.308z"
       fill="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgBela.displayName = "SvgBela";
+SvgBela.defaultProps = {
+  size: 24
+};
 export default SvgBela;

@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgWtc = props => (
-  <svg
+  <Svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "#8200FF"}
     height={props.size}
@@ -25,7 +34,11 @@ const SvgWtc = props => (
       d="M9.673 9.985v4.321c0 .083.01.165.03.246.129.503.62.824 1.133.76v.704a.508.508 0 01-.392.492l-2.585.633a.517.517 0 01-.643-.492v-5.667c0-.232.161-.435.391-.491l2.066-.506zm5.69.032v4.305c0 .083.01.165.03.246.139.542.7.872 1.255.737l.007-.002v.712a.51.51 0 01-.391.492l-2.587.633a.517.517 0 01-.642-.49v-5.668c0-.232.161-.435.392-.491l1.934-.474h.001z"
       fill="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgWtc.displayName = "SvgWtc";
+SvgWtc.defaultProps = {
+  size: 24
+};
 export default SvgWtc;

@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgPivx = props => (
-  <svg
+  <Svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "#5E4778"}
     height={props.size}
@@ -19,7 +28,11 @@ const SvgPivx = props => (
       fill="white"
       stroke="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgPivx.displayName = "SvgPivx";
+SvgPivx.defaultProps = {
+  size: 24
+};
 export default SvgPivx;

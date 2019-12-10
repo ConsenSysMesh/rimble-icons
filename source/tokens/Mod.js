@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgMod = props => (
-  <svg
+  <Svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "#09547D"}
     height={props.size}
@@ -18,7 +27,11 @@ const SvgMod = props => (
       fill="white"
     />
     <path d="M6.75 5.25l.228.234 6.35 6.506L6.75 18.74V5.25z" fill="white" />
-  </svg>
+  </Svg>
 );
 
+SvgMod.displayName = "SvgMod";
+SvgMod.defaultProps = {
+  size: 24
+};
 export default SvgMod;

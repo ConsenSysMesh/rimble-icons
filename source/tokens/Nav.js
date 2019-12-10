@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgNav = props => (
-  <svg
+  <Svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "#7D59B5"}
     height={props.size}
@@ -18,7 +27,11 @@ const SvgNav = props => (
       d="M15.99 16.5h-3.597l-2.849-5.254L7.348 16.5H3.75l3.763-9h3.598l2.959 5.457L16.652 7.5h3.598l-4.26 9z"
       fill="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgNav.displayName = "SvgNav";
+SvgNav.defaultProps = {
+  size: 24
+};
 export default SvgNav;
