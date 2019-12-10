@@ -12,7 +12,7 @@ var SvgNxs = function SvgNxs(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#4099CD",
+      fill: props.color ? "currentcolor" : "#4099CD",
       height: props.size,
       width: props.size
     }, props),

@@ -12,7 +12,7 @@ var SvgCenz = function SvgCenz(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#3089F2",
+      fill: props.color ? "currentcolor" : "#3089F2",
       height: props.size,
       width: props.size
     }, props),

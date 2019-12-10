@@ -14,7 +14,7 @@ var SvgChangeHistory = function SvgChangeHistory(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? props.color : "#000"
+      fill: props.color ? "currentcolor" : "#000"
     }, props),
     React.createElement("path", { d: "M12 7.77L18.39 18H5.61L12 7.77M12 4L2 20h20L12 4z" }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" })

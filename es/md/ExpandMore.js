@@ -14,10 +14,9 @@ var SvgExpandMore = function SvgExpandMore(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? props.color : "#000"
+      fill: props.color ? "currentcolor" : "#000"
     }, props),
-    React.createElement("path", { d: "M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" }),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
+    React.createElement("path", { d: "M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" })
   );
 };
 

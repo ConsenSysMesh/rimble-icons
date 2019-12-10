@@ -12,7 +12,7 @@ const Svg = styled("svg")(
 const SvgTel = props => (
   <Svg
     viewBox="0 0 24 24"
-    fill={props.color ? props.color : "#14C8FF"}
+    fill={props.color ? "currentcolor" : "#14C8FF"}
     height={props.size}
     width={props.size}
     {...props}

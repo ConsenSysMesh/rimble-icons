@@ -14,7 +14,7 @@ var SvgRateReview = function SvgRateReview(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? props.color : "#000"
+      fill: props.color ? "currentcolor" : "#000"
     }, props),
     React.createElement("path", {
       d: "M0 0h24v24H0zm15.35 6.41l-1.77-1.77c-.2-.2-.51-.2-.71 0L6 11.53V14h2.47l6.88-6.88c.2-.19.2-.51 0-.71z",

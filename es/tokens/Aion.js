@@ -12,7 +12,7 @@ var SvgAion = function SvgAion(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#00BFEC",
+      fill: props.color ? "currentcolor" : "#00BFEC",
       height: props.size,
       width: props.size
     }, props),

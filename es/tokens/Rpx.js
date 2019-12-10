@@ -12,7 +12,7 @@ var SvgRpx = function SvgRpx(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#8D181B",
+      fill: props.color ? "currentcolor" : "#8D181B",
       height: props.size,
       width: props.size
     }, props),

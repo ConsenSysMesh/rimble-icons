@@ -12,7 +12,7 @@ var SvgReq = function SvgReq(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#6CFCCD",
+      fill: props.color ? "currentcolor" : "#6CFCCD",
       height: props.size,
       width: props.size
     }, props),

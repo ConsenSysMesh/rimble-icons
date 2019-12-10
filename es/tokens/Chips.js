@@ -12,7 +12,7 @@ var SvgChips = function SvgChips(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#598182",
+      fill: props.color ? "currentcolor" : "#598182",
       height: props.size,
       width: props.size
     }, props),

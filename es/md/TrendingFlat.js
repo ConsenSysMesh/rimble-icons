@@ -14,7 +14,7 @@ var SvgTrendingFlat = function SvgTrendingFlat(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? props.color : "#000"
+      fill: props.color ? "currentcolor" : "#000"
     }, props),
     React.createElement("path", { d: "M22 12l-4-4v3H3v2h15v3z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })

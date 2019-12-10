@@ -12,7 +12,7 @@ var SvgOnt = function SvgOnt(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#32A4BE",
+      fill: props.color ? "currentcolor" : "#32A4BE",
       height: props.size,
       width: props.size
     }, props),

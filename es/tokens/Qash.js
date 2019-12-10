@@ -12,7 +12,7 @@ var SvgQash = function SvgQash(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#1347E8",
+      fill: props.color ? "currentcolor" : "#1347E8",
       height: props.size,
       width: props.size
     }, props),

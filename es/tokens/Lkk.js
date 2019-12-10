@@ -12,7 +12,7 @@ var SvgLkk = function SvgLkk(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#9D01EB",
+      fill: props.color ? "currentcolor" : "#9D01EB",
       height: props.size,
       width: props.size
     }, props),

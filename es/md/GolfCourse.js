@@ -14,7 +14,7 @@ var SvgGolfCourse = function SvgGolfCourse(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? props.color : "#000"
+      fill: props.color ? "currentcolor" : "#000"
     }, props),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" }),
     React.createElement("circle", { cx: 19.5, cy: 19.5, r: 1.5 }),

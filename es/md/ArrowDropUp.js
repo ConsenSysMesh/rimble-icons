@@ -14,10 +14,9 @@ var SvgArrowDropUp = function SvgArrowDropUp(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? props.color : "#000"
+      fill: props.color ? "currentcolor" : "#000"
     }, props),
-    React.createElement("path", { d: "M7 14l5-5 5 5z" }),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
+    React.createElement("path", { d: "M7 14l5-5 5 5z" })
   );
 };
 

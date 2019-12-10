@@ -12,7 +12,7 @@ var SvgFlo = function SvgFlo(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#2080A2",
+      fill: props.color ? "currentcolor" : "#2080A2",
       height: props.size,
       width: props.size
     }, props),

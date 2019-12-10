@@ -12,7 +12,7 @@ var SvgNeo = function SvgNeo(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#58BF00",
+      fill: props.color ? "currentcolor" : "#58BF00",
       height: props.size,
       width: props.size
     }, props),

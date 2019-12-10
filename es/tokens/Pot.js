@@ -12,7 +12,7 @@ var SvgPot = function SvgPot(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#105B2F",
+      fill: props.color ? "currentcolor" : "#105B2F",
       height: props.size,
       width: props.size
     }, props),

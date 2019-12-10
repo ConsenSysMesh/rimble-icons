@@ -12,7 +12,7 @@ var SvgAda = function SvgAda(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#3CC8C8",
+      fill: props.color ? "currentcolor" : "#3CC8C8",
       height: props.size,
       width: props.size
     }, props),

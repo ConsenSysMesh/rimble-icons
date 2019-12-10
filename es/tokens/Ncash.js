@@ -12,7 +12,7 @@ var SvgNcash = function SvgNcash(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#36A9CF",
+      fill: props.color ? "currentcolor" : "#36A9CF",
       height: props.size,
       width: props.size
     }, props),

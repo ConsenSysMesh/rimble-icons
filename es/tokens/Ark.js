@@ -12,7 +12,7 @@ var SvgArk = function SvgArk(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#F70000",
+      fill: props.color ? "currentcolor" : "#F70000",
       height: props.size,
       width: props.size
     }, props),

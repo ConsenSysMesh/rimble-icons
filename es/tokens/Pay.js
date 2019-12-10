@@ -12,7 +12,7 @@ var SvgPay = function SvgPay(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#302C2C",
+      fill: props.color ? "currentcolor" : "#302C2C",
       height: props.size,
       width: props.size
     }, props),

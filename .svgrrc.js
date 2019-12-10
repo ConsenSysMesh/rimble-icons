@@ -6,7 +6,7 @@ module.exports = {
     viewBox: "0 0 24 24",
     height: "{props.size}",
     width: "{props.size}",
-    fill: "{ props.color ? props.color : '#000' }"
+    fill: "{ props.color ? 'currentcolor' : '#000' }"
   },
   svgoConfig: {
     plugins: [

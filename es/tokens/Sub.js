@@ -12,7 +12,7 @@ var SvgSub = function SvgSub(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#E53431",
+      fill: props.color ? "currentcolor" : "#E53431",
       height: props.size,
       width: props.size
     }, props),

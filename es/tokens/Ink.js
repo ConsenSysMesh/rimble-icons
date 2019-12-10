@@ -12,7 +12,7 @@ var SvgInk = function SvgInk(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#DF1A14",
+      fill: props.color ? "currentcolor" : "#DF1A14",
       height: props.size,
       width: props.size
     }, props),

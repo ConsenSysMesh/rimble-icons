@@ -14,7 +14,7 @@ var SvgViewHeadline = function SvgViewHeadline(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? props.color : "#000"
+      fill: props.color ? "currentcolor" : "#000"
     }, props),
     React.createElement("path", { d: "M4 15h16v-2H4v2zm0 4h16v-2H4v2zm0-8h16V9H4v2zm0-6v2h16V5H4z" }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" })

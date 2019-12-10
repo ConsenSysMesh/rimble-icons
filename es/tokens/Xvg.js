@@ -12,7 +12,7 @@ var SvgXvg = function SvgXvg(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#00CBFF",
+      fill: props.color ? "currentcolor" : "#00CBFF",
       height: props.size,
       width: props.size
     }, props),

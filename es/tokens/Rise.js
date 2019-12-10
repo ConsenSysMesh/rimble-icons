@@ -12,7 +12,7 @@ var SvgRise = function SvgRise(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#F49352",
+      fill: props.color ? "currentcolor" : "#F49352",
       height: props.size,
       width: props.size
     }, props),

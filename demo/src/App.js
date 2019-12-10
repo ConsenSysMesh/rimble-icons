@@ -15,6 +15,7 @@ import * as mdIcons from "@rimble/icons/es/md";
 import * as tokenIcons from "@rimble/icons/es/tokens";
 import { Star, Battery20 } from "@rimble/icons/es/md";
 import { Eth, Btc, Xuc } from "@rimble/icons/es/tokens";
+import { Icon } from "@rimble/icons";
 import styled from "styled-components";
 
 const Truncate = styled(Box)([], {
@@ -97,6 +98,9 @@ const App = props => {
           </Text>
 
           <Flex>
+            <Box m={3}>
+              <Icon name="Accessibility" size={"24px"} color="primary" />
+            </Box>
             <Box m={3}>
               <Star size={"24px"} />
             </Box>

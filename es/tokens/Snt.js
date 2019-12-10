@@ -12,7 +12,7 @@ var SvgSnt = function SvgSnt(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#5B6DEE",
+      fill: props.color ? "currentcolor" : "#5B6DEE",
       height: props.size,
       width: props.size
     }, props),

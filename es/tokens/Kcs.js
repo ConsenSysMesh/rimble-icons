@@ -12,7 +12,7 @@ var SvgKcs = function SvgKcs(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#0093DD",
+      fill: props.color ? "currentcolor" : "#0093DD",
       height: props.size,
       width: props.size
     }, props),

@@ -12,7 +12,7 @@ var SvgVib = function SvgVib(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#FF1F43",
+      fill: props.color ? "currentcolor" : "#FF1F43",
       height: props.size,
       width: props.size
     }, props),

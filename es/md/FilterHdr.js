@@ -14,8 +14,9 @@ var SvgFilterHdr = function SvgFilterHdr(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? props.color : "#000"
+      fill: props.color ? "currentcolor" : "#000"
     }, props),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z" })
   );
 };

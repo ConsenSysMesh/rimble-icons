@@ -12,7 +12,7 @@ var SvgBix = function SvgBix(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "black",
+      fill: props.color ? "currentcolor" : "black",
       height: props.size,
       width: props.size
     }, props),

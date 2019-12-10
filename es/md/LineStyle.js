@@ -14,7 +14,7 @@ var SvgLineStyle = function SvgLineStyle(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? props.color : "#000"
+      fill: props.color ? "currentcolor" : "#000"
     }, props),
     React.createElement(
       "defs",

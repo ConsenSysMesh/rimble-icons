@@ -12,7 +12,7 @@ var SvgEur = function SvgEur(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#0F8FF8",
+      fill: props.color ? "currentcolor" : "#0F8FF8",
       height: props.size,
       width: props.size
     }, props),

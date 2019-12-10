@@ -12,7 +12,7 @@ var SvgTzc = function SvgTzc(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#374851",
+      fill: props.color ? "currentcolor" : "#374851",
       height: props.size,
       width: props.size
     }, props),

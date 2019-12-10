@@ -12,7 +12,7 @@ var SvgFtc = function SvgFtc(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#27323A",
+      fill: props.color ? "currentcolor" : "#27323A",
       height: props.size,
       width: props.size
     }, props),

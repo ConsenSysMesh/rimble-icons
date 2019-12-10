@@ -12,7 +12,7 @@ var SvgEtp = function SvgEtp(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#00A5FF",
+      fill: props.color ? "currentcolor" : "#00A5FF",
       height: props.size,
       width: props.size
     }, props),

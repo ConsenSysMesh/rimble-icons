@@ -12,7 +12,7 @@ var SvgGbx = function SvgGbx(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#1666AF",
+      fill: props.color ? "currentcolor" : "#1666AF",
       height: props.size,
       width: props.size
     }, props),

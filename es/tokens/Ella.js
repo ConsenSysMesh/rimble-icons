@@ -12,7 +12,7 @@ var SvgElla = function SvgElla(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#396A28",
+      fill: props.color ? "currentcolor" : "#396A28",
       height: props.size,
       width: props.size
     }, props),

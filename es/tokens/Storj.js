@@ -12,7 +12,7 @@ var SvgStorj = function SvgStorj(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#2683FF",
+      fill: props.color ? "currentcolor" : "#2683FF",
       height: props.size,
       width: props.size
     }, props),

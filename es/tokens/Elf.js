@@ -12,7 +12,7 @@ var SvgElf = function SvgElf(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#2B5EBB",
+      fill: props.color ? "currentcolor" : "#2B5EBB",
       height: props.size,
       width: props.size
     }, props),

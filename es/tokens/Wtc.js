@@ -12,7 +12,7 @@ var SvgWtc = function SvgWtc(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#8200FF",
+      fill: props.color ? "currentcolor" : "#8200FF",
       height: props.size,
       width: props.size
     }, props),

@@ -14,7 +14,7 @@ var SvgContentCut = function SvgContentCut(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? props.color : "#000"
+      fill: props.color ? "currentcolor" : "#000"
     }, props),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("circle", { cx: 6, cy: 18, r: 2, fill: "none" }),

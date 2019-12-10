@@ -12,7 +12,7 @@ var SvgPoe = function SvgPoe(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#DCD6CC",
+      fill: props.color ? "currentcolor" : "#DCD6CC",
       height: props.size,
       width: props.size
     }, props),

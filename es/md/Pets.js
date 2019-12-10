@@ -14,7 +14,7 @@ var SvgPets = function SvgPets(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? props.color : "#000"
+      fill: props.color ? "currentcolor" : "#000"
     }, props),
     React.createElement("circle", { cx: 4.5, cy: 9.5, r: 2.5 }),
     React.createElement("circle", { cx: 9, cy: 5.5, r: 2.5 }),

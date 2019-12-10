@@ -12,7 +12,7 @@ var SvgSpank = function SvgSpank(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#FF3B81",
+      fill: props.color ? "currentcolor" : "#FF3B81",
       height: props.size,
       width: props.size
     }, props),

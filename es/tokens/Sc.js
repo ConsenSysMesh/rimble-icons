@@ -12,7 +12,7 @@ var SvgSc = function SvgSc(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#20EE82",
+      fill: props.color ? "currentcolor" : "#20EE82",
       height: props.size,
       width: props.size
     }, props),

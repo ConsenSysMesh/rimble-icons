@@ -12,7 +12,7 @@ var SvgBcpt = function SvgBcpt(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#404040",
+      fill: props.color ? "currentcolor" : "#404040",
       height: props.size,
       width: props.size
     }, props),

@@ -12,7 +12,7 @@ var SvgMth = function SvgMth(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#104FCA",
+      fill: props.color ? "currentcolor" : "#104FCA",
       height: props.size,
       width: props.size
     }, props),

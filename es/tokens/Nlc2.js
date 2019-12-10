@@ -12,7 +12,7 @@ var SvgNlc2 = function SvgNlc2(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#F28F01",
+      fill: props.color ? "currentcolor" : "#F28F01",
       height: props.size,
       width: props.size
     }, props),

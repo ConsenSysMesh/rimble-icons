@@ -12,7 +12,7 @@ const Svg = styled("svg")(
 const SvgApex = props => (
   <Svg
     viewBox="0 0 24 24"
-    fill={props.color ? props.color : "#1F4C9F"}
+    fill={props.color ? "currentcolor" : "#1F4C9F"}
     height={props.size}
     width={props.size}
     {...props}

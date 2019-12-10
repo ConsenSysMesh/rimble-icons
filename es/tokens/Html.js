@@ -12,7 +12,7 @@ var SvgHtml = function SvgHtml(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#CFA967",
+      fill: props.color ? "currentcolor" : "#CFA967",
       height: props.size,
       width: props.size
     }, props),

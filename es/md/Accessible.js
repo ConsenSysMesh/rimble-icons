@@ -14,7 +14,7 @@ var SvgAccessible = function SvgAccessible(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? props.color : "#000"
+      fill: props.color ? "currentcolor" : "#000"
     }, props),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0z" }),
     React.createElement("circle", { cx: 12, cy: 4, r: 2 }),

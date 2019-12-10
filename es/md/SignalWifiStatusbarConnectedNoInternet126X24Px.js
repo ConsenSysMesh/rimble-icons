@@ -14,9 +14,8 @@ var SvgSignalWifiStatusbarConnectedNoInternet126X24Px = function SvgSignalWifiSt
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? props.color : "#000"
+      fill: props.color ? "currentcolor" : "#000"
     }, props),
-    React.createElement("path", { d: "M0 0h26v24H0z", fill: "none" }),
     React.createElement("path", {
       fillOpacity: 0.3,
       d: "M24.24 8l1.35-1.68C25.1 5.96 20.26 2 13 2S.9 5.96.42 6.32l12.57 15.66.01.02.01-.01L20 13.28V8h4.24z"

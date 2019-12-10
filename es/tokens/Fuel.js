@@ -12,7 +12,7 @@ var SvgFuel = function SvgFuel(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#4096D0",
+      fill: props.color ? "currentcolor" : "#4096D0",
       height: props.size,
       width: props.size
     }, props),

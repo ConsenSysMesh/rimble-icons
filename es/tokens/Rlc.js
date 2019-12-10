@@ -12,7 +12,7 @@ var SvgRlc = function SvgRlc(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#FFD800",
+      fill: props.color ? "currentcolor" : "#FFD800",
       height: props.size,
       width: props.size
     }, props),

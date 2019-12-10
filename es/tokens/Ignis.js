@@ -12,7 +12,7 @@ var SvgIgnis = function SvgIgnis(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#F9C011",
+      fill: props.color ? "currentcolor" : "#F9C011",
       height: props.size,
       width: props.size
     }, props),

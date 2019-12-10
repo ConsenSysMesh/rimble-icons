@@ -12,7 +12,7 @@ var SvgArn = function SvgArn(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#0092B5",
+      fill: props.color ? "currentcolor" : "#0092B5",
       height: props.size,
       width: props.size
     }, props),

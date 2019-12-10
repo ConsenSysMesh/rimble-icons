@@ -12,7 +12,7 @@ var SvgGvt = function SvgGvt(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#16B9AD",
+      fill: props.color ? "currentcolor" : "#16B9AD",
       height: props.size,
       width: props.size
     }, props),

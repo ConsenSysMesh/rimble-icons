@@ -12,7 +12,7 @@ var SvgGame = function SvgGame(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#2D475B",
+      fill: props.color ? "currentcolor" : "#2D475B",
       height: props.size,
       width: props.size
     }, props),

@@ -12,7 +12,7 @@ var SvgAppc = function SvgAppc(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#FD875E",
+      fill: props.color ? "currentcolor" : "#FD875E",
       height: props.size,
       width: props.size
     }, props),

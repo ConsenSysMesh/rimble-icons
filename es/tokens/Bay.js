@@ -12,7 +12,7 @@ var SvgBay = function SvgBay(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#6356AB",
+      fill: props.color ? "currentcolor" : "#6356AB",
       height: props.size,
       width: props.size
     }, props),

@@ -12,7 +12,7 @@ var SvgEthos = function SvgEthos(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#00FFBA",
+      fill: props.color ? "currentcolor" : "#00FFBA",
       height: props.size,
       width: props.size
     }, props),

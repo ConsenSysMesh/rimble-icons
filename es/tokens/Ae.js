@@ -12,7 +12,7 @@ var SvgAe = function SvgAe(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#DE3F6B",
+      fill: props.color ? "currentcolor" : "#DE3F6B",
       height: props.size,
       width: props.size
     }, props),

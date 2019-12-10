@@ -12,7 +12,7 @@ var SvgPlr = function SvgPlr(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#00BFFF",
+      fill: props.color ? "currentcolor" : "#00BFFF",
       height: props.size,
       width: props.size
     }, props),

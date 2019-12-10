@@ -12,7 +12,7 @@ var SvgSls = function SvgSls(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#8E9495",
+      fill: props.color ? "currentcolor" : "#8E9495",
       height: props.size,
       width: props.size
     }, props),

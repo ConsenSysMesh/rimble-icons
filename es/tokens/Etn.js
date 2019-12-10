@@ -12,7 +12,7 @@ var SvgEtn = function SvgEtn(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#23BEE2",
+      fill: props.color ? "currentcolor" : "#23BEE2",
       height: props.size,
       width: props.size
     }, props),

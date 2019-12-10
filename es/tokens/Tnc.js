@@ -12,7 +12,7 @@ var SvgTnc = function SvgTnc(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#FF439B",
+      fill: props.color ? "currentcolor" : "#FF439B",
       height: props.size,
       width: props.size
     }, props),

@@ -12,7 +12,7 @@ var SvgCred = function SvgCred(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#37E8A3",
+      fill: props.color ? "currentcolor" : "#37E8A3",
       height: props.size,
       width: props.size
     }, props),

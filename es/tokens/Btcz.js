@@ -12,7 +12,7 @@ var SvgBtcz = function SvgBtcz(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#F8C24A",
+      fill: props.color ? "currentcolor" : "#F8C24A",
       height: props.size,
       width: props.size
     }, props),

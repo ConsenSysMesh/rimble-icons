@@ -12,7 +12,7 @@ var SvgSberbank = function SvgSberbank(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#48B254",
+      fill: props.color ? "currentcolor" : "#48B254",
       height: props.size,
       width: props.size
     }, props),

@@ -12,7 +12,7 @@ var SvgSalt = function SvgSalt(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#1BEEF4",
+      fill: props.color ? "currentcolor" : "#1BEEF4",
       height: props.size,
       width: props.size
     }, props),

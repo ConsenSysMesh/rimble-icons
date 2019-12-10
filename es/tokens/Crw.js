@@ -12,7 +12,7 @@ var SvgCrw = function SvgCrw(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#0F1529",
+      fill: props.color ? "currentcolor" : "#0F1529",
       height: props.size,
       width: props.size
     }, props),

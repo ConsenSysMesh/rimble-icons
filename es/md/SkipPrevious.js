@@ -14,10 +14,9 @@ var SvgSkipPrevious = function SvgSkipPrevious(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? props.color : "#000"
+      fill: props.color ? "currentcolor" : "#000"
     }, props),
-    React.createElement("path", { d: "M6 6h2v12H6zm3.5 6l8.5 6V6z" }),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
+    React.createElement("path", { d: "M6 6h2v12H6zm3.5 6l8.5 6V6z" })
   );
 };
 

@@ -12,7 +12,7 @@ var SvgDcr = function SvgDcr(props) {
     Svg,
     _extends({
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#2ED6A1",
+      fill: props.color ? "currentcolor" : "#2ED6A1",
       height: props.size,
       width: props.size
     }, props),
