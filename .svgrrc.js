@@ -15,5 +15,6 @@ module.exports = {
       }
     ]
   },
-  template: template
+  template: template,
+  expandProps: "start"
 };

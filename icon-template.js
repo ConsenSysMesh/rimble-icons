@@ -41,30 +41,3 @@ function template(
   `;
 }
 module.exports = template;
-
-// export default styledSystem = ({
-//   name,
-//   viewBox,
-//   pathData
-// }) => `import React from 'react'
-// import styled from 'styled-components'
-// import { space, color } from 'styled-system'
-// const Svg = styled('svg')({ flex: 'none' }, space, color)
-// const ${name}Icon = ({
-//   size,
-//   ...props
-// }) => (
-//   <Svg
-//     {...props}
-//     viewBox='${viewBox}'
-//     width={size}
-//     height={size}
-//     fill='currentcolor'
-//   >
-//     <path d='${pathData}' />
-//   </Svg>
-// )
-// ${name}Icon.displayName = '${name}Icon'
-// ${name}Icon.defaultProps = {
-//   size: 24
-// }
