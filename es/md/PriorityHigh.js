@@ -10,12 +10,12 @@ var Svg = styled("svg")({
 var SvgPriorityHigh = function SvgPriorityHigh(props) {
   return React.createElement(
     Svg,
-    _extends({
+    _extends({}, props, {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
-    }, props),
+    }),
     React.createElement("circle", { cx: 12, cy: 19, r: 2 }),
     React.createElement("path", { d: "M10 3h4v12h-4z" })
   );

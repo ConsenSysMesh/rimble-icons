@@ -10,12 +10,12 @@ var Svg = styled("svg")({
 var SvgRemove = function SvgRemove(props) {
   return React.createElement(
     Svg,
-    _extends({
+    _extends({}, props, {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
-    }, props),
+    }),
     React.createElement("path", { d: "M19 13H5v-2h14v2z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
   );

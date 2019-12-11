@@ -10,12 +10,12 @@ var Svg = styled("svg")({
 var SvgSentimentSatisfied = function SvgSentimentSatisfied(props) {
   return React.createElement(
     Svg,
-    _extends({
+    _extends({}, props, {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
-    }, props),
+    }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0z" }),
     React.createElement("circle", { cx: 15.5, cy: 9.5, r: 1.5 }),
     React.createElement("circle", { cx: 8.5, cy: 9.5, r: 1.5 }),

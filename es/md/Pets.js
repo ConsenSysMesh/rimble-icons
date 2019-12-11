@@ -10,12 +10,12 @@ var Svg = styled("svg")({
 var SvgPets = function SvgPets(props) {
   return React.createElement(
     Svg,
-    _extends({
+    _extends({}, props, {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
-    }, props),
+    }),
     React.createElement("circle", { cx: 4.5, cy: 9.5, r: 2.5 }),
     React.createElement("circle", { cx: 9, cy: 5.5, r: 2.5 }),
     React.createElement("circle", { cx: 15, cy: 5.5, r: 2.5 }),

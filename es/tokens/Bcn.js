@@ -10,12 +10,12 @@ var Svg = styled("svg")({
 var SvgBcn = function SvgBcn(props) {
   return React.createElement(
     Svg,
-    _extends({
+    _extends({}, props, {
       viewBox: "0 0 24 24",
       fill: props.color ? "currentcolor" : "#F04086",
       height: props.size,
       width: props.size
-    }, props),
+    }),
     React.createElement("path", {
       d: "M12 23.998c6.626 0 11.998-5.372 11.998-11.999C23.998 5.372 18.627 0 12 0 5.372 0 0 5.372 0 12c0 6.626 5.372 11.998 12 11.998z",
       fill: "inherit"

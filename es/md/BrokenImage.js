@@ -10,12 +10,12 @@ var Svg = styled("svg")({
 var SvgBrokenImage = function SvgBrokenImage(props) {
   return React.createElement(
     Svg,
-    _extends({
+    _extends({}, props, {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
-    }, props),
+    }),
     React.createElement("path", {
       fill: "none",
       d: "M0 0h24v24H0zm0 0h24v24H0zm21 19c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2"

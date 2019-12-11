@@ -10,12 +10,12 @@ var Svg = styled("svg")({
 var SvgLinkedCamera = function SvgLinkedCamera(props) {
   return React.createElement(
     Svg,
-    _extends({
+    _extends({}, props, {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
-    }, props),
+    }),
     React.createElement("circle", { cx: 12, cy: 14, r: 3.2 }),
     React.createElement("circle", { fill: "none", cx: 12, cy: 14, r: 5 }),
     React.createElement("path", { d: "M16 3.33c2.58 0 4.67 2.09 4.67 4.67H22c0-3.31-2.69-6-6-6v1.33M16 6c1.11 0 2 .89 2 2h1.33c0-1.84-1.49-3.33-3.33-3.33V6" }),

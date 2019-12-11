@@ -10,12 +10,12 @@ var Svg = styled("svg")({
 var SvgViewCompact = function SvgViewCompact(props) {
   return React.createElement(
     Svg,
-    _extends({
+    _extends({}, props, {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
-    }, props),
+    }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0z" }),
     React.createElement("path", { d: "M3 19h6v-7H3v7zm7 0h12v-7H10v7zM3 5v6h19V5H3z" })
   );

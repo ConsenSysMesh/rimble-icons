@@ -10,12 +10,12 @@ var Svg = styled("svg")({
 var SvgCollectionsBookmark = function SvgCollectionsBookmark(props) {
   return React.createElement(
     Svg,
-    _extends({
+    _extends({}, props, {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
-    }, props),
+    }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" }),
     React.createElement("path", { d: "M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z" }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" }),

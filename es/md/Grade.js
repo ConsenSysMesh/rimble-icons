@@ -10,12 +10,12 @@ var Svg = styled("svg")({
 var SvgGrade = function SvgGrade(props) {
   return React.createElement(
     Svg,
-    _extends({
+    _extends({}, props, {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
-    }, props),
+    }),
     React.createElement("path", { d: "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
   );

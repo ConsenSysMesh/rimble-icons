@@ -27,8 +27,8 @@ const Truncate = styled(Box)([], {
 const IconList = ({ filterValue, icons }) => {
   return Object.keys(icons)
     .filter(key => key !== "Icon" && key.includes(filterValue))
-    .map(key => (
-      <Box>
+    .map((key, index) => (
+      <Box key={key + index}>
         <Box
           width={"4rem"}
           key={key}
@@ -46,7 +46,7 @@ const IconList = ({ filterValue, icons }) => {
         </Box>
         <Box
           width={"4rem"}
-          key={key}
+          key={key + "_color"}
           title={key}
           m={3}
           style={{
@@ -91,6 +91,32 @@ const App = props => {
         <Box m={4}>
           <Heading as="h1">Rimble Icons</Heading>
 
+          <Text>Import entire library and reference any icon</Text>
+
+          <Box bg={"light-gray"} p={3}>
+            <Text>import {`{ Icon }`} from "@rimble/icons";</Text>
+            <Text>{`<Icon name="Star" color="blue" />`}</Text>
+            <Text>
+              {`<Icon name="Star" color="primary" />`} // access styled-system
+              theme color values
+            </Text>
+          </Box>
+
+          <Flex>
+            <Box m={3}>
+              <Icon name="Star" size={"24px"} color="red" />
+            </Box>
+            <Box m={3}>
+              <Text color="primary">
+                <Icon name="Star" size={"24px"} color="primary" />
+              </Text>
+            </Box>
+
+            <Box m={3}>
+              <Icon name="Star" size={"24px"} color="primary" />
+            </Box>
+          </Flex>
+
           <Text>Single icon, named imports that supports tree-shaking</Text>
 
           <Text bg={"light-gray"} p={3}>
@@ -98,9 +124,6 @@ const App = props => {
           </Text>
 
           <Flex>
-            <Box m={3}>
-              <Icon name="Accessibility" size={"24px"} color="primary" />
-            </Box>
             <Box m={3}>
               <Star size={"24px"} />
             </Box>

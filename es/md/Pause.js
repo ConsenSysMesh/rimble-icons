@@ -10,13 +10,14 @@ var Svg = styled("svg")({
 var SvgPause = function SvgPause(props) {
   return React.createElement(
     Svg,
-    _extends({
+    _extends({}, props, {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
-    }, props),
-    React.createElement("path", { d: "M6 19h4V5H6v14zm8-14v14h4V5h-4z" })
+    }),
+    React.createElement("path", { d: "M6 19h4V5H6v14zm8-14v14h4V5h-4z" }),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
   );
 };
 

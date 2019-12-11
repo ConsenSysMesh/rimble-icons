@@ -10,12 +10,12 @@ var Svg = styled("svg")({
 var SvgGTranslate = function SvgGTranslate(props) {
   return React.createElement(
     Svg,
-    _extends({
+    _extends({}, props, {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
-    }, props),
+    }),
     React.createElement("path", {
       fill: "none",
       d: "M0 0h24v24H0zm20 6h-8.82L15 19l-2 2h7c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1z"
