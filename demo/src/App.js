@@ -8,6 +8,7 @@ import {
   Field,
   Input,
   Heading,
+  Tooltip,
   Text
 } from "rimble-ui";
 // import * as icons from "@rimble/icons";
@@ -17,6 +18,7 @@ import { Star, Battery20 } from "@rimble/icons/es/md";
 import { Eth, Btc, Xuc } from "@rimble/icons/es/tokens";
 import { Icon } from "@rimble/icons";
 import styled from "styled-components";
+import Clipboard from "./CopyToClipboard";
 
 const Truncate = styled(Box)([], {
   overflow: "hidden",
@@ -29,37 +31,26 @@ const IconList = ({ filterValue, icons }) => {
     .filter(key => key !== "Icon" && key.includes(filterValue))
     .map((key, index) => (
       <Box key={key + index}>
-        <Box
-          width={"4rem"}
-          key={key}
-          title={key}
-          m={3}
-          style={{
-            textAlign: "center"
-          }}
-        >
-          {React.createElement(icons[key], {
-            title: key,
-            size: 48
-          })}
-          <Truncate fontSize={"1rem"}>{key}</Truncate>
-        </Box>
-        <Box
-          width={"4rem"}
-          key={key + "_color"}
-          title={key}
-          m={3}
-          style={{
-            textAlign: "center"
-          }}
-        >
-          {React.createElement(icons[key], {
-            title: key,
-            size: 48,
-            color: "red"
-          })}
-          <Truncate fontSize={"1rem"}>{key}</Truncate>
-        </Box>
+        <Clipboard text={key}>
+          {isCopied => (
+            <Tooltip message={isCopied ? "Copied!" : key}>
+              <Box
+                width={"4rem"}
+                key={key}
+                title={key}
+                m={3}
+                style={{
+                  textAlign: "center"
+                }}
+              >
+                {React.createElement(icons[key], {
+                  size: 48
+                })}
+                <Truncate fontSize={"1rem"}>{key}</Truncate>
+              </Box>
+            </Tooltip>
+          )}
+        </Clipboard>
       </Box>
     ));
 };
@@ -85,6 +76,7 @@ const FilteredIcons = ({ icons, placeholder }) => {
 };
 
 const App = props => {
+  console.log("theme", theme);
   return (
     <ThemeProvider theme={theme} className="App">
       <BaseStyles>
@@ -95,21 +87,21 @@ const App = props => {
 
           <Box bg={"light-gray"} p={3}>
             <Text>import {`{ Icon }`} from "@rimble/icons";</Text>
-            <Text>{`<Icon name="Star" color="blue" />`}</Text>
+            <Text>{`<Icon name="Star" />`}</Text>
+            <Text>{`<Icon name="Star" color="red" /> // set color value directly`}</Text>
             <Text>
-              {`<Icon name="Star" color="primary" />`} // access styled-system
-              theme color values
+              {`<Icon name="Star" color="primary" /> // access styled-system
+              theme color values`}
             </Text>
           </Box>
 
           <Flex>
             <Box m={3}>
-              <Icon name="Star" size={"24px"} color="red" />
+              <Icon name="Star" size={"24px"} />
             </Box>
+
             <Box m={3}>
-              <Text color="primary">
-                <Icon name="Star" size={"24px"} color="primary" />
-              </Text>
+              <Icon name="Star" size={"24px"} color="red" />
             </Box>
 
             <Box m={3}>

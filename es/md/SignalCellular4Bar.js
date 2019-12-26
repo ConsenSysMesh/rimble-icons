@@ -16,8 +16,7 @@ var SvgSignalCellular4Bar = function SvgSignalCellular4Bar(props) {
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
     }),
-    React.createElement("path", { d: "M2 22h20V2z" }),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
+    React.createElement("path", { d: "M2 22h20V2z" })
   );
 };
 
