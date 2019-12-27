@@ -1,12 +1,21 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgAion = props => (
-  <svg
+  <Svg
+    {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? props.color : "#00BFEC"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
-    {...props}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
@@ -21,7 +30,12 @@ const SvgAion = props => (
       d="M19.012 10.069a7.167 7.167 0 00-1.422-2.693l.675-.56a8.034 8.034 0 011.594 3.02l-.846.233zM5.145 16.482A8.057 8.057 0 013.8 12.015c0-2.222.885-4.296 2.493-5.842l.61.628a7.173 7.173 0 00-2.224 5.214c0 1.424.415 2.803 1.2 3.987l-.734.48z"
       fill="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgAion.displayName = "SvgAion";
+SvgAion.defaultProps = {
+  size: 24,
+  color: "#00BFEC"
+};
 export default SvgAion;

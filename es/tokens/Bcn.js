@@ -1,16 +1,21 @@
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+var Svg = styled("svg")({
+  flex: "none"
+}, space, color);
 
 var SvgBcn = function SvgBcn(props) {
   return React.createElement(
-    "svg",
-    _extends({
+    Svg,
+    _extends({}, props, {
       viewBox: "0 0 24 24",
-      fill: props.color ? props.color : "#F04086",
+      fill: "currentcolor",
       height: props.size,
       width: props.size
-    }, props),
+    }),
     React.createElement("path", {
       d: "M12 23.998c6.626 0 11.998-5.372 11.998-11.999C23.998 5.372 18.627 0 12 0 5.372 0 0 5.372 0 12c0 6.626 5.372 11.998 12 11.998z",
       fill: "inherit"
@@ -22,4 +27,9 @@ var SvgBcn = function SvgBcn(props) {
   );
 };
 
+SvgBcn.displayName = "SvgBcn";
+SvgBcn.defaultProps = {
+  size: 24,
+  color: "#F04086"
+};
 export default SvgBcn;

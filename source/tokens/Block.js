@@ -1,12 +1,21 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgBlock = props => (
-  <svg
+  <Svg
+    {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? props.color : "#101341"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
-    {...props}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
@@ -25,7 +34,12 @@ const SvgBlock = props => (
       d="M9.085 8.27L6.908 12l2.157 3.697-1.379 2.407L4.125 12l3.592-6.158L9.085 8.27z"
       fill="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgBlock.displayName = "SvgBlock";
+SvgBlock.defaultProps = {
+  size: 24,
+  color: "#101341"
+};
 export default SvgBlock;

@@ -1,12 +1,21 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgDai = props => (
-  <svg
+  <Svg
+    {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? props.color : "white"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
-    {...props}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
@@ -29,7 +38,12 @@ const SvgDai = props => (
       d="M11.998 21.116V2.733l9.192 9.192-9.192 9.19z"
       fill="#D9A547"
     />
-  </svg>
+  </Svg>
 );
 
+SvgDai.displayName = "SvgDai";
+SvgDai.defaultProps = {
+  size: 24,
+  color: "white"
+};
 export default SvgDai;

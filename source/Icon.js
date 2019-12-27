@@ -1,12 +1,19 @@
-import React from 'react'
-import * as Icons from './index'
+import React from "react";
+import * as tokenIcons from "./tokens/index";
+import * as mdIcons from "./md/index";
 
 const Icon = ({ name, ...props }) => {
-  const Component = Icons[name]
-  if (!Component) return false
-  return <Component {...props} />
-}
+  if (tokenIcons[name]) {
+    const Component = tokenIcons[name];
+    return <Component {...props} />;
+  } else if (mdIcons[name]) {
+    const Component = mdIcons[name];
+    return <Component {...props} />;
+  } else {
+    return false;
+  }
+};
 
-Icon.displayName = 'Icon'
+Icon.displayName = "Icon";
 
-export default Icon
+export default Icon;

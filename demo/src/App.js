@@ -15,7 +15,9 @@ import * as mdIcons from "@rimble/icons/es/md";
 import * as tokenIcons from "@rimble/icons/es/tokens";
 import { Star, Battery20 } from "@rimble/icons/es/md";
 import { Eth, Btc, Xuc } from "@rimble/icons/es/tokens";
+import { Icon } from "@rimble/icons";
 import styled from "styled-components";
+import CopyToClipboard from "./CopyToClipboard";
 
 const Truncate = styled(Box)([], {
   overflow: "hidden",
@@ -26,39 +28,27 @@ const Truncate = styled(Box)([], {
 const IconList = ({ filterValue, icons }) => {
   return Object.keys(icons)
     .filter(key => key !== "Icon" && key.includes(filterValue))
-    .map(key => (
-      <Box>
-        <Box
-          width={"4rem"}
-          key={key}
-          title={key}
-          m={3}
-          style={{
-            textAlign: "center"
-          }}
-        >
-          {React.createElement(icons[key], {
-            title: key,
-            size: 48
-          })}
-          <Truncate fontSize={"1rem"}>{key}</Truncate>
-        </Box>
-        <Box
-          width={"4rem"}
-          key={key}
-          title={key}
-          m={3}
-          style={{
-            textAlign: "center"
-          }}
-        >
-          {React.createElement(icons[key], {
-            title: key,
-            size: 48,
-            color: "red"
-          })}
-          <Truncate fontSize={"1rem"}>{key}</Truncate>
-        </Box>
+    .map((key, index) => (
+      <Box key={key + index}>
+        <CopyToClipboard text={key}>
+          {isCopied => (
+            <Box
+              width={"4rem"}
+              key={key}
+              m={3}
+              title={key}
+              style={{
+                textAlign: "center"
+              }}
+            >
+              {React.createElement(icons[key], {
+                size: 48
+              })}
+
+              <Truncate fontSize={"1rem"}>{isCopied ? "Copied" : key}</Truncate>
+            </Box>
+          )}
+        </CopyToClipboard>
       </Box>
     ));
 };
@@ -89,6 +79,32 @@ const App = props => {
       <BaseStyles>
         <Box m={4}>
           <Heading as="h1">Rimble Icons</Heading>
+
+          <Text>Import entire library and reference any icon</Text>
+
+          <Box bg={"light-gray"} p={3}>
+            <Text>import {`{ Icon }`} from "@rimble/icons";</Text>
+            <Text>{`<Icon name="Star" />`}</Text>
+            <Text>{`<Icon name="Star" color="red" /> // set color value directly`}</Text>
+            <Text>
+              {`<Icon name="Star" color="primary" /> // access styled-system
+              theme color values`}
+            </Text>
+          </Box>
+
+          <Flex>
+            <Box m={3}>
+              <Icon name="Star" size={"24px"} />
+            </Box>
+
+            <Box m={3}>
+              <Icon name="Star" size={"24px"} color="red" />
+            </Box>
+
+            <Box m={3}>
+              <Icon name="Star" size={"24px"} color="primary" />
+            </Box>
+          </Flex>
 
           <Text>Single icon, named imports that supports tree-shaking</Text>
 

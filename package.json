@@ -16,6 +16,7 @@
   "author": "Rimble",
   "license": "MIT",
   "dependencies": {
+    "@styled-system/theme-get": "^5.1.2",
     "@svgr/cli": "^4.3.3",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
@@ -31,11 +32,10 @@
     "react": "^16.3.2",
     "react-test-renderer": "^16.3.2",
     "recursive-readdir": "^2.2.2",
-    "styled-components": "^3.2.6",
-    "styled-system": "^2.0.0"
+    "styled-system": "^5.1.4"
   },
   "peerDependencies": {
-    "styled-components": ">=2.0 || >=3.0"
+    "styled-components": ">= 4"
   },
   "pixo": {
     "outDir": "source",
@@ -45,22 +45,6 @@
   },
   "x0": {
     "cssLibrary": "styled-components"
-  },
-  "svgr": {
-    "dimensions": false,
-    "svgProps": {
-      "viewBox": "0 0 24 24",
-      "height": "{props.size}",
-      "width": "{props.size}",
-      "fill": "{ props.color ? props.color : '#000' }"
-    },
-    "svgoConfig": {
-      "plugins": [
-        {
-          "convertColors": false
-        }
-      ]
-    }
   },
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",

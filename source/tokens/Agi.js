@@ -1,12 +1,21 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgAgi = props => (
-  <svg
+  <Svg
+    {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? props.color : "#6916FF"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
-    {...props}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
@@ -21,7 +30,12 @@ const SvgAgi = props => (
       d="M15.52 15.005a4.104 4.104 0 00-.984-2.364 8.112 8.112 0 00-1.969-1.455c-.633-.35-1.23-.762-1.781-1.231a3.024 3.024 0 01-.89-1.591 3.182 3.182 0 01.229-1.86 5.02 5.02 0 011.317-1.681.195.195 0 00.047-.228.182.182 0 00-.281-.045A4.183 4.183 0 009.38 6.095a3.757 3.757 0 00-.661 2.455c.037.439.148.868.328 1.273.195.397.447.765.75 1.091a8.086 8.086 0 002.015 1.409c.636.33 1.234.726 1.782 1.181.481.423.797 1.003.89 1.637.133.66.05 1.342-.234 1.955a4.598 4.598 0 01-1.36 1.636.155.155 0 00-.047.227.18.18 0 00.13.091.184.184 0 00.152-.045 5.85 5.85 0 001.781-1.591 3.88 3.88 0 00.614-2.41z"
       fill="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgAgi.displayName = "SvgAgi";
+SvgAgi.defaultProps = {
+  size: 24,
+  color: "#6916FF"
+};
 export default SvgAgi;

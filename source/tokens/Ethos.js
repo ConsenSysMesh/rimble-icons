@@ -1,12 +1,21 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgEthos = props => (
-  <svg
+  <Svg
+    {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? props.color : "#00FFBA"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
-    {...props}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
@@ -21,7 +30,12 @@ const SvgEthos = props => (
       d="M11.996 13.286c.906 0 1.64.735 1.64 1.64a4.563 4.563 0 01-9.053.83 4.565 4.565 0 014.49-5.395 1.641 1.641 0 010 3.283c-.256 0-.505.075-.716.218a1.283 1.283 0 00-.207 1.955v.001a1.28 1.28 0 002.055-.288c.099-.186.15-.394.149-.604 0-.905.735-1.64 1.642-1.64zm6.994-6.297a4.568 4.568 0 01-4.062 6.65 1.641 1.641 0 110-3.283 1.283 1.283 0 10-1.283-1.282 1.64 1.64 0 01-2.813 1.183 1.641 1.641 0 01-.468-1.183 4.565 4.565 0 017.287-3.665l.003.002c.56.418 1.017.957 1.335 1.578h.001z"
       fill="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgEthos.displayName = "SvgEthos";
+SvgEthos.defaultProps = {
+  size: 24,
+  color: "#00FFBA"
+};
 export default SvgEthos;

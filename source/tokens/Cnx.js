@@ -1,12 +1,21 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgCnx = props => (
-  <svg
+  <Svg
+    {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? props.color : "#4C6BAE"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
-    {...props}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
@@ -25,7 +34,12 @@ const SvgCnx = props => (
       d="M12.691 19.22l.108 1.03c-1.553-.555-2.795-1.652-3.726-3.293 1.286-.155 2.35-.765 3.193-1.83l.102.982a4.127 4.127 0 003.709-3.477c.486.652.79 1.421.88 2.23.906-.516 1.647-1.125 2.222-1.83a7.255 7.255 0 01-6.487 6.188zM11.242 4.787l-.107-1.037c1.553.555 2.795 1.652 3.726 3.293-1.287.155-2.351.765-3.194 1.83l-.101-.975a4.127 4.127 0 00-3.643 3.47 4.563 4.563 0 01-.88-2.23c-.907.516-1.647 1.125-2.222 1.83a7.255 7.255 0 016.421-6.18z"
       fill="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgCnx.displayName = "SvgCnx";
+SvgCnx.defaultProps = {
+  size: 24,
+  color: "#4C6BAE"
+};
 export default SvgCnx;

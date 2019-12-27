@@ -1,12 +1,21 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgMaid = props => (
-  <svg
+  <Svg
+    {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? props.color : "#5592D7"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
-    {...props}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
@@ -26,7 +35,12 @@ const SvgMaid = props => (
       d="M9.283 10.577l8.447-4.885v9.462c0 2.808-.848 3.115-2.546 4.077V9.5l-3.896 2.229-2.006-1.154v.001z"
       fill="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgMaid.displayName = "SvgMaid";
+SvgMaid.defaultProps = {
+  size: 24,
+  color: "#5592D7"
+};
 export default SvgMaid;

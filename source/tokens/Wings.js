@@ -1,12 +1,21 @@
 import React from "react";
+import styled from "styled-components";
+import { space, color } from "styled-system";
+const Svg = styled("svg")(
+  {
+    flex: "none"
+  },
+  space,
+  color
+);
 
 const SvgWings = props => (
-  <svg
+  <Svg
+    {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? props.color : "#0DC9F7"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
-    {...props}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
@@ -26,7 +35,12 @@ const SvgWings = props => (
       d="M17.097 13.335l-3.56-6.12L4.5 6.75l6.887 1.846 1.868 6.367 3.842-1.628z"
       fill="white"
     />
-  </svg>
+  </Svg>
 );
 
+SvgWings.displayName = "SvgWings";
+SvgWings.defaultProps = {
+  size: 24,
+  color: "#0DC9F7"
+};
 export default SvgWings;
