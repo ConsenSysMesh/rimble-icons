@@ -14,7 +14,7 @@ var SvgFormatQuote = function SvgFormatQuote(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgFormatQuote = function SvgFormatQuote(props) {
 
 SvgFormatQuote.displayName = "SvgFormatQuote";
 SvgFormatQuote.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgFormatQuote;

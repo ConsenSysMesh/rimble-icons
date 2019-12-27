@@ -14,7 +14,7 @@ var SvgDone = function SvgDone(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0z" }),
     React.createElement("path", { d: "M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" })
@@ -23,6 +23,7 @@ var SvgDone = function SvgDone(props) {
 
 SvgDone.displayName = "SvgDone";
 SvgDone.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgDone;

@@ -14,7 +14,7 @@ var SvgBatteryCharging50 = function SvgBatteryCharging50(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", {
       d: "M0 0h24v24H0zm9 14.5h2V20l3.47-6.5H9.53zm4-2V7l-2.93 5.5-.54 1h4.94l.53-1z",
@@ -30,6 +30,7 @@ var SvgBatteryCharging50 = function SvgBatteryCharging50(props) {
 
 SvgBatteryCharging50.displayName = "SvgBatteryCharging50";
 SvgBatteryCharging50.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgBatteryCharging50;

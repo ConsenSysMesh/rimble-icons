@@ -14,7 +14,7 @@ var SvgSpaceBar = function SvgSpaceBar(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" }),
     React.createElement("path", { d: "M18 9v4H6V9H4v6h16V9z" })
@@ -23,6 +23,7 @@ var SvgSpaceBar = function SvgSpaceBar(props) {
 
 SvgSpaceBar.displayName = "SvgSpaceBar";
 SvgSpaceBar.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgSpaceBar;

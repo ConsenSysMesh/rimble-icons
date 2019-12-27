@@ -14,15 +14,15 @@ var SvgFiberManualRecord = function SvgFiberManualRecord(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
-    React.createElement("path", { fill: "none", d: "M24 24H0V0h24v24z" }),
     React.createElement("circle", { fill: "#010101", cx: 12, cy: 12, r: 8 })
   );
 };
 
 SvgFiberManualRecord.displayName = "SvgFiberManualRecord";
 SvgFiberManualRecord.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgFiberManualRecord;

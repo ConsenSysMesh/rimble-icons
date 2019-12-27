@@ -14,7 +14,7 @@ var SvgSignalCellularConnectedNoInternet3Bar = function SvgSignalCellularConnect
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { fillOpacity: 0.3, d: "M22 8V2L2 22h16V8z" }),
@@ -24,6 +24,7 @@ var SvgSignalCellularConnectedNoInternet3Bar = function SvgSignalCellularConnect
 
 SvgSignalCellularConnectedNoInternet3Bar.displayName = "SvgSignalCellularConnectedNoInternet3Bar";
 SvgSignalCellularConnectedNoInternet3Bar.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgSignalCellularConnectedNoInternet3Bar;

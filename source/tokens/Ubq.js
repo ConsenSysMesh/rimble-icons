@@ -13,13 +13,13 @@ const SvgUbq = props => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? "currentcolor" : "#00EA90"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
-      fill="inherit"
+      fill="#00EA90"
     />
     <path
       d="M13.661 5.631l5.833 3.051-5.62 3.445-.213-6.496zM10.34 18.337l-5.833-3.051 5.62-3.446.213 6.497z"
@@ -35,6 +35,7 @@ const SvgUbq = props => (
 
 SvgUbq.displayName = "SvgUbq";
 SvgUbq.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#00EA90"
 };
 export default SvgUbq;

@@ -14,7 +14,7 @@ var SvgFlashOn = function SvgFlashOn(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M7 2v11h3v9l7-12h-4l4-8z" })
   );
@@ -22,6 +22,7 @@ var SvgFlashOn = function SvgFlashOn(props) {
 
 SvgFlashOn.displayName = "SvgFlashOn";
 SvgFlashOn.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgFlashOn;

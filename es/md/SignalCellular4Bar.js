@@ -14,7 +14,7 @@ var SvgSignalCellular4Bar = function SvgSignalCellular4Bar(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M2 22h20V2z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgSignalCellular4Bar = function SvgSignalCellular4Bar(props) {
 
 SvgSignalCellular4Bar.displayName = "SvgSignalCellular4Bar";
 SvgSignalCellular4Bar.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgSignalCellular4Bar;

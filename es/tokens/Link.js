@@ -12,13 +12,13 @@ var SvgLink = function SvgLink(props) {
     Svg,
     _extends({}, props, {
       viewBox: "0 0 24 24",
-      fill: props.color ? "currentcolor" : "#01A6FB",
+      fill: "currentcolor",
       height: props.size,
       width: props.size
     }),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "inherit"
+      fill: "#01A6FB"
     }),
     React.createElement("path", {
       fillRule: "evenodd",
@@ -31,6 +31,7 @@ var SvgLink = function SvgLink(props) {
 
 SvgLink.displayName = "SvgLink";
 SvgLink.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#01A6FB"
 };
 export default SvgLink;

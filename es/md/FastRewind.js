@@ -14,15 +14,15 @@ var SvgFastRewind = function SvgFastRewind(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
-    React.createElement("path", { d: "M11 18V6l-8.5 6 8.5 6zm.5-6l8.5 6V6l-8.5 6z" }),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
+    React.createElement("path", { d: "M11 18V6l-8.5 6 8.5 6zm.5-6l8.5 6V6l-8.5 6z" })
   );
 };
 
 SvgFastRewind.displayName = "SvgFastRewind";
 SvgFastRewind.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgFastRewind;

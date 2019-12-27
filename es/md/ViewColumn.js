@@ -14,7 +14,7 @@ var SvgViewColumn = function SvgViewColumn(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M10 18h5V5h-5v13zm-6 0h5V5H4v13zM16 5v13h5V5h-5z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgViewColumn = function SvgViewColumn(props) {
 
 SvgViewColumn.displayName = "SvgViewColumn";
 SvgViewColumn.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgViewColumn;

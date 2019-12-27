@@ -13,13 +13,13 @@ const SvgEtp = props => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? "currentcolor" : "#00A5FF"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
-      fill="inherit"
+      fill="#00A5FF"
     />
     <path
       fillRule="evenodd"
@@ -32,6 +32,7 @@ const SvgEtp = props => (
 
 SvgEtp.displayName = "SvgEtp";
 SvgEtp.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#00A5FF"
 };
 export default SvgEtp;

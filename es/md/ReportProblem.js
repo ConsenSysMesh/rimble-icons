@@ -14,7 +14,7 @@ var SvgReportProblem = function SvgReportProblem(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" })
@@ -23,6 +23,7 @@ var SvgReportProblem = function SvgReportProblem(props) {
 
 SvgReportProblem.displayName = "SvgReportProblem";
 SvgReportProblem.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgReportProblem;

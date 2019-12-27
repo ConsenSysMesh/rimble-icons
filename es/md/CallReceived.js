@@ -14,7 +14,7 @@ var SvgCallReceived = function SvgCallReceived(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M20 5.41L18.59 4 7 15.59V9H5v10h10v-2H8.41z" })
@@ -23,6 +23,7 @@ var SvgCallReceived = function SvgCallReceived(props) {
 
 SvgCallReceived.displayName = "SvgCallReceived";
 SvgCallReceived.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgCallReceived;

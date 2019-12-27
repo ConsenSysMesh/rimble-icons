@@ -12,13 +12,13 @@ var SvgIcx = function SvgIcx(props) {
     Svg,
     _extends({}, props, {
       viewBox: "0 0 24 24",
-      fill: props.color ? "currentcolor" : "#1FC5C9",
+      fill: "currentcolor",
       height: props.size,
       width: props.size
     }),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "inherit"
+      fill: "#1FC5C9"
     }),
     React.createElement("path", {
       fillRule: "evenodd",
@@ -31,6 +31,7 @@ var SvgIcx = function SvgIcx(props) {
 
 SvgIcx.displayName = "SvgIcx";
 SvgIcx.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#1FC5C9"
 };
 export default SvgIcx;

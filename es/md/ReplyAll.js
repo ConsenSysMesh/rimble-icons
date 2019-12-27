@@ -14,7 +14,7 @@ var SvgReplyAll = function SvgReplyAll(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M7 8V5l-7 7 7 7v-3l-4-4 4-4zm6 1V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgReplyAll = function SvgReplyAll(props) {
 
 SvgReplyAll.displayName = "SvgReplyAll";
 SvgReplyAll.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgReplyAll;

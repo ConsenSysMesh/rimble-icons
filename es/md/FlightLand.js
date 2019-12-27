@@ -14,7 +14,7 @@ var SvgFlightLand = function SvgFlightLand(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement(
       "defs",
@@ -45,6 +45,7 @@ var SvgFlightLand = function SvgFlightLand(props) {
 
 SvgFlightLand.displayName = "SvgFlightLand";
 SvgFlightLand.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgFlightLand;

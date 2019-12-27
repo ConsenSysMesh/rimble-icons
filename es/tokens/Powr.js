@@ -12,13 +12,13 @@ var SvgPowr = function SvgPowr(props) {
     Svg,
     _extends({}, props, {
       viewBox: "0 0 24 24",
-      fill: props.color ? "currentcolor" : "#05BCA9",
+      fill: "currentcolor",
       height: props.size,
       width: props.size
     }),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "inherit"
+      fill: "#05BCA9"
     }),
     React.createElement("path", {
       fillRule: "evenodd",
@@ -31,6 +31,7 @@ var SvgPowr = function SvgPowr(props) {
 
 SvgPowr.displayName = "SvgPowr";
 SvgPowr.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#05BCA9"
 };
 export default SvgPowr;

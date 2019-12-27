@@ -14,9 +14,8 @@ var SvgFiberSmartRecord = function SvgFiberSmartRecord(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
-    React.createElement("path", { fill: "none", d: "M24 24H0V0h24v24z" }),
     React.createElement(
       "g",
       { fill: "#010101" },
@@ -28,6 +27,7 @@ var SvgFiberSmartRecord = function SvgFiberSmartRecord(props) {
 
 SvgFiberSmartRecord.displayName = "SvgFiberSmartRecord";
 SvgFiberSmartRecord.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgFiberSmartRecord;

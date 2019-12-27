@@ -14,14 +14,16 @@ var SvgKeyboardArrowDown = function SvgKeyboardArrowDown(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
-    React.createElement("path", { d: "M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" })
+    React.createElement("path", { d: "M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" }),
+    React.createElement("path", { d: "M0-.75h24v24H0z", fill: "none" })
   );
 };
 
 SvgKeyboardArrowDown.displayName = "SvgKeyboardArrowDown";
 SvgKeyboardArrowDown.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgKeyboardArrowDown;

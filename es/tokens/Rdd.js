@@ -12,13 +12,13 @@ var SvgRdd = function SvgRdd(props) {
     Svg,
     _extends({}, props, {
       viewBox: "0 0 24 24",
-      fill: props.color ? "currentcolor" : "#E30613",
+      fill: "currentcolor",
       height: props.size,
       width: props.size
     }),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "inherit"
+      fill: "#E30613"
     }),
     React.createElement("path", {
       opacity: 0.75,
@@ -36,6 +36,7 @@ var SvgRdd = function SvgRdd(props) {
 
 SvgRdd.displayName = "SvgRdd";
 SvgRdd.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#E30613"
 };
 export default SvgRdd;

@@ -14,7 +14,7 @@ var SvgNature = function SvgNature(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M13 16.12a7 7 0 006.17-6.95c0-3.87-3.13-7-7-7s-7 3.13-7 7A6.98 6.98 0 0011 16.06V20H5v2h14v-2h-6v-3.88z" })
   );
@@ -22,6 +22,7 @@ var SvgNature = function SvgNature(props) {
 
 SvgNature.displayName = "SvgNature";
 SvgNature.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgNature;

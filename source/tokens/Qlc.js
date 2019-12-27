@@ -13,13 +13,13 @@ const SvgQlc = props => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? "currentcolor" : "#610089"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
-      fill="inherit"
+      fill="#610089"
     />
     <path
       fillRule="evenodd"
@@ -32,6 +32,7 @@ const SvgQlc = props => (
 
 SvgQlc.displayName = "SvgQlc";
 SvgQlc.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#610089"
 };
 export default SvgQlc;

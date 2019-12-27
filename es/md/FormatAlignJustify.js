@@ -14,7 +14,7 @@ var SvgFormatAlignJustify = function SvgFormatAlignJustify(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M3 21h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18V7H3v2zm0-6v2h18V3H3z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgFormatAlignJustify = function SvgFormatAlignJustify(props) {
 
 SvgFormatAlignJustify.displayName = "SvgFormatAlignJustify";
 SvgFormatAlignJustify.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgFormatAlignJustify;

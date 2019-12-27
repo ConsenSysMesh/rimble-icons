@@ -12,13 +12,13 @@ var SvgFair = function SvgFair(props) {
     Svg,
     _extends({}, props, {
       viewBox: "0 0 24 24",
-      fill: props.color ? "currentcolor" : "#C99705",
+      fill: "currentcolor",
       height: props.size,
       width: props.size
     }),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "inherit"
+      fill: "#C99705"
     }),
     React.createElement("path", {
       fillRule: "evenodd",
@@ -31,6 +31,7 @@ var SvgFair = function SvgFair(props) {
 
 SvgFair.displayName = "SvgFair";
 SvgFair.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#C99705"
 };
 export default SvgFair;

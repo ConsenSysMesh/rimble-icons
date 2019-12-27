@@ -14,7 +14,7 @@ var SvgShortText = function SvgShortText(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement(
       "defs",
@@ -32,6 +32,7 @@ var SvgShortText = function SvgShortText(props) {
 
 SvgShortText.displayName = "SvgShortText";
 SvgShortText.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgShortText;

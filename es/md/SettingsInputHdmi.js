@@ -14,7 +14,7 @@ var SvgSettingsInputHdmi = function SvgSettingsInputHdmi(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M18 7V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v3H5v6l3 6v3h8v-3l3-6V7h-1zM8 4h8v3h-2V5h-1v2h-2V5h-1v2H8V4z" })
@@ -23,6 +23,7 @@ var SvgSettingsInputHdmi = function SvgSettingsInputHdmi(props) {
 
 SvgSettingsInputHdmi.displayName = "SvgSettingsInputHdmi";
 SvgSettingsInputHdmi.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgSettingsInputHdmi;

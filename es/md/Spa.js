@@ -14,7 +14,7 @@ var SvgSpa = function SvgSpa(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", {
       fill: "none",
@@ -27,6 +27,7 @@ var SvgSpa = function SvgSpa(props) {
 
 SvgSpa.displayName = "SvgSpa";
 SvgSpa.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgSpa;

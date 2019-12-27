@@ -14,7 +14,7 @@ var SvgExpandLess = function SvgExpandLess(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgExpandLess = function SvgExpandLess(props) {
 
 SvgExpandLess.displayName = "SvgExpandLess";
 SvgExpandLess.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgExpandLess;

@@ -14,7 +14,7 @@ var SvgBrightness1 = function SvgBrightness1(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("circle", { cx: 12, cy: 12, r: 10 })
   );
@@ -22,6 +22,7 @@ var SvgBrightness1 = function SvgBrightness1(props) {
 
 SvgBrightness1.displayName = "SvgBrightness1";
 SvgBrightness1.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgBrightness1;

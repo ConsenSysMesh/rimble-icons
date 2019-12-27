@@ -14,15 +14,15 @@ var SvgQueue = function SvgQueue(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z" })
   );
 };
 
 SvgQueue.displayName = "SvgQueue";
 SvgQueue.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgQueue;

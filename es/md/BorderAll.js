@@ -14,7 +14,7 @@ var SvgBorderAll = function SvgBorderAll(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M3 3v18h18V3H3zm8 16H5v-6h6v6zm0-8H5V5h6v6zm8 8h-6v-6h6v6zm0-8h-6V5h6v6z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgBorderAll = function SvgBorderAll(props) {
 
 SvgBorderAll.displayName = "SvgBorderAll";
 SvgBorderAll.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgBorderAll;

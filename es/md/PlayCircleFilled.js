@@ -14,15 +14,15 @@ var SvgPlayCircleFilled = function SvgPlayCircleFilled(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" })
   );
 };
 
 SvgPlayCircleFilled.displayName = "SvgPlayCircleFilled";
 SvgPlayCircleFilled.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgPlayCircleFilled;

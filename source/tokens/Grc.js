@@ -13,13 +13,13 @@ const SvgGrc = props => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? "currentcolor" : "#5411B3"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
-      fill="inherit"
+      fill="#5411B3"
     />
     <path
       fillRule="evenodd"
@@ -32,6 +32,7 @@ const SvgGrc = props => (
 
 SvgGrc.displayName = "SvgGrc";
 SvgGrc.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#5411B3"
 };
 export default SvgGrc;

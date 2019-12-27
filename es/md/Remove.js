@@ -14,7 +14,7 @@ var SvgRemove = function SvgRemove(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M19 13H5v-2h14v2z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgRemove = function SvgRemove(props) {
 
 SvgRemove.displayName = "SvgRemove";
 SvgRemove.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgRemove;

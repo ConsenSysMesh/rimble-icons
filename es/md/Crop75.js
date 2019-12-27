@@ -14,7 +14,7 @@ var SvgCrop75 = function SvgCrop75(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M19 7H5c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm0 8H5V9h14v6z" })
   );
@@ -22,6 +22,7 @@ var SvgCrop75 = function SvgCrop75(props) {
 
 SvgCrop75.displayName = "SvgCrop75";
 SvgCrop75.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgCrop75;

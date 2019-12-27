@@ -13,13 +13,13 @@ const SvgXvg = props => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? "currentcolor" : "#00CBFF"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
-      fill="inherit"
+      fill="#00CBFF"
     />
     <path
       d="M7.207 7.751L6 5.25h12l-1.194 2.501H18L11.963 20.25 6 7.751h1.207zm0 0l4.829 9.998 4.77-9.998H7.208z"
@@ -31,6 +31,7 @@ const SvgXvg = props => (
 
 SvgXvg.displayName = "SvgXvg";
 SvgXvg.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#00CBFF"
 };
 export default SvgXvg;

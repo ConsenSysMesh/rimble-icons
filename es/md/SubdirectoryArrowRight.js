@@ -14,7 +14,7 @@ var SvgSubdirectoryArrowRight = function SvgSubdirectoryArrowRight(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" }),
     React.createElement("path", { d: "M19 15l-6 6-1.42-1.42L15.17 16H4V4h2v10h9.17l-3.59-3.58L13 9l6 6z" })
@@ -23,6 +23,7 @@ var SvgSubdirectoryArrowRight = function SvgSubdirectoryArrowRight(props) {
 
 SvgSubdirectoryArrowRight.displayName = "SvgSubdirectoryArrowRight";
 SvgSubdirectoryArrowRight.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgSubdirectoryArrowRight;

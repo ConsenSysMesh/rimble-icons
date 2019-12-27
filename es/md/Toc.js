@@ -14,7 +14,7 @@ var SvgToc = function SvgToc(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M3 9h14V7H3v2zm0 4h14v-2H3v2zm0 4h14v-2H3v2zm16 0h2v-2h-2v2zm0-10v2h2V7h-2zm0 6h2v-2h-2v2z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgToc = function SvgToc(props) {
 
 SvgToc.displayName = "SvgToc";
 SvgToc.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgToc;

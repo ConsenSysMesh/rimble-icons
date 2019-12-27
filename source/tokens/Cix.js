@@ -13,13 +13,13 @@ const SvgCix = props => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? "currentcolor" : "#0576B4"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
-      fill="inherit"
+      fill="#0576B4"
     />
     <path
       d="M18.501 14.147l-.794-.497 1.732-.02.037-.02v.019l.715-.008-1.214 1.976-.109-.952-5.523 3.047-2.095-2.797-5.872 3.095v-.705l6.054-3.19 2.095 2.796 4.975-2.744zm-7.584-.678l-2.295 1.208V6.483h2.295v6.986zm6.49.36l-2.295 1.275V6.483h2.295v7.346z"
@@ -35,6 +35,7 @@ const SvgCix = props => (
 
 SvgCix.displayName = "SvgCix";
 SvgCix.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#0576B4"
 };
 export default SvgCix;

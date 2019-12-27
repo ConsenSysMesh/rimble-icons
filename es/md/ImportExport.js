@@ -14,7 +14,7 @@ var SvgImportExport = function SvgImportExport(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M9 3L5 6.99h3V14h2V6.99h3L9 3zm7 14.01V10h-2v7.01h-3L15 21l4-3.99h-3z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgImportExport = function SvgImportExport(props) {
 
 SvgImportExport.displayName = "SvgImportExport";
 SvgImportExport.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgImportExport;

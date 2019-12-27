@@ -14,7 +14,7 @@ var SvgChevronLeft = function SvgChevronLeft(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgChevronLeft = function SvgChevronLeft(props) {
 
 SvgChevronLeft.displayName = "SvgChevronLeft";
 SvgChevronLeft.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgChevronLeft;

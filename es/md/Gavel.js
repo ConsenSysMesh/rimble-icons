@@ -14,7 +14,7 @@ var SvgGavel = function SvgGavel(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement(
       "defs",
@@ -35,6 +35,7 @@ var SvgGavel = function SvgGavel(props) {
 
 SvgGavel.displayName = "SvgGavel";
 SvgGavel.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgGavel;

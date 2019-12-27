@@ -14,7 +14,7 @@ var SvgFlag = function SvgFlag(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" })
@@ -23,6 +23,7 @@ var SvgFlag = function SvgFlag(props) {
 
 SvgFlag.displayName = "SvgFlag";
 SvgFlag.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgFlag;

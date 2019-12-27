@@ -12,13 +12,13 @@ var SvgAct = function SvgAct(props) {
     Svg,
     _extends({}, props, {
       viewBox: "0 0 24 24",
-      fill: props.color ? "currentcolor" : "#767DFF",
+      fill: "currentcolor",
       height: props.size,
       width: props.size
     }),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "inherit"
+      fill: "#767DFF"
     }),
     React.createElement("path", {
       fillRule: "evenodd",
@@ -31,6 +31,7 @@ var SvgAct = function SvgAct(props) {
 
 SvgAct.displayName = "SvgAct";
 SvgAct.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#767DFF"
 };
 export default SvgAct;

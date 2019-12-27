@@ -13,13 +13,13 @@ const SvgPot = props => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? "currentcolor" : "#105B2F"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
-      fill="inherit"
+      fill="#105B2F"
     />
     <path
       fillRule="evenodd"
@@ -32,6 +32,7 @@ const SvgPot = props => (
 
 SvgPot.displayName = "SvgPot";
 SvgPot.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#105B2F"
 };
 export default SvgPot;

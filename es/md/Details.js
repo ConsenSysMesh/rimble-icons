@@ -14,7 +14,7 @@ var SvgDetails = function SvgDetails(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M3 4l9 16 9-16H3zm3.38 2h11.25L12 16 6.38 6z" })
   );
@@ -22,6 +22,7 @@ var SvgDetails = function SvgDetails(props) {
 
 SvgDetails.displayName = "SvgDetails";
 SvgDetails.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgDetails;

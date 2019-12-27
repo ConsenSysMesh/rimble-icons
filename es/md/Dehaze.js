@@ -14,7 +14,7 @@ var SvgDehaze = function SvgDehaze(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z" })
   );
@@ -22,6 +22,7 @@ var SvgDehaze = function SvgDehaze(props) {
 
 SvgDehaze.displayName = "SvgDehaze";
 SvgDehaze.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgDehaze;

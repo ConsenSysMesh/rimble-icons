@@ -14,7 +14,7 @@ var SvgArrowDownward = function SvgArrowDownward(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" }),
     React.createElement("path", {
@@ -26,6 +26,7 @@ var SvgArrowDownward = function SvgArrowDownward(props) {
 
 SvgArrowDownward.displayName = "SvgArrowDownward";
 SvgArrowDownward.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgArrowDownward;

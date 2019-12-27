@@ -14,7 +14,7 @@ var SvgPriorityHigh = function SvgPriorityHigh(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("circle", { cx: 12, cy: 19, r: 2 }),
     React.createElement("path", { d: "M10 3h4v12h-4z" }),
@@ -24,6 +24,7 @@ var SvgPriorityHigh = function SvgPriorityHigh(props) {
 
 SvgPriorityHigh.displayName = "SvgPriorityHigh";
 SvgPriorityHigh.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgPriorityHigh;

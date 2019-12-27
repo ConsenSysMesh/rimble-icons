@@ -13,13 +13,13 @@ const SvgMaid = props => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? "currentcolor" : "#5592D7"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
-      fill="inherit"
+      fill="#5592D7"
     />
     <path
       d="M15.184 9.5v9.73L6.969 14.5c-2.43-1.423-2.276-2.308-2.276-4.23l8.447 4.884v-4.462l2.045-1.193V9.5z"
@@ -40,6 +40,7 @@ const SvgMaid = props => (
 
 SvgMaid.displayName = "SvgMaid";
 SvgMaid.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#5592D7"
 };
 export default SvgMaid;

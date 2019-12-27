@@ -14,7 +14,7 @@ var SvgNextWeek = function SvgNextWeek(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement(
       "defs",
@@ -36,6 +36,7 @@ var SvgNextWeek = function SvgNextWeek(props) {
 
 SvgNextWeek.displayName = "SvgNextWeek";
 SvgNextWeek.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgNextWeek;

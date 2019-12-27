@@ -14,7 +14,7 @@ var SvgFunctions = function SvgFunctions(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M18 4H6v2l6.5 6L6 18v2h12v-3h-7l5-5-5-5h7z" })
@@ -23,6 +23,7 @@ var SvgFunctions = function SvgFunctions(props) {
 
 SvgFunctions.displayName = "SvgFunctions";
 SvgFunctions.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgFunctions;

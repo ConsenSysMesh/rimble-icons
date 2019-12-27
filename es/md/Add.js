@@ -14,7 +14,7 @@ var SvgAdd = function SvgAdd(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgAdd = function SvgAdd(props) {
 
 SvgAdd.displayName = "SvgAdd";
 SvgAdd.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgAdd;

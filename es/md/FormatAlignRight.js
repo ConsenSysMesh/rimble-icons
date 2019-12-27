@@ -14,7 +14,7 @@ var SvgFormatAlignRight = function SvgFormatAlignRight(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgFormatAlignRight = function SvgFormatAlignRight(props) {
 
 SvgFormatAlignRight.displayName = "SvgFormatAlignRight";
 SvgFormatAlignRight.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgFormatAlignRight;

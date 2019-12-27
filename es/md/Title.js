@@ -14,7 +14,7 @@ var SvgTitle = function SvgTitle(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M5 4v3h5.5v12h3V7H19V4z" }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" })
@@ -23,6 +23,7 @@ var SvgTitle = function SvgTitle(props) {
 
 SvgTitle.displayName = "SvgTitle";
 SvgTitle.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgTitle;

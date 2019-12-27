@@ -14,7 +14,7 @@ var SvgLastPage = function SvgLastPage(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6zM16 6h2v12h-2z" }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" })
@@ -23,6 +23,7 @@ var SvgLastPage = function SvgLastPage(props) {
 
 SvgLastPage.displayName = "SvgLastPage";
 SvgLastPage.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgLastPage;

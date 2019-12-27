@@ -12,13 +12,13 @@ var SvgElla = function SvgElla(props) {
     Svg,
     _extends({}, props, {
       viewBox: "0 0 24 24",
-      fill: props.color ? "currentcolor" : "#396A28",
+      fill: "currentcolor",
       height: props.size,
       width: props.size
     }),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "inherit"
+      fill: "#396A28"
     }),
     React.createElement("path", {
       fillRule: "evenodd",
@@ -31,6 +31,7 @@ var SvgElla = function SvgElla(props) {
 
 SvgElla.displayName = "SvgElla";
 SvgElla.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#396A28"
 };
 export default SvgElla;

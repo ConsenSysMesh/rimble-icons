@@ -14,7 +14,7 @@ var SvgSwitchCamera = function SvgSwitchCamera(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M20 4h-3.17L15 2H9L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 11.5V13H9v2.5L5.5 12 9 8.5V11h6V8.5l3.5 3.5-3.5 3.5z" })
   );
@@ -22,6 +22,7 @@ var SvgSwitchCamera = function SvgSwitchCamera(props) {
 
 SvgSwitchCamera.displayName = "SvgSwitchCamera";
 SvgSwitchCamera.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgSwitchCamera;

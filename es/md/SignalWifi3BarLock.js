@@ -14,7 +14,7 @@ var SvgSignalWifi3BarLock = function SvgSignalWifi3BarLock(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", {
       opacity: 0.3,
@@ -27,6 +27,7 @@ var SvgSignalWifi3BarLock = function SvgSignalWifi3BarLock(props) {
 
 SvgSignalWifi3BarLock.displayName = "SvgSignalWifi3BarLock";
 SvgSignalWifi3BarLock.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgSignalWifi3BarLock;

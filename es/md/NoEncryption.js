@@ -14,7 +14,7 @@ var SvgNoEncryption = function SvgNoEncryption(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", {
       fill: "none",
@@ -26,6 +26,7 @@ var SvgNoEncryption = function SvgNoEncryption(props) {
 
 SvgNoEncryption.displayName = "SvgNoEncryption";
 SvgNoEncryption.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgNoEncryption;

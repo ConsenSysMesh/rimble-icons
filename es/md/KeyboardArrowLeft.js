@@ -14,14 +14,16 @@ var SvgKeyboardArrowLeft = function SvgKeyboardArrowLeft(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
-    React.createElement("path", { d: "M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z" })
+    React.createElement("path", { d: "M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z" }),
+    React.createElement("path", { d: "M0-.5h24v24H0z", fill: "none" })
   );
 };
 
 SvgKeyboardArrowLeft.displayName = "SvgKeyboardArrowLeft";
 SvgKeyboardArrowLeft.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgKeyboardArrowLeft;

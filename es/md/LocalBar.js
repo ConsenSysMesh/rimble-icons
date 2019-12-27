@@ -14,14 +14,16 @@ var SvgLocalBar = function SvgLocalBar(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
-    React.createElement("path", { d: "M21 5V3H3v2l8 9v5H6v2h12v-2h-5v-5l8-9zM7.43 7L5.66 5h12.69l-1.78 2H7.43z" })
+    React.createElement("path", { d: "M21 5V3H3v2l8 9v5H6v2h12v-2h-5v-5l8-9zM7.43 7L5.66 5h12.69l-1.78 2H7.43z" }),
+    React.createElement("path", { fill: "none", d: "M0 0h24v24H0z" })
   );
 };
 
 SvgLocalBar.displayName = "SvgLocalBar";
 SvgLocalBar.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgLocalBar;

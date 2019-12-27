@@ -14,14 +14,16 @@ var SvgKeyboardCapslock = function SvgKeyboardCapslock(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
-    React.createElement("path", { d: "M12 8.41L16.59 13 18 11.59l-6-6-6 6L7.41 13 12 8.41zM6 18h12v-2H6v2z" })
+    React.createElement("path", { d: "M12 8.41L16.59 13 18 11.59l-6-6-6 6L7.41 13 12 8.41zM6 18h12v-2H6v2z" }),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
   );
 };
 
 SvgKeyboardCapslock.displayName = "SvgKeyboardCapslock";
 SvgKeyboardCapslock.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgKeyboardCapslock;

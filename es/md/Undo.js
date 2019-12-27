@@ -14,7 +14,7 @@ var SvgUndo = function SvgUndo(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z" })
@@ -23,6 +23,7 @@ var SvgUndo = function SvgUndo(props) {
 
 SvgUndo.displayName = "SvgUndo";
 SvgUndo.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgUndo;

@@ -12,13 +12,13 @@ var SvgEmc2 = function SvgEmc2(props) {
     Svg,
     _extends({}, props, {
       viewBox: "0 0 24 24",
-      fill: props.color ? "currentcolor" : "#00CCFF",
+      fill: "currentcolor",
       height: props.size,
       width: props.size
     }),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "inherit"
+      fill: "#00CCFF"
     }),
     React.createElement("path", {
       d: "M5.92 14.37h3.298l-1.42 2.88H4.5l1.42-2.88zm1.88-3.81h3.298l-1.416 2.872h-3.3L7.8 10.56zm1.879-3.81h3.298L11.56 9.624H8.263L9.679 6.75z",
@@ -39,6 +39,7 @@ var SvgEmc2 = function SvgEmc2(props) {
 
 SvgEmc2.displayName = "SvgEmc2";
 SvgEmc2.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#00CCFF"
 };
 export default SvgEmc2;

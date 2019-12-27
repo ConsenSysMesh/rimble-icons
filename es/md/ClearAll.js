@@ -14,7 +14,7 @@ var SvgClearAll = function SvgClearAll(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M5 13h14v-2H5v2zm-2 4h14v-2H3v2zM7 7v2h14V7H7z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgClearAll = function SvgClearAll(props) {
 
 SvgClearAll.displayName = "SvgClearAll";
 SvgClearAll.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgClearAll;

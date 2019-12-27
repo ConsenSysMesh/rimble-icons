@@ -14,7 +14,7 @@ var SvgArrowUpward = function SvgArrowUpward(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" }),
     React.createElement("path", { d: "M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" })
@@ -23,6 +23,7 @@ var SvgArrowUpward = function SvgArrowUpward(props) {
 
 SvgArrowUpward.displayName = "SvgArrowUpward";
 SvgArrowUpward.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgArrowUpward;

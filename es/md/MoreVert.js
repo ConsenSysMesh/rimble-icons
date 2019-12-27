@@ -14,7 +14,7 @@ var SvgMoreVert = function SvgMoreVert(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" })
@@ -23,6 +23,7 @@ var SvgMoreVert = function SvgMoreVert(props) {
 
 SvgMoreVert.displayName = "SvgMoreVert";
 SvgMoreVert.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgMoreVert;

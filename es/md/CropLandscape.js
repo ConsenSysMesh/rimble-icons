@@ -14,7 +14,7 @@ var SvgCropLandscape = function SvgCropLandscape(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M19 5H5c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 12H5V7h14v10z" })
   );
@@ -22,6 +22,7 @@ var SvgCropLandscape = function SvgCropLandscape(props) {
 
 SvgCropLandscape.displayName = "SvgCropLandscape";
 SvgCropLandscape.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgCropLandscape;

@@ -14,7 +14,7 @@ var SvgGroupWork = function SvgGroupWork(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM8 17.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5zM9.5 8a2.5 2.5 0 015 0 2.5 2.5 0 01-5 0zm6.5 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" })
@@ -23,6 +23,7 @@ var SvgGroupWork = function SvgGroupWork(props) {
 
 SvgGroupWork.displayName = "SvgGroupWork";
 SvgGroupWork.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgGroupWork;

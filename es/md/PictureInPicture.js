@@ -14,7 +14,7 @@ var SvgPictureInPicture = function SvgPictureInPicture(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M19 7h-8v6h8V7zm2-4H3c-1.1 0-2 .9-2 2v14c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98V5c0-1.1-.9-2-2-2zm0 16.01H3V4.98h18v14.03z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgPictureInPicture = function SvgPictureInPicture(props) {
 
 SvgPictureInPicture.displayName = "SvgPictureInPicture";
 SvgPictureInPicture.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgPictureInPicture;

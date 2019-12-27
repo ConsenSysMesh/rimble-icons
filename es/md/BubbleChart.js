@@ -14,7 +14,7 @@ var SvgBubbleChart = function SvgBubbleChart(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0z" }),
     React.createElement("circle", { cx: 7.2, cy: 14.4, r: 3.2 }),
@@ -25,6 +25,7 @@ var SvgBubbleChart = function SvgBubbleChart(props) {
 
 SvgBubbleChart.displayName = "SvgBubbleChart";
 SvgBubbleChart.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgBubbleChart;

@@ -14,7 +14,7 @@ var SvgStorage = function SvgStorage(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z" })
@@ -23,6 +23,7 @@ var SvgStorage = function SvgStorage(props) {
 
 SvgStorage.displayName = "SvgStorage";
 SvgStorage.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgStorage;

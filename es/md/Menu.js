@@ -14,7 +14,7 @@ var SvgMenu = function SvgMenu(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" })
@@ -23,6 +23,7 @@ var SvgMenu = function SvgMenu(props) {
 
 SvgMenu.displayName = "SvgMenu";
 SvgMenu.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgMenu;

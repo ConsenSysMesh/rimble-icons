@@ -14,7 +14,7 @@ var SvgDoNotDisturbOn = function SvgDoNotDisturbOn(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" }),
     React.createElement("path", { d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z" })
@@ -23,6 +23,7 @@ var SvgDoNotDisturbOn = function SvgDoNotDisturbOn(props) {
 
 SvgDoNotDisturbOn.displayName = "SvgDoNotDisturbOn";
 SvgDoNotDisturbOn.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgDoNotDisturbOn;

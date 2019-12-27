@@ -14,7 +14,7 @@ var SvgVpnKey = function SvgVpnKey(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M12.65 10A5.99 5.99 0 007 6c-3.31 0-6 2.69-6 6s2.69 6 6 6a5.99 5.99 0 005.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" })
@@ -23,6 +23,7 @@ var SvgVpnKey = function SvgVpnKey(props) {
 
 SvgVpnKey.displayName = "SvgVpnKey";
 SvgVpnKey.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgVpnKey;

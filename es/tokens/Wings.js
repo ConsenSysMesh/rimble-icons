@@ -12,13 +12,13 @@ var SvgWings = function SvgWings(props) {
     Svg,
     _extends({}, props, {
       viewBox: "0 0 24 24",
-      fill: props.color ? "currentcolor" : "#0DC9F7",
+      fill: "currentcolor",
       height: props.size,
       width: props.size
     }),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "inherit"
+      fill: "#0DC9F7"
     }),
     React.createElement("path", {
       d: "M14.178 11.804l-2.284 1.773-.935-3.243-5.418-1.452 7.11.365 1.527 2.557z",
@@ -39,6 +39,7 @@ var SvgWings = function SvgWings(props) {
 
 SvgWings.displayName = "SvgWings";
 SvgWings.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#0DC9F7"
 };
 export default SvgWings;

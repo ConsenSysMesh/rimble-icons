@@ -14,7 +14,7 @@ var SvgSignalCellularNull = function SvgSignalCellularNull(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M20 6.83V20H6.83L20 6.83M22 2L2 22h20V2z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgSignalCellularNull = function SvgSignalCellularNull(props) {
 
 SvgSignalCellularNull.displayName = "SvgSignalCellularNull";
 SvgSignalCellularNull.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgSignalCellularNull;

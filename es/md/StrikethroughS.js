@@ -14,7 +14,7 @@ var SvgStrikethroughS = function SvgStrikethroughS(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement(
       "defs",
@@ -36,6 +36,7 @@ var SvgStrikethroughS = function SvgStrikethroughS(props) {
 
 SvgStrikethroughS.displayName = "SvgStrikethroughS";
 SvgStrikethroughS.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgStrikethroughS;

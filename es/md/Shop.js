@@ -14,7 +14,7 @@ var SvgShop = function SvgShop(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M16 6V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H2v13c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6h-6zm-6-2h4v2h-4V4zM9 18V9l7.5 4L9 18z" })
@@ -23,6 +23,7 @@ var SvgShop = function SvgShop(props) {
 
 SvgShop.displayName = "SvgShop";
 SvgShop.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgShop;

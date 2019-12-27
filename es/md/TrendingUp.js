@@ -14,7 +14,7 @@ var SvgTrendingUp = function SvgTrendingUp(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgTrendingUp = function SvgTrendingUp(props) {
 
 SvgTrendingUp.displayName = "SvgTrendingUp";
 SvgTrendingUp.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgTrendingUp;

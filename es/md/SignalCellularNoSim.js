@@ -14,7 +14,7 @@ var SvgSignalCellularNoSim = function SvgSignalCellularNoSim(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", {
       d: "M-618-2872H782V728H-618zM-1 0h26v24H-1zm1 0h24v24H0z",
@@ -27,6 +27,7 @@ var SvgSignalCellularNoSim = function SvgSignalCellularNoSim(props) {
 
 SvgSignalCellularNoSim.displayName = "SvgSignalCellularNoSim";
 SvgSignalCellularNoSim.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgSignalCellularNoSim;

@@ -14,7 +14,7 @@ var SvgPublish = function SvgPublish(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M5 4v2h14V4H5zm0 10h4v6h6v-6h4l-7-7-7 7z" })
@@ -23,6 +23,7 @@ var SvgPublish = function SvgPublish(props) {
 
 SvgPublish.displayName = "SvgPublish";
 SvgPublish.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgPublish;

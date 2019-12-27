@@ -14,7 +14,7 @@ var SvgFileDownload = function SvgFileDownload(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgFileDownload = function SvgFileDownload(props) {
 
 SvgFileDownload.displayName = "SvgFileDownload";
 SvgFileDownload.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgFileDownload;

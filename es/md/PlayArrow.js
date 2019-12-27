@@ -14,15 +14,15 @@ var SvgPlayArrow = function SvgPlayArrow(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
-    React.createElement("path", { d: "M8 5v14l11-7z" }),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
+    React.createElement("path", { d: "M8 5v14l11-7z" })
   );
 };
 
 SvgPlayArrow.displayName = "SvgPlayArrow";
 SvgPlayArrow.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgPlayArrow;

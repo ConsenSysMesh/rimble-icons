@@ -14,7 +14,7 @@ var SvgSlideshow = function SvgSlideshow(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M10 8v8l5-4-5-4zm9-5H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z" })
   );
@@ -22,6 +22,7 @@ var SvgSlideshow = function SvgSlideshow(props) {
 
 SvgSlideshow.displayName = "SvgSlideshow";
 SvgSlideshow.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgSlideshow;

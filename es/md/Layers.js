@@ -14,14 +14,16 @@ var SvgLayers = function SvgLayers(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z" })
   );
 };
 
 SvgLayers.displayName = "SvgLayers";
 SvgLayers.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgLayers;

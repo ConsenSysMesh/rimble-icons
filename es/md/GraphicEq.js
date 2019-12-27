@@ -14,7 +14,7 @@ var SvgGraphicEq = function SvgGraphicEq(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M7 18h2V6H7v12zm4 4h2V2h-2v20zm-8-8h2v-4H3v4zm12 4h2V6h-2v12zm4-8v4h2v-4h-2z" })
@@ -23,6 +23,7 @@ var SvgGraphicEq = function SvgGraphicEq(props) {
 
 SvgGraphicEq.displayName = "SvgGraphicEq";
 SvgGraphicEq.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgGraphicEq;

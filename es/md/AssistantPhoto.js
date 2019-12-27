@@ -14,7 +14,7 @@ var SvgAssistantPhoto = function SvgAssistantPhoto(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" })
   );
@@ -22,6 +22,7 @@ var SvgAssistantPhoto = function SvgAssistantPhoto(props) {
 
 SvgAssistantPhoto.displayName = "SvgAssistantPhoto";
 SvgAssistantPhoto.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgAssistantPhoto;

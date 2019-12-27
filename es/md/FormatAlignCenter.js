@@ -14,7 +14,7 @@ var SvgFormatAlignCenter = function SvgFormatAlignCenter(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgFormatAlignCenter = function SvgFormatAlignCenter(props) {
 
 SvgFormatAlignCenter.displayName = "SvgFormatAlignCenter";
 SvgFormatAlignCenter.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgFormatAlignCenter;

@@ -14,7 +14,7 @@ var SvgFormatStrikethrough = function SvgFormatStrikethrough(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M10 19h4v-3h-4v3zM5 4v3h5v3h4V7h5V4H5zM3 14h18v-2H3v2z" })
@@ -23,6 +23,7 @@ var SvgFormatStrikethrough = function SvgFormatStrikethrough(props) {
 
 SvgFormatStrikethrough.displayName = "SvgFormatStrikethrough";
 SvgFormatStrikethrough.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgFormatStrikethrough;

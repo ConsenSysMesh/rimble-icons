@@ -14,7 +14,7 @@ var SvgCropSquare = function SvgCropSquare(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M18 4H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H6V6h12v12z" })
   );
@@ -22,6 +22,7 @@ var SvgCropSquare = function SvgCropSquare(props) {
 
 SvgCropSquare.displayName = "SvgCropSquare";
 SvgCropSquare.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgCropSquare;

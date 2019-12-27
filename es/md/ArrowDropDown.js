@@ -14,7 +14,7 @@ var SvgArrowDropDown = function SvgArrowDropDown(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M7 10l5 5 5-5z" }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
@@ -23,6 +23,7 @@ var SvgArrowDropDown = function SvgArrowDropDown(props) {
 
 SvgArrowDropDown.displayName = "SvgArrowDropDown";
 SvgArrowDropDown.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgArrowDropDown;

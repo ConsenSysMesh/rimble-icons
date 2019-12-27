@@ -14,7 +14,7 @@ var SvgSignalWifi1BarLock = function SvgSignalWifi1BarLock(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" }),
     React.createElement("path", { d: "M23 16v-1.5c0-1.4-1.1-2.5-2.5-2.5S18 13.1 18 14.5V16c-.5 0-1 .5-1 1v4c0 .5.5 1 1 1h5c.5 0 1-.5 1-1v-4c0-.5-.5-1-1-1zm-1 0h-3v-1.5c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5V16z" }),
@@ -28,6 +28,7 @@ var SvgSignalWifi1BarLock = function SvgSignalWifi1BarLock(props) {
 
 SvgSignalWifi1BarLock.displayName = "SvgSignalWifi1BarLock";
 SvgSignalWifi1BarLock.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgSignalWifi1BarLock;

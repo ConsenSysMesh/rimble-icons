@@ -14,7 +14,7 @@ var SvgNavigateBefore = function SvgNavigateBefore(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" })
   );
@@ -22,6 +22,7 @@ var SvgNavigateBefore = function SvgNavigateBefore(props) {
 
 SvgNavigateBefore.displayName = "SvgNavigateBefore";
 SvgNavigateBefore.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgNavigateBefore;

@@ -12,13 +12,13 @@ var SvgXvc = function SvgXvc(props) {
     Svg,
     _extends({}, props, {
       viewBox: "0 0 24 24",
-      fill: props.color ? "currentcolor" : "#B50126",
+      fill: "currentcolor",
       height: props.size,
       width: props.size
     }),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "inherit"
+      fill: "#B50126"
     }),
     React.createElement("path", {
       fillRule: "evenodd",
@@ -31,6 +31,7 @@ var SvgXvc = function SvgXvc(props) {
 
 SvgXvc.displayName = "SvgXvc";
 SvgXvc.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#B50126"
 };
 export default SvgXvc;

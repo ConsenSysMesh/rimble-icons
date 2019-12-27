@@ -14,15 +14,15 @@ var SvgSkipNext = function SvgSkipNext(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
-    React.createElement("path", { d: "M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" }),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
+    React.createElement("path", { d: "M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" })
   );
 };
 
 SvgSkipNext.displayName = "SvgSkipNext";
 SvgSkipNext.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgSkipNext;

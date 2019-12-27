@@ -13,13 +13,13 @@ const SvgZil = props => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? "currentcolor" : "#49C1BF"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
-      fill="inherit"
+      fill="#49C1BF"
     />
     <path
       d="M6.75 5.46l8.335 4.038 2.134-.961L8.92 4.5l-2.169.96z"
@@ -40,6 +40,7 @@ const SvgZil = props => (
 
 SvgZil.displayName = "SvgZil";
 SvgZil.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#49C1BF"
 };
 export default SvgZil;

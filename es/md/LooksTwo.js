@@ -14,7 +14,7 @@ var SvgLooksTwo = function SvgLooksTwo(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 8a2 2 0 01-2 2h-2v2h4v2H9v-4a2 2 0 012-2h2V9H9V7h4a2 2 0 012 2v2z" })
   );
@@ -22,6 +22,7 @@ var SvgLooksTwo = function SvgLooksTwo(props) {
 
 SvgLooksTwo.displayName = "SvgLooksTwo";
 SvgLooksTwo.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgLooksTwo;

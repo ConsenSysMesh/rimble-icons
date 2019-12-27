@@ -14,7 +14,7 @@ var SvgRssFeed = function SvgRssFeed(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0z" }),
     React.createElement("circle", { cx: 6.18, cy: 17.82, r: 2.18 }),
@@ -24,6 +24,7 @@ var SvgRssFeed = function SvgRssFeed(props) {
 
 SvgRssFeed.displayName = "SvgRssFeed";
 SvgRssFeed.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgRssFeed;

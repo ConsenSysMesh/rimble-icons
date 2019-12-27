@@ -13,13 +13,13 @@ const SvgBlcn = props => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? "currentcolor" : "#2AABE4"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
-      fill="inherit"
+      fill="#2AABE4"
     />
     <path
       fillRule="evenodd"
@@ -32,6 +32,7 @@ const SvgBlcn = props => (
 
 SvgBlcn.displayName = "SvgBlcn";
 SvgBlcn.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#2AABE4"
 };
 export default SvgBlcn;

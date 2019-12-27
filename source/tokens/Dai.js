@@ -13,13 +13,13 @@ const SvgDai = props => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? "currentcolor" : "white"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
-      fill="inherit"
+      fill="white"
     />
     <path
       d="M11.998 2.734l9.192 9.191-9.192 9.191-9.19-9.19 9.19-9.192z"
@@ -31,7 +31,7 @@ const SvgDai = props => (
     />
     <path
       d="M6 11.325h4.2l1.799-2 1.999 2h4.2l-6.2-6.7L6 11.325z"
-      fill="inherit"
+      fill="white"
     />
     <path
       opacity={0.42}
@@ -43,6 +43,7 @@ const SvgDai = props => (
 
 SvgDai.displayName = "SvgDai";
 SvgDai.defaultProps = {
-  size: 24
+  size: 24,
+  color: "white"
 };
 export default SvgDai;

@@ -14,7 +14,7 @@ var SvgCallMade = function SvgCallMade(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5z" })
@@ -23,6 +23,7 @@ var SvgCallMade = function SvgCallMade(props) {
 
 SvgCallMade.displayName = "SvgCallMade";
 SvgCallMade.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgCallMade;

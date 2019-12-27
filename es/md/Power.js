@@ -14,7 +14,7 @@ var SvgPower = function SvgPower(props) {
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M16.01 7L16 3h-2v4h-4V3H8v4h-.01C7 6.99 6 7.99 6 8.99v5.49L9.5 18v3h5v-3l3.5-3.51v-5.5c0-1-1-2-1.99-1.99z" }),
     React.createElement("path", { fill: "none", d: "M0 0h24v24H0z" })
@@ -23,6 +23,7 @@ var SvgPower = function SvgPower(props) {
 
 SvgPower.displayName = "SvgPower";
 SvgPower.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgPower;

@@ -14,7 +14,7 @@ var SvgSignalWifiStatusbarConnectedNoInternet226X24Px = function SvgSignalWifiSt
       viewBox: "0 0 24 24",
       height: props.size,
       width: props.size,
-      fill: props.color ? "currentcolor" : "#000"
+      fill: "currentcolor"
     }),
     React.createElement("path", { d: "M0 0h26v24H0z", fill: "none" }),
     React.createElement("path", {
@@ -27,6 +27,7 @@ var SvgSignalWifiStatusbarConnectedNoInternet226X24Px = function SvgSignalWifiSt
 
 SvgSignalWifiStatusbarConnectedNoInternet226X24Px.displayName = "SvgSignalWifiStatusbarConnectedNoInternet226X24Px";
 SvgSignalWifiStatusbarConnectedNoInternet226X24Px.defaultProps = {
-  size: 24
+  size: 24,
+  color: "inherit"
 };
 export default SvgSignalWifiStatusbarConnectedNoInternet226X24Px;

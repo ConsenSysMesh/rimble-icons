@@ -35,7 +35,8 @@ function template(
     )
     ${componentName.name}.displayName = '${componentName.name}'
     ${componentName.name}.defaultProps = {
-      size: 24
+      size: 24,
+      color: 'inherit'
     }
     ${exports}
   `;

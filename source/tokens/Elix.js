@@ -13,13 +13,13 @@ const SvgElix = props => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
-    fill={props.color ? "currentcolor" : "#00ADED"}
+    fill={"currentcolor"}
     height={props.size}
     width={props.size}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
-      fill="inherit"
+      fill="#00ADED"
     />
     <path
       d="M7.573 17.702l.002-.003 2.39-5.712-2.392-5.711 4.414 5.711-4.41 5.711-.004.004zm8.832 0l-.003-.004-4.41-5.71 4.413-5.712-2.392 5.711 2.39 5.712.002.003z"
@@ -45,6 +45,7 @@ const SvgElix = props => (
 
 SvgElix.displayName = "SvgElix";
 SvgElix.defaultProps = {
-  size: 24
+  size: 24,
+  color: "#00ADED"
 };
 export default SvgElix;
