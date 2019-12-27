@@ -16,7 +16,6 @@ var SvgPowerInput = function SvgPowerInput(props) {
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
     }),
-    React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" }),
     React.createElement("path", { d: "M2 9v2h19V9H2zm0 6h5v-2H2v2zm7 0h5v-2H9v2zm7 0h5v-2h-5v2z" })
   );
 };

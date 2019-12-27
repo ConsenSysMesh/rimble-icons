@@ -16,6 +16,7 @@ var SvgBattery50 = function SvgBattery50(props) {
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
     }),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", {
       fillOpacity: 0.3,
       d: "M17 5.33C17 4.6 16.4 4 15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33V13h10V5.33z"

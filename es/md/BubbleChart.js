@@ -16,6 +16,7 @@ var SvgBubbleChart = function SvgBubbleChart(props) {
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
     }),
+    React.createElement("path", { fill: "none", d: "M0 0h24v24H0z" }),
     React.createElement("circle", { cx: 7.2, cy: 14.4, r: 3.2 }),
     React.createElement("circle", { cx: 14.8, cy: 18, r: 2 }),
     React.createElement("circle", { cx: 15.2, cy: 8.8, r: 4.8 })

@@ -8,7 +8,6 @@ import {
   Field,
   Input,
   Heading,
-  Tooltip,
   Text
 } from "rimble-ui";
 // import * as icons from "@rimble/icons";
@@ -18,7 +17,7 @@ import { Star, Battery20 } from "@rimble/icons/es/md";
 import { Eth, Btc, Xuc } from "@rimble/icons/es/tokens";
 import { Icon } from "@rimble/icons";
 import styled from "styled-components";
-import Clipboard from "./CopyToClipboard";
+import CopyToClipboard from "./CopyToClipboard";
 
 const Truncate = styled(Box)([], {
   overflow: "hidden",
@@ -31,26 +30,25 @@ const IconList = ({ filterValue, icons }) => {
     .filter(key => key !== "Icon" && key.includes(filterValue))
     .map((key, index) => (
       <Box key={key + index}>
-        <Clipboard text={key}>
+        <CopyToClipboard text={key}>
           {isCopied => (
-            <Tooltip message={isCopied ? "Copied!" : key}>
-              <Box
-                width={"4rem"}
-                key={key}
-                title={key}
-                m={3}
-                style={{
-                  textAlign: "center"
-                }}
-              >
-                {React.createElement(icons[key], {
-                  size: 48
-                })}
-                <Truncate fontSize={"1rem"}>{key}</Truncate>
-              </Box>
-            </Tooltip>
+            <Box
+              width={"4rem"}
+              key={key}
+              m={3}
+              title={key}
+              style={{
+                textAlign: "center"
+              }}
+            >
+              {React.createElement(icons[key], {
+                size: 48
+              })}
+
+              <Truncate fontSize={"1rem"}>{isCopied ? "Copied" : key}</Truncate>
+            </Box>
           )}
-        </Clipboard>
+        </CopyToClipboard>
       </Box>
     ));
 };
@@ -76,7 +74,6 @@ const FilteredIcons = ({ icons, placeholder }) => {
 };
 
 const App = props => {
-  console.log("theme", theme);
   return (
     <ThemeProvider theme={theme} className="App">
       <BaseStyles>

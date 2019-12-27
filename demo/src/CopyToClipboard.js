@@ -23,7 +23,7 @@ const Clipboard = props => {
     });
 
     clipboard.on("error", e => {
-      console.log("error: failed to copy text");
+      console.log("error: failed to copy text", e);
     });
 
     return () => {

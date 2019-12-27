@@ -16,7 +16,8 @@ var SvgArrowDropDown = function SvgArrowDropDown(props) {
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
     }),
-    React.createElement("path", { d: "M7 10l5 5 5-5z" })
+    React.createElement("path", { d: "M7 10l5 5 5-5z" }),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
   );
 };
 

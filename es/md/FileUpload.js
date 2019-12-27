@@ -16,6 +16,7 @@ var SvgFileUpload = function SvgFileUpload(props) {
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
     }),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z" })
   );
 };

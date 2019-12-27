@@ -16,8 +16,7 @@ var SvgNavigateNext = function SvgNavigateNext(props) {
       width: props.size,
       fill: props.color ? "currentcolor" : "#000"
     }),
-    React.createElement("path", { d: "M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" }),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
+    React.createElement("path", { d: "M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" })
   );
 };
 
