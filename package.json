@@ -1,6 +1,6 @@
 {
   "name": "@rimble/icons",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Rimble Icons",
   "main": "index.js",
   "module": "index.es.js",
@@ -16,38 +16,27 @@
   "author": "Rimble",
   "license": "MIT",
   "dependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-function-bind": "^7.7.4",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
     "@styled-system/theme-get": "^5.1.2",
     "@svgr/cli": "^4.3.3",
-    "@babel/cli": "^7.7.7",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "create-index": "^2.5.0",
+    "cross-env": "^6.0.3",
     "lodash.camelcase": "^4.3.0",
     "lodash.uniqby": "^4.7.0",
     "lodash.upperfirst": "^4.3.1",
     "material-design-icons": "^3.0.1",
-    "ok-css": "^1.0.0-0",
-    "pixo": "^1.1.0",
     "react": "^16.3.2",
     "react-test-renderer": "^16.3.2",
     "recursive-readdir": "^2.2.2",
-    "styled-system": "^5.1.4"
+    "styled-system": "^5.1.4",
+    "svgi": "^1.1.0"
   },
   "peerDependencies": {
     "styled-components": ">= 4"
-  },
-  "pixo": {
-    "outDir": "source",
-    "template": "styledSystem",
-    "index": false,
-    "iconComponent": true
-  },
-  "x0": {
-    "cssLibrary": "styled-components"
-  },
-  "devDependencies": {
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "create-index": "^2.5.0",
-    "cross-env": "^6.0.3"
   }
 }
