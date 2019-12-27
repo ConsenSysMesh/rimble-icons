@@ -44,8 +44,8 @@ fs.readdir(sourceDir, function(err, files) {
 
         // THIS WILL REPLACE THE COLOR #000 WITH DEFAULT COLOR
         const defaultColorReplaced = circleInherit.replace(
-          /inherit/g,
-          fileCircleColor
+          /color: "inherit"/g,
+          'color: "' + fileCircleColor + '"'
         );
         // console.log(defaultColorReplaced);
 

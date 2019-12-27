@@ -16,7 +16,8 @@ var SvgPlayArrow = function SvgPlayArrow(props) {
       width: props.size,
       fill: "currentcolor"
     }),
-    React.createElement("path", { d: "M8 5v14l11-7z" })
+    React.createElement("path", { d: "M8 5v14l11-7z" }),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
   );
 };
 

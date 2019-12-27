@@ -18,7 +18,7 @@ var SvgXvg = function SvgXvg(props) {
     }),
     React.createElement("path", {
       d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
-      fill: "#00CBFF"
+      fill: "inherit"
     }),
     React.createElement("path", {
       d: "M7.207 7.751L6 5.25h12l-1.194 2.501H18L11.963 20.25 6 7.751h1.207zm0 0l4.829 9.998 4.77-9.998H7.208z",
