@@ -9,6 +9,7 @@ module.exports = {
     fill: "{ 'currentcolor' }"
   },
   svgoConfig: {
+    multipass: false,
     plugins: [
       {
         convertColors: false

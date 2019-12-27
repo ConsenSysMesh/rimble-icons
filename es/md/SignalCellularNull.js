@@ -16,7 +16,8 @@ var SvgSignalCellularNull = function SvgSignalCellularNull(props) {
       width: props.size,
       fill: "currentcolor"
     }),
-    React.createElement("path", { d: "M20 6.83V20H6.83L20 6.83M22 2L2 22h20V2z" })
+    React.createElement("path", { d: "M20 6.83V20H6.83L20 6.83M22 2L2 22h20V2z" }),
+    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" })
   );
 };
 
