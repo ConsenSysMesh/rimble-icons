@@ -16,7 +16,6 @@ var SvgSpaceBar = function SvgSpaceBar(props) {
       width: props.size,
       fill: "currentcolor"
     }),
-    React.createElement("path", { fill: "none", d: "M0 0h24v24H0V0z" }),
     React.createElement("path", { d: "M18 9v4H6V9H4v6h16V9z" })
   );
 };

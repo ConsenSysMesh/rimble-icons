@@ -16,7 +16,6 @@ var SvgStop = function SvgStop(props) {
       width: props.size,
       fill: "currentcolor"
     }),
-    React.createElement("path", { d: "M0 0h24v24H0z", fill: "none" }),
     React.createElement("path", { d: "M6 6h12v12H6z" })
   );
 };
