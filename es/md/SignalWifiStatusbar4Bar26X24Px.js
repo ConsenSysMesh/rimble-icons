@@ -16,8 +16,7 @@ var SvgSignalWifiStatusbar4Bar26X24Px = function SvgSignalWifiStatusbar4Bar26X24
       width: props.size,
       fill: "currentcolor"
     }),
-    React.createElement("path", { d: "M13.01 21.99L25.58 6.32C25.1 5.96 20.26 2 13 2S.9 5.96.42 6.32l12.57 15.66.01.02.01-.01z" }),
-    React.createElement("path", { d: "M0 0h26v24H0z", fill: "none" })
+    React.createElement("path", { d: "M13.01 21.99L25.58 6.32C25.1 5.96 20.26 2 13 2S.9 5.96.42 6.32l12.57 15.66.01.02.01-.01z" })
   );
 };
 
