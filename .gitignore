@@ -1,7 +1,6 @@
 svg
-source
-lib
+source/md
+source/token
 examples
 node_modules
-es
 .DS_Store

@@ -47,9 +47,12 @@ The build process will:
 1. Parse the `material-design-icons` package for SVG source code
 1. Parse the `crypto-icons` repo folder
 1. Copy all the icons to the `svg/` folder
+1. Run svgr over all icons to wrap in a react template with styled-system props
+1. Replace default color prop with original background color for token icons
+1. Create index files that imports all icons per directory
 1. Create an `examples/` folder for tests and development
-1. Run [Pixo][pixo] on the `svg/` folder and output to `src/`
-1. Run Babel on the `src/` folder and output to `lib/`
+1. Run Babel on the `src/` folder and output to `lib/` for CommonJS compatible icons
+1. Run Babel on the `src/` folder and output to `es/` for ES6 compatible icons
 
 To run the development server:
 
@@ -67,9 +70,8 @@ Should start a local webserver that displays all the icons
 
 ## Technology
 
-Built with [Pixo][pixo], [Styled Components][sc], and [Styled System][sys]
+[Styled Components][sc], and [Styled System][sys]
 
-[pixo]: https://github.com/c8r/pixo
 [sys]: https://github.com/jxnblk/styled-system
 [sc]: https://github.com/styled-components/styled-components
 
