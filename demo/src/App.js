@@ -13,8 +13,8 @@ import {
 // import * as icons from "@rimble/icons";
 import * as mdIcons from "@rimble/icons/es/md";
 import * as tokenIcons from "@rimble/icons/es/tokens";
-import { Star, Battery20 } from "@rimble/icons/es/md";
-import { Eth, Btc, Xuc } from "@rimble/icons/es/tokens";
+import { Star, Battery20 } from "@rimble/icons";
+import { Eth, Btc, Xuc } from "@rimble/icons";
 import { Icon } from "@rimble/icons";
 import styled from "styled-components";
 import CopyToClipboard from "./CopyToClipboard";
@@ -109,7 +109,7 @@ const App = props => {
           <Text>Single icon, named imports that supports tree-shaking</Text>
 
           <Text bg={"light-gray"} p={3}>
-            import {`{ Star }`} from "@rimble/icons/es/md";
+            import {`{ Star }`} from "@rimble/icons";
           </Text>
 
           <Flex>
@@ -128,7 +128,7 @@ const App = props => {
           </Flex>
 
           <Text bg={"light-gray"} p={3}>
-            import {`{ Btc, Eth }`} from "@rimble/icons/es/tokens";
+            import {`{ Btc, Eth }`} from "@rimble/icons";
           </Text>
 
           <Flex>
