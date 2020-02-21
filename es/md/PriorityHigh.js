@@ -19,6 +19,9 @@ var SvgPriorityHigh = function SvgPriorityHigh(props) {
     r: 2
   }), React.createElement("path", {
     d: "M10 3h4v12h-4z"
+  }), React.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0z"
   }));
 };
 

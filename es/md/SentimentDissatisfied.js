@@ -13,9 +13,6 @@ var SvgSentimentDissatisfied = function SvgSentimentDissatisfied(props) {
     height: props.size,
     width: props.size,
     fill: "currentcolor"
-  }), React.createElement("path", {
-    fill: "none",
-    d: "M0 0h24v24H0z"
   }), React.createElement("circle", {
     cx: 15.5,
     cy: 9.5,

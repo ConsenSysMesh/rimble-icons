@@ -75,8 +75,8 @@ Should start a local web server that displays all the icons
 - [RMDI](https://jxnblk.com/rmdi)
 - [Google Material Design Icons](https://github.com/google/material-design-icons)
 - [Pixo](https://github.com/c8r/pixo)
-- [Styled Components][https://www.styled-components.com/]
-- [Styled System][https://styled-system.com/]
+- [Styled Components](https://www.styled-components.com/)
+- [Styled System](https://styled-system.com/)
 - [React Icons](https://github.com/gorangajic/react-icons)
 - [Cryptocurrency Icons](https://github.com/atomiclabs/cryptocurrency-icons)
 

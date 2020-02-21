@@ -25,7 +25,7 @@
   "homepage": "https://rimble.consensys.design",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ConsenSys/rimble-icons"
+    "url": "git+https://github.com/ConsenSys/rimble-icons.git"
   },
   "bugs": {
     "url": "https://github.com/ConsenSys/rimble-icons/issues"
@@ -53,5 +53,10 @@
   },
   "peerDependencies": {
     "styled-components": ">= 4"
-  }
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "devDependencies": {}
 }
