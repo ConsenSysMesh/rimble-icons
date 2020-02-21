@@ -1,7 +1,7 @@
 {
   "name": "@rimble/icons",
   "version": "0.1.0",
-  "description": "Rimble Icons",
+  "description": "Cryptocurrency and Material icons ready for React with styled-components",
   "main": "index.js",
   "module": "index.es.js",
   "sideEffects": false,
@@ -12,9 +12,24 @@
     "clean": "rm -r svg source/md source/tokens lib es examples",
     "start": "cd demo && yarn start"
   },
-  "keywords": [],
+  "keywords": [
+    "icons",
+    "crypto",
+    "web3",
+    "rimble",
+    "react",
+    "styled-components"
+  ],
   "author": "Rimble",
   "license": "MIT",
+  "homepage": "https://rimble.consensys.design",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ConsenSys/rimble-icons"
+  },
+  "bugs": {
+    "url": "https://github.com/ConsenSys/rimble-icons/issues"
+  },
   "dependencies": {
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
