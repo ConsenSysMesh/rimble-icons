@@ -1,5 +1,7 @@
 # Rimble Icons
 
+Crypto icons and Material icons as ES6 React styled-components
+
 ```sh
 yarn add @rimble/icons styled-components
 ```
@@ -22,7 +24,7 @@ const App = props => (
 // import all icons as a single component
 import { Icon } from "@rimble/icons";
 
-const App = props => <Icon name="accessibility" size={32} color="tomato" />;
+const App = props => <Icon name="Accessibility" size={32} color="tomato" />;
 ```
 
 ## List of Icons
@@ -56,7 +58,7 @@ The build process will:
 
 To run the development server:
 
-1. First navigate to the `demos` directory
+1. First navigate to the `demo` directory
 2. Install all the dependencies for the demo
 3. Run the demo app
 
@@ -66,22 +68,16 @@ yarn install
 yarn start
 ```
 
-Should start a local webserver that displays all the icons
-
-## Technology
-
-[Styled Components][sc], and [Styled System][sys]
-
-[sys]: https://github.com/jxnblk/styled-system
-[sc]: https://github.com/styled-components/styled-components
+Should start a local web server that displays all the icons
 
 ## Related
 
 - [RMDI](https://jxnblk.com/rmdi)
 - [Google Material Design Icons](https://github.com/google/material-design-icons)
-- [Pixo][pixo]
-- [Styled Components][sc]
-- [Styled System][sys]
+- [Pixo](https://github.com/c8r/pixo)
+- [Styled Components](https://www.styled-components.com/)
+- [Styled System](https://styled-system.com/)
 - [React Icons](https://github.com/gorangajic/react-icons)
+- [Cryptocurrency Icons](https://github.com/atomiclabs/cryptocurrency-icons)
 
 [MIT License](LICENSE.md)

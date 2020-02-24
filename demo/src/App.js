@@ -13,8 +13,8 @@ import {
 // import * as icons from "@rimble/icons";
 import * as mdIcons from "@rimble/icons/es/md";
 import * as tokenIcons from "@rimble/icons/es/tokens";
-import { Star, Battery20 } from "@rimble/icons/es/md";
-import { Eth, Btc, Xuc } from "@rimble/icons/es/tokens";
+import { Star, Battery20 } from "@rimble/icons";
+import { Eth, Btc, Xuc } from "@rimble/icons";
 import { Icon } from "@rimble/icons";
 import styled from "styled-components";
 import CopyToClipboard from "./CopyToClipboard";
@@ -80,9 +80,15 @@ const App = props => {
         <Box m={4}>
           <Heading as="h1">Rimble Icons</Heading>
 
-          <Text>Import entire library and reference any icon</Text>
+          <Text>Install with peer dependency</Text>
 
           <Box bg={"light-gray"} p={3}>
+            <Text>yarn add @rimble/icons styled-components</Text>
+          </Box>
+
+          <Text mt={3}>Import entire library and reference any icon</Text>
+
+          <Box bg={"light-gray"} p={4}>
             <Text>import {`{ Icon }`} from "@rimble/icons";</Text>
             <Text>{`<Icon name="Star" />`}</Text>
             <Text>{`<Icon name="Star" color="red" /> // set color value directly`}</Text>
@@ -109,7 +115,7 @@ const App = props => {
           <Text>Single icon, named imports that supports tree-shaking</Text>
 
           <Text bg={"light-gray"} p={3}>
-            import {`{ Star }`} from "@rimble/icons/es/md";
+            import {`{ Star }`} from "@rimble/icons";
           </Text>
 
           <Flex>
@@ -128,7 +134,7 @@ const App = props => {
           </Flex>
 
           <Text bg={"light-gray"} p={3}>
-            import {`{ Btc, Eth }`} from "@rimble/icons/es/tokens";
+            import {`{ Btc, Eth }`} from "@rimble/icons";
           </Text>
 
           <Flex>
