@@ -1,7 +1,7 @@
 # Rimble Icons
 
 ```sh
-yarn add @rimble/icons
+yarn add @rimble/icons styled-components
 ```
 
 ```jsx
