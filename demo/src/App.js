@@ -80,6 +80,12 @@ const App = props => {
         <Box m={4}>
           <Heading as="h1">Rimble Icons</Heading>
 
+          <Text>Install with peer dependency</Text>
+
+          <Box bg={"light-gray"} p={3}>
+            <Text>yarn add @rimble/icons styled-components</Text>
+          </Box>
+
           <Text>Import entire library and reference any icon</Text>
 
           <Box bg={"light-gray"} p={3}>
