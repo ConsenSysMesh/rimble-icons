@@ -86,9 +86,9 @@ const App = props => {
             <Text>yarn add @rimble/icons styled-components</Text>
           </Box>
 
-          <Text>Import entire library and reference any icon</Text>
+          <Text mt={3}>Import entire library and reference any icon</Text>
 
-          <Box bg={"light-gray"} p={3}>
+          <Box bg={"light-gray"} p={4}>
             <Text>import {`{ Icon }`} from "@rimble/icons";</Text>
             <Text>{`<Icon name="Star" />`}</Text>
             <Text>{`<Icon name="Star" color="red" /> // set color value directly`}</Text>
