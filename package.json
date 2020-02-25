@@ -1,12 +1,12 @@
 {
   "name": "@rimble/icons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cryptocurrency and Material icons ready for React with styled-components",
   "main": "index.js",
   "module": "index.es.js",
   "sideEffects": false,
   "scripts": {
-    "prepare": "./build.js && npx @svgr/cli -d ./source/tokens ./svg/tokens && npx @svgr/cli -d ./source/md ./svg/md && ./colorize.js && create-index ./source -ri && npm run build:cjs && npm run build:es",
+    "build": "./build.js && npx @svgr/cli -d ./source/tokens ./svg/tokens && npx @svgr/cli -d ./source/md ./svg/md && ./colorize.js && create-index ./source -ri && npm run build:cjs && npm run build:es",
     "build:cjs": "cross-env BABEL_ENV=cjs babel source -d lib",
     "build:es": "babel source -d es",
     "clean": "rm -r svg source/md source/tokens lib es examples",
