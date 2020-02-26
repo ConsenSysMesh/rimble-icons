@@ -1,6 +1,6 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-import React from "react";
+import * as React from "react";
 import styled from "styled-components";
 import { space, color } from "styled-system";
 var Svg = styled("svg")({
@@ -15,6 +15,9 @@ var SvgViewHeadline = function SvgViewHeadline(props) {
     fill: "currentcolor"
   }), React.createElement("path", {
     d: "M4 15h16v-2H4v2zm0 4h16v-2H4v2zm0-8h16V9H4v2zm0-6v2h16V5H4z"
+  }), React.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0V0z"
   }));
 };
 

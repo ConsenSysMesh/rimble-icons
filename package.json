@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/ConsenSys/rimble-icons/issues"
   },
-  "dependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-function-bind": "^7.7.4",
@@ -45,18 +45,17 @@
     "lodash.uniqby": "^4.7.0",
     "lodash.upperfirst": "^4.3.1",
     "material-design-icons": "^3.0.1",
-    "react": "^16.3.2",
     "react-test-renderer": "^16.3.2",
     "recursive-readdir": "^2.2.2",
     "styled-system": "^5.1.4",
     "svgi": "^1.1.0"
   },
   "peerDependencies": {
+    "react": "^16.3.2",
     "styled-components": ">= 4"
   },
   "directories": {
     "example": "examples",
     "lib": "lib"
-  },
-  "devDependencies": {}
+  }
 }

@@ -1,6 +1,6 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-import React from "react";
+import * as React from "react";
 import styled from "styled-components";
 import { space, color } from "styled-system";
 var Svg = styled("svg")({
@@ -13,6 +13,9 @@ var SvgCardMembership = function SvgCardMembership(props) {
     height: props.size,
     width: props.size,
     fill: "currentcolor"
+  }), React.createElement("path", {
+    d: "M0 0h24v24H0z",
+    fill: "none"
   }), React.createElement("path", {
     d: "M20 2H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h4v5l4-2 4 2v-5h4c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2zm0 13H4v-2h16v2zm0-5H4V4h16v6z"
   }));
