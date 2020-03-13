@@ -8,14 +8,14 @@ const Svg = styled("svg")(
   space,
   color
 );
-
-const SvgXvg = props => (
+const SvgXvg = React.forwardRef((props, ref) => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
     fill={"currentcolor"}
     height={props.size}
     width={props.size}
+    ref={ref}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
@@ -27,8 +27,7 @@ const SvgXvg = props => (
     />
     <path opacity={0.504} d="M12 18.375L6 5.25h12l-6 13.125z" fill="white" />
   </Svg>
-);
-
+));
 SvgXvg.displayName = "SvgXvg";
 SvgXvg.defaultProps = {
   size: 24,

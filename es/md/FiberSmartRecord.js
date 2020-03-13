@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgFiberSmartRecord = function SvgFiberSmartRecord(props) {
+var SvgFiberSmartRecord = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     fill: "none",
     d: "M24 24H0V0h24v24z"
@@ -25,8 +25,7 @@ var SvgFiberSmartRecord = function SvgFiberSmartRecord(props) {
   }), React.createElement("path", {
     d: "M17 4.26v2.09a5.99 5.99 0 010 11.3v2.09c3.45-.89 6-4.01 6-7.74s-2.55-6.85-6-7.74z"
   })));
-};
-
+});
 SvgFiberSmartRecord.displayName = "SvgFiberSmartRecord";
 SvgFiberSmartRecord.defaultProps = {
   size: 24,

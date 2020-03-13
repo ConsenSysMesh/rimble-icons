@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgEth = function SvgEth(props) {
+var SvgEth = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     fill: "currentcolor",
     height: props.size,
-    width: props.size
+    width: props.size,
+    ref: ref
   }), React.createElement("path", {
     d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
     fill: "inherit"
@@ -20,8 +20,7 @@ var SvgEth = function SvgEth(props) {
     d: "M12 15.243l4.5-2.662-4.5 6.343-4.5-6.342 4.5 2.662v-.001zm0-10.74l4.5 7.087-4.5 2.662-4.5-2.662L12 4.502z",
     fill: "white"
   }));
-};
-
+});
 SvgEth.displayName = "SvgEth";
 SvgEth.defaultProps = {
   size: 24,

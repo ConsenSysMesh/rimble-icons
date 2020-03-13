@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgStorm = function SvgStorm(props) {
+var SvgStorm = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     fill: "currentcolor",
     height: props.size,
-    width: props.size
+    width: props.size,
+    ref: ref
   }), React.createElement("path", {
     d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
     fill: "inherit"
@@ -22,8 +22,7 @@ var SvgStorm = function SvgStorm(props) {
     d: "M17.25 4.5l-9.022 6.188 4.557 2.906L6.75 19.5l9.977-6.906-4.496-2.906L17.25 4.5z",
     fill: "white"
   }));
-};
-
+});
 SvgStorm.displayName = "SvgStorm";
 SvgStorm.defaultProps = {
   size: 24,

@@ -6,21 +6,20 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgPlayArrow = function SvgPlayArrow(props) {
+var SvgPlayArrow = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M8 5v14l11-7z"
   }), React.createElement("path", {
     d: "M0 0h24v24H0z",
     fill: "none"
   }));
-};
-
+});
 SvgPlayArrow.displayName = "SvgPlayArrow";
 SvgPlayArrow.defaultProps = {
   size: 24,

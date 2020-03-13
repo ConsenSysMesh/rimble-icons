@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgPlaylistAddCheck = function SvgPlaylistAddCheck(props) {
+var SvgPlaylistAddCheck = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("defs", null, React.createElement("path", {
     id: "playlistAddCheck_svg__a",
     d: "M0 0h24v24H0V0z"
@@ -25,8 +25,7 @@ var SvgPlaylistAddCheck = function SvgPlaylistAddCheck(props) {
     clipPath: "url(#playlistAddCheck_svg__b)",
     d: "M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"
   }));
-};
-
+});
 SvgPlaylistAddCheck.displayName = "SvgPlaylistAddCheck";
 SvgPlaylistAddCheck.defaultProps = {
   size: 24,

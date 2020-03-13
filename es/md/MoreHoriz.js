@@ -6,18 +6,20 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgMoreHoriz = function SvgMoreHoriz(props) {
+var SvgMoreHoriz = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
+  }), React.createElement("path", {
+    d: "M0 0h24v24H0z",
+    fill: "none"
   }), React.createElement("path", {
     d: "M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
   }));
-};
-
+});
 SvgMoreHoriz.displayName = "SvgMoreHoriz";
 SvgMoreHoriz.defaultProps = {
   size: 24,

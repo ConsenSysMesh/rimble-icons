@@ -6,20 +6,19 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgBrightness1 = function SvgBrightness1(props) {
+var SvgBrightness1 = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("circle", {
     cx: 12,
     cy: 12,
     r: 10
   }));
-};
-
+});
 SvgBrightness1.displayName = "SvgBrightness1";
 SvgBrightness1.defaultProps = {
   size: 24,

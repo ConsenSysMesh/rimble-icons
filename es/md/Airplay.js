@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgAirplay = function SvgAirplay(props) {
+var SvgAirplay = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("defs", null, React.createElement("path", {
     id: "airplay_svg__a",
     d: "M0 0h24v24H0V0z"
@@ -34,8 +34,7 @@ var SvgAirplay = function SvgAirplay(props) {
     d: "M6 22h12l-6-6zM21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v-2H3V5h18v12h-4v2h4c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z",
     clipPath: "url(#airplay_svg__d)"
   }));
-};
-
+});
 SvgAirplay.displayName = "SvgAirplay";
 SvgAirplay.defaultProps = {
   size: 24,

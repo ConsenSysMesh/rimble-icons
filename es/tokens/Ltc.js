@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgLtc = function SvgLtc(props) {
+var SvgLtc = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     fill: "currentcolor",
     height: props.size,
-    width: props.size
+    width: props.size,
+    ref: ref
   }), React.createElement("path", {
     d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
     fill: "inherit"
@@ -22,8 +22,7 @@ var SvgLtc = function SvgLtc(props) {
     d: "M7.82 14.41l-1.07.416.516-2.07 1.083-.434L9.909 6h3.848l-1.14 4.647 1.058-.428-.51 2.062-1.07.428-.636 2.613h5.791L16.595 18H6.94l.881-3.59z",
     fill: "white"
   }));
-};
-
+});
 SvgLtc.displayName = "SvgLtc";
 SvgLtc.defaultProps = {
   size: 24,

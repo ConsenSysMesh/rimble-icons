@@ -6,18 +6,20 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgArrowForward = function SvgArrowForward(props) {
+var SvgArrowForward = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
+  }), React.createElement("path", {
+    d: "M0 0h24v24H0z",
+    fill: "none"
   }), React.createElement("path", {
     d: "M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
   }));
-};
-
+});
 SvgArrowForward.displayName = "SvgArrowForward";
 SvgArrowForward.defaultProps = {
   size: 24,

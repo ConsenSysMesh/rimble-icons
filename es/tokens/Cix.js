@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgCix = function SvgCix(props) {
+var SvgCix = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     fill: "currentcolor",
     height: props.size,
-    width: props.size
+    width: props.size,
+    ref: ref
   }), React.createElement("path", {
     d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
     fill: "inherit"
@@ -24,8 +24,7 @@ var SvgCix = function SvgCix(props) {
     d: "M14.162 15.632l-.493.273-1.803-2.407V7.42h2.296v8.211zm-6.49-.455l-2.295 1.209V8.484h2.295v6.693z",
     fill: "white"
   }));
-};
-
+});
 SvgCix.displayName = "SvgCix";
 SvgCix.defaultProps = {
   size: 24,

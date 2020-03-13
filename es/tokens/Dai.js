@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgDai = function SvgDai(props) {
+var SvgDai = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     fill: "currentcolor",
     height: props.size,
-    width: props.size
+    width: props.size,
+    ref: ref
   }), React.createElement("path", {
     d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
     fill: "inherit"
@@ -30,8 +30,7 @@ var SvgDai = function SvgDai(props) {
     d: "M11.998 21.116V2.733l9.192 9.192-9.192 9.19z",
     fill: "#D9A547"
   }));
-};
-
+});
 SvgDai.displayName = "SvgDai";
 SvgDai.defaultProps = {
   size: 24,

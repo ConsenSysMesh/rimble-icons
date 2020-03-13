@@ -6,21 +6,17 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgViewAgenda = function SvgViewAgenda(props) {
+var SvgViewAgenda = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
-  }), React.createElement("path", {
-    d: "M0 0h24v24H0z",
-    fill: "none"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M20 13H3c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h17c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zm0-10H3c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h17c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1z"
   }));
-};
-
+});
 SvgViewAgenda.displayName = "SvgViewAgenda";
 SvgViewAgenda.defaultProps = {
   size: 24,

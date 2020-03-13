@@ -6,21 +6,17 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgViewArray = function SvgViewArray(props) {
+var SvgViewArray = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M4 18h3V5H4v13zM18 5v13h3V5h-3zM8 18h9V5H8v13z"
-  }), React.createElement("path", {
-    d: "M0 0h24v24H0z",
-    fill: "none"
   }));
-};
-
+});
 SvgViewArray.displayName = "SvgViewArray";
 SvgViewArray.defaultProps = {
   size: 24,

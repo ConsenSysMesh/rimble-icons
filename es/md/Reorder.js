@@ -6,21 +6,17 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgReorder = function SvgReorder(props) {
+var SvgReorder = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
-  }), React.createElement("path", {
-    d: "M0 0h24v24H0z",
-    fill: "none"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M3 15h18v-2H3v2zm0 4h18v-2H3v2zm0-8h18V9H3v2zm0-6v2h18V5H3z"
   }));
-};
-
+});
 SvgReorder.displayName = "SvgReorder";
 SvgReorder.defaultProps = {
   size: 24,

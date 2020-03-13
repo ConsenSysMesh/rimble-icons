@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgLinkedCamera = function SvgLinkedCamera(props) {
+var SvgLinkedCamera = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("circle", {
     cx: 12,
     cy: 14,
@@ -22,8 +22,7 @@ var SvgLinkedCamera = function SvgLinkedCamera(props) {
   }), React.createElement("path", {
     d: "M17 9c0-1.11-.89-2-2-2V4H9L7.17 6H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9h-5zm-5 10c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
   }));
-};
-
+});
 SvgLinkedCamera.displayName = "SvgLinkedCamera";
 SvgLinkedCamera.defaultProps = {
   size: 24,

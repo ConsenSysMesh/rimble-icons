@@ -6,18 +6,17 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgDragHandle = function SvgDragHandle(props) {
+var SvgDragHandle = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M20 9H4v2h16V9zM4 15h16v-2H4v2z"
   }));
-};
-
+});
 SvgDragHandle.displayName = "SvgDragHandle";
 SvgDragHandle.defaultProps = {
   size: 24,

@@ -6,21 +6,17 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgHome = function SvgHome(props) {
+var SvgHome = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
-  }), React.createElement("path", {
-    d: "M0 0h24v24H0z",
-    fill: "none"
   }));
-};
-
+});
 SvgHome.displayName = "SvgHome";
 SvgHome.defaultProps = {
   size: 24,

@@ -6,18 +6,17 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgFormatAlignCenter = function SvgFormatAlignCenter(props) {
+var SvgFormatAlignCenter = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"
   }));
-};
-
+});
 SvgFormatAlignCenter.displayName = "SvgFormatAlignCenter";
 SvgFormatAlignCenter.defaultProps = {
   size: 24,

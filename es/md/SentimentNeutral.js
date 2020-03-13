@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgSentimentNeutral = function SvgSentimentNeutral(props) {
+var SvgSentimentNeutral = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M9 14h6v1.5H9z"
   }), React.createElement("circle", {
@@ -25,12 +25,8 @@ var SvgSentimentNeutral = function SvgSentimentNeutral(props) {
     r: 1.5
   }), React.createElement("path", {
     d: "M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-  }), React.createElement("path", {
-    fill: "none",
-    d: "M0 0h24v24H0z"
   }));
-};
-
+});
 SvgSentimentNeutral.displayName = "SvgSentimentNeutral";
 SvgSentimentNeutral.defaultProps = {
   size: 24,

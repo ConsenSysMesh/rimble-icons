@@ -6,18 +6,17 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgSpaceBar = function SvgSpaceBar(props) {
+var SvgSpaceBar = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M18 9v4H6V9H4v6h16V9z"
   }));
-};
-
+});
 SvgSpaceBar.displayName = "SvgSpaceBar";
 SvgSpaceBar.defaultProps = {
   size: 24,

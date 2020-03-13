@@ -6,21 +6,17 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgKeyboardBackspace = function SvgKeyboardBackspace(props) {
+var SvgKeyboardBackspace = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
-  }), React.createElement("path", {
-    d: "M0 0h24v24H0z",
-    fill: "none"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"
   }));
-};
-
+});
 SvgKeyboardBackspace.displayName = "SvgKeyboardBackspace";
 SvgKeyboardBackspace.defaultProps = {
   size: 24,

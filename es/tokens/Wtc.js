@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgWtc = function SvgWtc(props) {
+var SvgWtc = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     fill: "currentcolor",
     height: props.size,
-    width: props.size
+    width: props.size,
+    ref: ref
   }), React.createElement("path", {
     d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
     fill: "inherit"
@@ -28,8 +28,7 @@ var SvgWtc = function SvgWtc(props) {
     d: "M9.673 9.985v4.321c0 .083.01.165.03.246.129.503.62.824 1.133.76v.704a.508.508 0 01-.392.492l-2.585.633a.517.517 0 01-.643-.492v-5.667c0-.232.161-.435.391-.491l2.066-.506zm5.69.032v4.305c0 .083.01.165.03.246.139.542.7.872 1.255.737l.007-.002v.712a.51.51 0 01-.391.492l-2.587.633a.517.517 0 01-.642-.49v-5.668c0-.232.161-.435.392-.491l1.934-.474h.001z",
     fill: "white"
   }));
-};
-
+});
 SvgWtc.displayName = "SvgWtc";
 SvgWtc.defaultProps = {
   size: 24,

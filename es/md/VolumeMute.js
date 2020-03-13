@@ -6,21 +6,20 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgVolumeMute = function SvgVolumeMute(props) {
+var SvgVolumeMute = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M7 9v6h4l5 5V4l-5 5H7z"
   }), React.createElement("path", {
     d: "M0 0h24v24H0z",
     fill: "none"
   }));
-};
-
+});
 SvgVolumeMute.displayName = "SvgVolumeMute";
 SvgVolumeMute.defaultProps = {
   size: 24,

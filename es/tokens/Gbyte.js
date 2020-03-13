@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgGbyte = function SvgGbyte(props) {
+var SvgGbyte = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     fill: "currentcolor",
     height: props.size,
-    width: props.size
+    width: props.size,
+    ref: ref
   }), React.createElement("path", {
     d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
     fill: "inherit"
@@ -20,8 +20,7 @@ var SvgGbyte = function SvgGbyte(props) {
     d: "M12 20.25a8.25 8.25 0 100-16.5 8.25 8.25 0 000 16.5z",
     fill: "white"
   }));
-};
-
+});
 SvgGbyte.displayName = "SvgGbyte";
 SvgGbyte.defaultProps = {
   size: 24,

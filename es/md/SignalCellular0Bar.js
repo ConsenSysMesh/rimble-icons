@@ -6,19 +6,21 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgSignalCellular0Bar = function SvgSignalCellular0Bar(props) {
+var SvgSignalCellular0Bar = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     fillOpacity: 0.3,
     d: "M2 22h20V2z"
+  }), React.createElement("path", {
+    d: "M0 0h24v24H0z",
+    fill: "none"
   }));
-};
-
+});
 SvgSignalCellular0Bar.displayName = "SvgSignalCellular0Bar";
 SvgSignalCellular0Bar.defaultProps = {
   size: 24,

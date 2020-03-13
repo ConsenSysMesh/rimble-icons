@@ -1,6 +1,6 @@
 {
   "name": "@rimble/icons",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Cryptocurrency and Material icons ready for React with styled-components",
   "main": "index.js",
   "module": "index.es.js",

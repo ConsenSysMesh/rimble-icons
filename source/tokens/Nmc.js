@@ -8,14 +8,14 @@ const Svg = styled("svg")(
   space,
   color
 );
-
-const SvgNmc = props => (
+const SvgNmc = React.forwardRef((props, ref) => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
     fill={"currentcolor"}
     height={props.size}
     width={props.size}
+    ref={ref}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
@@ -26,8 +26,7 @@ const SvgNmc = props => (
       fill="white"
     />
   </Svg>
-);
-
+));
 SvgNmc.displayName = "SvgNmc";
 SvgNmc.defaultProps = {
   size: 24,

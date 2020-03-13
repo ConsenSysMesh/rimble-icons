@@ -6,18 +6,17 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgViewCompact = function SvgViewCompact(props) {
+var SvgViewCompact = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M3 19h6v-7H3v7zm7 0h12v-7H10v7zM3 5v6h19V5H3z"
   }));
-};
-
+});
 SvgViewCompact.displayName = "SvgViewCompact";
 SvgViewCompact.defaultProps = {
   size: 24,

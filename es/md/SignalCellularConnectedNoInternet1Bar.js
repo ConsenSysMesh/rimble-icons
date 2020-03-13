@@ -6,21 +6,23 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgSignalCellularConnectedNoInternet1Bar = function SvgSignalCellularConnectedNoInternet1Bar(props) {
+var SvgSignalCellularConnectedNoInternet1Bar = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
+  }), React.createElement("path", {
+    d: "M0 0h24v24H0z",
+    fill: "none"
   }), React.createElement("path", {
     fillOpacity: 0.3,
     d: "M22 8V2L2 22h16V8z"
   }), React.createElement("path", {
     d: "M20 10v8h2v-8h-2zm-8 12V12L2 22h10zm8 0h2v-2h-2v2z"
   }));
-};
-
+});
 SvgSignalCellularConnectedNoInternet1Bar.displayName = "SvgSignalCellularConnectedNoInternet1Bar";
 SvgSignalCellularConnectedNoInternet1Bar.defaultProps = {
   size: 24,

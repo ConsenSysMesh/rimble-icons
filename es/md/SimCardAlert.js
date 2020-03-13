@@ -6,21 +6,20 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgSimCardAlert = function SvgSimCardAlert(props) {
+var SvgSimCardAlert = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M0 0h24v24H0z",
     fill: "none"
   }), React.createElement("path", {
     d: "M18 2h-8L4.02 8 4 20c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-5 15h-2v-2h2v2zm0-4h-2V8h2v5z"
   }));
-};
-
+});
 SvgSimCardAlert.displayName = "SvgSimCardAlert";
 SvgSimCardAlert.defaultProps = {
   size: 24,

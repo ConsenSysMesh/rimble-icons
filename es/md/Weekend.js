@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgWeekend = function SvgWeekend(props) {
+var SvgWeekend = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("defs", null, React.createElement("path", {
     id: "weekend_svg__a",
     d: "M0 0h24v24H0z"
@@ -26,8 +26,7 @@ var SvgWeekend = function SvgWeekend(props) {
     clipPath: "url(#weekend_svg__b)",
     fill: "#010101"
   }));
-};
-
+});
 SvgWeekend.displayName = "SvgWeekend";
 SvgWeekend.defaultProps = {
   size: 24,

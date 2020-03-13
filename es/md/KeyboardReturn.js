@@ -6,21 +6,17 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgKeyboardReturn = function SvgKeyboardReturn(props) {
+var SvgKeyboardReturn = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
-  }), React.createElement("path", {
-    d: "M0 0h24v24H0z",
-    fill: "none"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"
   }));
-};
-
+});
 SvgKeyboardReturn.displayName = "SvgKeyboardReturn";
 SvgKeyboardReturn.defaultProps = {
   size: 24,

@@ -6,21 +6,17 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgSettingsInputHdmi = function SvgSettingsInputHdmi(props) {
+var SvgSettingsInputHdmi = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
-  }), React.createElement("path", {
-    d: "M0 0h24v24H0z",
-    fill: "none"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M18 7V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v3H5v6l3 6v3h8v-3l3-6V7h-1zM8 4h8v3h-2V5h-1v2h-2V5h-1v2H8V4z"
   }));
-};
-
+});
 SvgSettingsInputHdmi.displayName = "SvgSettingsInputHdmi";
 SvgSettingsInputHdmi.defaultProps = {
   size: 24,

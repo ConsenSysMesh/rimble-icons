@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgRemoveFromQueue = function SvgRemoveFromQueue(props) {
+var SvgRemoveFromQueue = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("defs", null, React.createElement("path", {
     id: "removeFromQueue_svg__a",
     d: "M0 0h24v24H0V0z"
@@ -25,8 +25,7 @@ var SvgRemoveFromQueue = function SvgRemoveFromQueue(props) {
     clipPath: "url(#removeFromQueue_svg__b)",
     d: "M21 3H3c-1.11 0-2 .89-2 2v12a2 2 0 002 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5a2 2 0 00-2-2zm0 14H3V5h18v12zm-5-7v2H8v-2h8z"
   }));
-};
-
+});
 SvgRemoveFromQueue.displayName = "SvgRemoveFromQueue";
 SvgRemoveFromQueue.defaultProps = {
   size: 24,

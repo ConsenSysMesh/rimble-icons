@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgEnhancedEncryption = function SvgEnhancedEncryption(props) {
+var SvgEnhancedEncryption = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     fill: "none",
     d: "M0 0h24v24H0z"
@@ -22,8 +22,7 @@ var SvgEnhancedEncryption = function SvgEnhancedEncryption(props) {
     fill: "none",
     d: "M0 0h24v24H0z"
   }));
-};
-
+});
 SvgEnhancedEncryption.displayName = "SvgEnhancedEncryption";
 SvgEnhancedEncryption.defaultProps = {
   size: 24,

@@ -6,18 +6,20 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgPhonelinkErase = function SvgPhonelinkErase(props) {
+var SvgPhonelinkErase = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
+  }), React.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0V0z"
   }), React.createElement("path", {
     d: "M13 8.2l-1-1-4 4-4-4-1 1 4 4-4 4 1 1 4-4 4 4 1-1-4-4 4-4zM19 1H9c-1.1 0-2 .9-2 2v3h2V4h10v16H9v-2H7v3c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2z"
   }));
-};
-
+});
 SvgPhonelinkErase.displayName = "SvgPhonelinkErase";
 SvgPhonelinkErase.defaultProps = {
   size: 24,

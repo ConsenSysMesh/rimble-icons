@@ -6,21 +6,17 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgNavigation = function SvgNavigation(props) {
+var SvgNavigation = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
-  }), React.createElement("path", {
-    d: "M0 0h24v24H0z",
-    fill: "none"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"
   }));
-};
-
+});
 SvgNavigation.displayName = "SvgNavigation";
 SvgNavigation.defaultProps = {
   size: 24,

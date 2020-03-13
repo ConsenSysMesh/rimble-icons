@@ -6,21 +6,20 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgSend = function SvgSend(props) {
+var SvgSend = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"
   }), React.createElement("path", {
     d: "M0 0h24v24H0z",
     fill: "none"
   }));
-};
-
+});
 SvgSend.displayName = "SvgSend";
 SvgSend.defaultProps = {
   size: 24,

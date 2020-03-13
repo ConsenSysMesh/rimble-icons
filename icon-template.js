@@ -30,9 +30,9 @@ function template(
     import { space, color } from 'styled-system';
     const Svg = styled('svg')({ flex: 'none' }, space, color);
     
-    const ${componentName} = (${props}) => (
+    const ${componentName} = React.forwardRef((${props}, ref) => (
       ${mergedJsx}
-    )
+    ))
     ${componentName.name}.displayName = '${componentName.name}'
     ${componentName.name}.defaultProps = {
       size: 24,

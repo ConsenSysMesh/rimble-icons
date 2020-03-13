@@ -6,18 +6,26 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgCallMissedOutgoing = function SvgCallMissedOutgoing(props) {
+var SvgCallMissedOutgoing = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
-  }), React.createElement("path", {
+    fill: "currentcolor",
+    ref: ref
+  }), React.createElement("defs", null, React.createElement("path", {
+    id: "callMissedOutgoing_svg__a",
+    d: "M24 24H0V0h24v24z"
+  })), React.createElement("clipPath", {
+    id: "callMissedOutgoing_svg__b"
+  }, React.createElement("use", {
+    xlinkHref: "#callMissedOutgoing_svg__a",
+    overflow: "visible"
+  })), React.createElement("path", {
+    clipPath: "url(#callMissedOutgoing_svg__b)",
     d: "M3 8.41l9 9 7-7V15h2V7h-8v2h4.59L12 14.59 4.41 7 3 8.41z"
   }));
-};
-
+});
 SvgCallMissedOutgoing.displayName = "SvgCallMissedOutgoing";
 SvgCallMissedOutgoing.defaultProps = {
   size: 24,

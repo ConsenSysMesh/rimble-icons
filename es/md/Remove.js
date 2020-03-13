@@ -6,21 +6,20 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgRemove = function SvgRemove(props) {
+var SvgRemove = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M19 13H5v-2h14v2z"
   }), React.createElement("path", {
     d: "M0 0h24v24H0z",
     fill: "none"
   }));
-};
-
+});
 SvgRemove.displayName = "SvgRemove";
 SvgRemove.defaultProps = {
   size: 24,

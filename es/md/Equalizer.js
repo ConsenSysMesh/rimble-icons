@@ -6,21 +6,20 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgEqualizer = function SvgEqualizer(props) {
+var SvgEqualizer = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M0 0h24v24H0z",
     fill: "none"
   }), React.createElement("path", {
     d: "M10 20h4V4h-4v16zm-6 0h4v-8H4v8zM16 9v11h4V9h-4z"
   }));
-};
-
+});
 SvgEqualizer.displayName = "SvgEqualizer";
 SvgEqualizer.defaultProps = {
   size: 24,

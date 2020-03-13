@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgPriorityHigh = function SvgPriorityHigh(props) {
+var SvgPriorityHigh = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("circle", {
     cx: 12,
     cy: 19,
@@ -23,8 +23,7 @@ var SvgPriorityHigh = function SvgPriorityHigh(props) {
     fill: "none",
     d: "M0 0h24v24H0z"
   }));
-};
-
+});
 SvgPriorityHigh.displayName = "SvgPriorityHigh";
 SvgPriorityHigh.defaultProps = {
   size: 24,

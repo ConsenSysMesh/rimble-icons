@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgElix = function SvgElix(props) {
+var SvgElix = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     fill: "currentcolor",
     height: props.size,
-    width: props.size
+    width: props.size,
+    ref: ref
   }), React.createElement("path", {
     d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
     fill: "inherit"
@@ -32,8 +32,7 @@ var SvgElix = function SvgElix(props) {
     fill: "white",
     fillOpacity: 0.145
   }));
-};
-
+});
 SvgElix.displayName = "SvgElix";
 SvgElix.defaultProps = {
   size: 24,

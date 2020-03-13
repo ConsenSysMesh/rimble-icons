@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgBubbleChart = function SvgBubbleChart(props) {
+var SvgBubbleChart = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("circle", {
     cx: 7.2,
     cy: 14.4,
@@ -26,8 +26,7 @@ var SvgBubbleChart = function SvgBubbleChart(props) {
     cy: 8.8,
     r: 4.8
   }));
-};
-
+});
 SvgBubbleChart.displayName = "SvgBubbleChart";
 SvgBubbleChart.defaultProps = {
   size: 24,

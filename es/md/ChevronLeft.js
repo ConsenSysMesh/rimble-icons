@@ -6,18 +6,20 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgChevronLeft = function SvgChevronLeft(props) {
+var SvgChevronLeft = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+  }), React.createElement("path", {
+    d: "M0 0h24v24H0z",
+    fill: "none"
   }));
-};
-
+});
 SvgChevronLeft.displayName = "SvgChevronLeft";
 SvgChevronLeft.defaultProps = {
   size: 24,

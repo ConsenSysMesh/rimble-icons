@@ -6,13 +6,13 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgUnity = function SvgUnity(props) {
+var SvgUnity = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     fill: "currentcolor",
     height: props.size,
-    width: props.size
+    width: props.size,
+    ref: ref
   }), React.createElement("path", {
     d: "M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z",
     fill: "inherit"
@@ -24,8 +24,7 @@ var SvgUnity = function SvgUnity(props) {
     d: "M19.434 14.156v-4.39c.493.666.768 1.411.768 2.195 0 .784-.275 1.528-.768 2.195zm-1.237-5.595l.004 5.596c-1.757-2.495-4.383-5.633-7.61-6.682a7.962 7.962 0 00-1.72-.358c1-.246 2.027-.37 3.058-.367 2.505 0 4.751.702 6.268 1.811z",
     fill: "white"
   }));
-};
-
+});
 SvgUnity.displayName = "SvgUnity";
 SvgUnity.defaultProps = {
   size: 24,

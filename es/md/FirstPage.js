@@ -6,18 +6,20 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgFirstPage = function SvgFirstPage(props) {
+var SvgFirstPage = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z"
+  }), React.createElement("path", {
+    fill: "none",
+    d: "M24 24H0V0h24v24z"
   }));
-};
-
+});
 SvgFirstPage.displayName = "SvgFirstPage";
 SvgFirstPage.defaultProps = {
   size: 24,

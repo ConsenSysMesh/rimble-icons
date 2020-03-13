@@ -6,18 +6,17 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgFormatQuote = function SvgFormatQuote(props) {
+var SvgFormatQuote = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"
   }));
-};
-
+});
 SvgFormatQuote.displayName = "SvgFormatQuote";
 SvgFormatQuote.defaultProps = {
   size: 24,

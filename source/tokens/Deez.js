@@ -8,14 +8,14 @@ const Svg = styled("svg")(
   space,
   color
 );
-
-const SvgDeez = props => (
+const SvgDeez = React.forwardRef((props, ref) => (
   <Svg
     {...props}
     viewBox="0 0 24 24"
     fill={"currentcolor"}
     height={props.size}
     width={props.size}
+    ref={ref}
   >
     <path
       d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
@@ -28,8 +28,7 @@ const SvgDeez = props => (
       fill="white"
     />
   </Svg>
-);
-
+));
 SvgDeez.displayName = "SvgDeez";
 SvgDeez.defaultProps = {
   size: 24,

@@ -6,21 +6,17 @@ import { space, color } from "styled-system";
 var Svg = styled("svg")({
   flex: "none"
 }, space, color);
-
-var SvgKeyboardArrowDown = function SvgKeyboardArrowDown(props) {
+var SvgKeyboardArrowDown = React.forwardRef(function (props, ref) {
   return React.createElement(Svg, _extends({}, props, {
     viewBox: "0 0 24 24",
     height: props.size,
     width: props.size,
-    fill: "currentcolor"
+    fill: "currentcolor",
+    ref: ref
   }), React.createElement("path", {
     d: "M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-  }), React.createElement("path", {
-    d: "M0-.75h24v24H0z",
-    fill: "none"
   }));
-};
-
+});
 SvgKeyboardArrowDown.displayName = "SvgKeyboardArrowDown";
 SvgKeyboardArrowDown.defaultProps = {
   size: 24,
