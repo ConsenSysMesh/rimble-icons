@@ -92,7 +92,7 @@
 - `BatteryUnknown`
 - `BeachAccess`
 - `Beenhere`
-- `Block`
+- `BlockIcon`
 - `Bluetooth`
 - `BluetoothAudio`
 - `BluetoothConnected`
@@ -164,9 +164,9 @@
 - `CenterFocusStrong`
 - `CenterFocusWeak`
 - `ChangeHistory`
-- `Chat`
 - `ChatBubble`
 - `ChatBubbleOutline`
+- `ChatIcon`
 - `Check`
 - `CheckBox`
 - `CheckBoxOutlineBlank`
@@ -477,7 +477,7 @@
 - `LineStyle`
 - `LineWeight`
 - `LinearScale`
-- `Link`
+- `LinkIcon`
 - `LinkedCamera`
 - `List`
 - `LiveHelp`

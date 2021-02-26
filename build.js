@@ -97,25 +97,6 @@ const copy = async () => {
   if (!fs.existsSync(outBaseDir)) fs.mkdirSync(outBaseDir);
   if (!fs.existsSync(examplesBaseDir)) fs.mkdirSync(examplesBaseDir);
 
-  // Read material icons
-  const mdFiles = await readdir(pkgPath, [ignore]);
-
-  // Sort material icons
-  const mdIcons = uniqBy(mdFiles, file => path.basename(file))
-    .filter(is24px)
-    .map(readFile)
-    .sort((a, b) => (a.name < b.name ? -1 : 1));
-
-  // Create missing material directories
-  if (!fs.existsSync(mdOutDir)) fs.mkdirSync(mdOutDir);
-  if (!fs.existsSync(mdExamplesDir)) fs.mkdirSync(mdExamplesDir);
-
-  // Copy material icons to svg directory
-  mdIcons.forEach(writeMdFile);
-  // Create material examples
-  mdIcons.forEach(createMdExample);
-  console.log(mdIcons.length, " material icons copied");
-
   // Read crypto icons from local directory
   const cryptoFiles = await readdir(cryptoPath, [ignore]);
   // Sort crypto icons
@@ -132,6 +113,29 @@ const copy = async () => {
   // Create crypto examples
   cryptoIcons.forEach(createCryptoExample);
   console.log(cryptoIcons.length, " token icons copied");
+
+  // Read material icons
+  const mdFiles = await readdir(pkgPath, [ignore]);
+
+  // Grab crypto icon names so we can easily resolve name collisions with material icons
+  const cryptoIconNames = cryptoIcons.map(icon => icon.name);
+
+  // Sort material icons
+  const mdIcons = uniqBy(mdFiles, file => path.basename(file))
+    .filter(is24px)
+    .map(readFile)
+    .map(icon => cryptoIconNames.includes(icon.name) ? { ...icon, name: `${icon.name}Icon` } : icon)
+    .sort((a, b) => (a.name < b.name ? -1 : 1));
+
+  // Create missing material directories
+  if (!fs.existsSync(mdOutDir)) fs.mkdirSync(mdOutDir);
+  if (!fs.existsSync(mdExamplesDir)) fs.mkdirSync(mdExamplesDir);
+
+  // Copy material icons to svg directory
+  mdIcons.forEach(writeMdFile);
+  // Create material examples
+  mdIcons.forEach(createMdExample);
+  console.log(mdIcons.length, " material icons copied");
 
   // Combine icon sets
   const combinedIcons = mdIcons.concat(cryptoIcons);
